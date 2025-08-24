@@ -76,7 +76,7 @@ title: FAQ
   <a href="https://thinker89.github.io/docs_hub/project_market_mood/docs/faq_ko">한국어</a>
 </div>
 
-# Frequently Asked Questions (FAQ)
+# 자주 묻는 질문 (FAQ)
 
 <p class="lead">아래 항목을 탭(클릭)해 내용을 펼쳐보세요.</p>
 
