@@ -72,8 +72,8 @@ title: FAQ
 <main class="doc">
 
 <div class="lang-switch">
-  <a href="https://thinker89.github.io/docs_hub/project_market_mood/docs/faq_en">English</a>
-  <a href="https://thinker89.github.io/docs_hub/project_market_mood/docs/faq_ko">한국어</a>
+  <a href="https://thinker89.github.io/docs_hub/project_market_mood/docs/faq_en.html">English</a>
+  <a href="https://thinker89.github.io/docs_hub/project_market_mood/docs/faq_ko.html">한국어</a>
 </div>
 
 # 자주 묻는 질문 (FAQ)
