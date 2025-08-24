@@ -1,3 +1,8 @@
+---
+layout: null   # ← Jekyll 레이아웃 적용 안 함
+title: FAQ
+---
+
 # Frequently Asked Questions (FAQ)
 
 아래 항목을 탭(클릭)해 내용을 펼쳐보세요.
