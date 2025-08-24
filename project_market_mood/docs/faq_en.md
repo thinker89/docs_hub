@@ -72,8 +72,8 @@ title: FAQ
 <main class="doc">
 
 <div class="lang-switch">
-  <a href="/docs_hub/project_market_mood/faq_en/">English</a>
-  <a href="/docs_hub/project_market_mood/faq_ko/">한국어</a>
+  <a href="/docs_hub/project_market_mood/docs/faq_en/">English</a>
+  <a href="/docs_hub/project_market_mood/docs/faq_ko/">한국어</a>
 </div>
 
 # Frequently Asked Questions (FAQ)
