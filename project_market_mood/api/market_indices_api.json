@@ -1,0 +1,50 @@
+[
+  {
+    "name": "DOW",
+    "price": 11111.74,
+    "change": 846.24,
+    "changePercent": 1.89,
+    "updatedAt": 1756008000000,
+    "timeZoneName": "KST"
+  },
+  {
+    "name": "S&P 500",
+    "price": 6466.91,
+    "change": 96.74,
+    "changePercent": 1.52,
+    "updatedAt": 1756008000000,
+    "timeZoneName": "KST"
+  },
+  {
+    "name": "NASDAQ",
+    "price": 21496.54,
+    "change": 396.23,
+    "changePercent": 1.88,
+    "updatedAt": 1756008000000,
+    "timeZoneName": "KST"
+  },
+  {
+    "name": "RUSSELL 2000",
+    "price": 2361.95,
+    "change": 87.85,
+    "changePercent": 3.86,
+    "updatedAt": 1756008000000,
+    "timeZoneName": "KST"
+  },
+  {
+    "name": "WTI Crude",
+    "price": 63.77,
+    "change": 0.25,
+    "changePercent": 0.39,
+    "updatedAt": 1756008000000,
+    "timeZoneName": "KST"
+  },
+  {
+    "name": "US 10Y",
+    "price": 4.26,
+    "change": -0.07,
+    "changePercent": -1.62,
+    "updatedAt": 1756008000000,
+    "timeZoneName": "KST"
+  }
+]
