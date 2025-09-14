@@ -5,12 +5,12 @@ title: FAQ
 
 <style>
   :root{
-    --fg:#111827;         /* 본문 글자 */
-    --bg:#F4F6F9;         /* ✅ 앱 전역 배경색 고정 */
-    --muted:#6b7280;      /* 보조 텍스트 */
-    --border:#d1d5db;     /* 경계선 */
-    --card:#ffffff;       /* 카드 배경 */
-    --primary:#142743;    /* 브랜드 포인트 */
+    --fg:#111827;         /* 本文テキスト */
+    --bg:#F4F6F9;         /* アプリ全体の背景色 */
+    --muted:#6b7280;      /* 補助テキスト */
+    --border:#d1d5db;     /* 境界線 */
+    --card:#ffffff;       /* カード背景 */
+    --primary:#142743;    /* ブランドカラー */
   }
 
   html, body {
@@ -24,7 +24,7 @@ title: FAQ
     max-width: 720px; margin: 0 auto; padding: 20px 16px 48px;
   }
 
-  /* 언어 버튼 */
+  /* 言語切り替えボタン */
   .lang-switch {
     display:flex; gap:8px; margin-bottom:16px;
   }
@@ -74,62 +74,61 @@ title: FAQ
 <div class="lang-switch">
   <a href="https://thinker89.github.io/docs_hub/project_market_mood/docs/faq_en.html">English</a>
   <a href="https://thinker89.github.io/docs_hub/project_market_mood/docs/faq_ko.html">한국어</a>
+  <a href="https://thinker89.github.io/docs_hub/project_market_mood/docs/faq_ja.html">日本語</a>
 </div>
 
-# 자주 묻는 질문 (FAQ)
-
-<p class="lead">아래 항목을 탭(클릭)해 내용을 펼쳐보세요.</p>
+# FAQ
 
 <details>
-  <summary>앱은 무료인가요?</summary>
+  <summary>1. 通知が届きません。</summary>
   <div class="details-body">
-    기본 기능은 무료입니다. 일부 고급 기능(예: 고급 알림, 추가 차트)은 구독 기반으로 제공될 수 있습니다.
+    設定画面で通知がオンになっているか、数値や時間が希望通りに設定されているか、通知権限が許可されているかを確認してください。<br><br>
+    アプリを長期間起動しないと、端末メーカーによって自動的にスリープモードに移行し、通知がブロックされる場合があります。<br><br>
+    ご利用の端末でスリープ対象外アプリに設定する方法をご確認ください。少なくとも週に1回はアプリを起動すると、スリープ扱いを防ぐのに役立ちます。
   </div>
 </details>
 
 <details>
-  <summary>문서(이용약관/개인정보처리방침)는 어떻게 업데이트되나요?</summary>
+  <summary>2. データはリアルタイム更新ですか？</summary>
   <div class="details-body">
-    GitHub Pages의 Markdown 문서를 수정/커밋하면 즉시 반영됩니다. 앱은 해당 URL을 로드하므로 새로고침 시 최신 내용이 표시됩니다.
+    いいえ、このアプリのデータはリアルタイムではありません。<br><br>
+    CNN BusinessとFREDが提供するデータを利用していますが、これらはリアルタイム更新ではありません。<br><br>
+    最新の更新時刻はアプリ画面のCNN F&amp;G、FRED VIXに表示されています。<br><br>
+    Fear &amp; Greedを除くすべての指標はFREDのデータであり、FRED VIXと同じ更新時刻になります。
   </div>
 </details>
 
 <details>
-  <summary>FAQ는 오프라인에서도 볼 수 있나요?</summary>
+  <summary>3. データが表示されません。</summary>
   <div class="details-body">
-    이 페이지는 WebView로 제공되어 네트워크 연결이 필요합니다. 중요한 고지 문서는 앱 내부 Markdown 화면으로도 제공할 수 있습니다.
+    まずネットワーク接続をご確認ください。<br><br>
+    データ提供元（CNN Business、FRED）の都合により、提供が遅延または一時停止されると、アプリにデータが表示されない場合があります。
   </div>
 </details>
 
 <details>
-  <summary>데이터 출처는 무엇인가요?</summary>
+  <summary>4. 個人情報を収集していますか？</summary>
   <div class="details-body">
-    시장 지표는 공신력 있는 공개 소스(CNN Fear &amp; Greed, Google Finance 등)를 참고합니다. 각 화면 하단에 출처를 표기합니다.
+    いいえ。このアプリにはログイン機能がなく、ユーザーの個人情報を収集することもありません。
   </div>
 </details>
 
 <details>
-  <summary>알림 시간과 조건은 어떻게 설정하나요?</summary>
+  <summary>5. 追加料金はありますか？</summary>
   <div class="details-body">
-    앱의 Settings에서 알림 허용, 시간대, 임계값(예: 점수 ≤ 25)을 조정할 수 있습니다. 기기 설정에서 알림 권한을 허용해야 동작합니다.
+    いいえ。このアプリは有料販売であり、アプリ内課金や広告はありません。
   </div>
 </details>
 
 <details>
-  <summary>개인정보는 어떻게 처리되나요?</summary>
+  <summary>6. 問い合わせはどこにすればいいですか？</summary>
   <div class="details-body">
-    필수 최소한의 정보만 사용하며, 법령 및 개인정보 처리방침에 따라 관리됩니다. 자세한 내용은 Privacy Policy 문서를 참고하세요.
-  </div>
-</details>
-
-<details>
-  <summary>문제가 발생했어요. 어디로 문의하나요?</summary>
-  <div class="details-body">
-    앱의 About 화면에 표기된 이메일/이슈 트래커로 연락 주세요. 가능한 한 빠르게 답변드리겠습니다.
+    ご不明な点があれば、以下のメールアドレスにご連絡ください。<br>
+    <a href="mailto:arksoft.cs@gmail.com">arksoft.cs@gmail.com</a>
   </div>
 </details>
 
 <hr />
-<div class="updated">Last updated: 2025-08-24</div>
+<div class="updated">最終更新日: 2025-09-14</div>
 
 </main>

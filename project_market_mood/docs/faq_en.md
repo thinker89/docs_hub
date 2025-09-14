@@ -5,12 +5,12 @@ title: FAQ
 
 <style>
   :root{
-    --fg:#111827;         /* 본문 글자 */
-    --bg:#F4F6F9;         /* ✅ 앱 전역 배경색 고정 */
-    --muted:#6b7280;      /* 보조 텍스트 */
-    --border:#d1d5db;     /* 경계선 */
-    --card:#ffffff;       /* 카드 배경 */
-    --primary:#142743;    /* 브랜드 포인트 */
+    --fg:#111827;         /* main text */
+    --bg:#F4F6F9;         /* global background */
+    --muted:#6b7280;      /* secondary text */
+    --border:#d1d5db;     /* border */
+    --card:#ffffff;       /* card background */
+    --primary:#142743;    /* brand color */
   }
 
   html, body {
@@ -24,7 +24,7 @@ title: FAQ
     max-width: 720px; margin: 0 auto; padding: 20px 16px 48px;
   }
 
-  /* 언어 버튼 */
+  /* language switch */
   .lang-switch {
     display:flex; gap:8px; margin-bottom:16px;
   }
@@ -74,62 +74,61 @@ title: FAQ
 <div class="lang-switch">
   <a href="https://thinker89.github.io/docs_hub/project_market_mood/docs/faq_en.html">English</a>
   <a href="https://thinker89.github.io/docs_hub/project_market_mood/docs/faq_ko.html">한국어</a>
+  <a href="https://thinker89.github.io/docs_hub/project_market_mood/docs/faq_ja.html">日本語</a>
 </div>
 
-# Frequently Asked Questions (FAQ)
-
-<p class="lead">아래 항목을 탭(클릭)해 내용을 펼쳐보세요.</p>
+# FAQ
 
 <details>
-  <summary>앱은 무료인가요?</summary>
+  <summary>1. I’m not receiving notifications.</summary>
   <div class="details-body">
-    기본 기능은 무료입니다. 일부 고급 기능(예: 고급 알림, 추가 차트)은 구독 기반으로 제공될 수 있습니다.
+    Please check if notifications are turned on in the app settings, if your thresholds and time options are set as you want, and if notification permission is granted.<br><br>
+    Some devices may automatically put the app into “sleep mode” after long periods of inactivity, which can block notifications.<br><br>
+    Check your device manufacturer’s instructions on how to exclude the app from sleep mode. Opening the app at least once a week also helps prevent the system from treating it as inactive.
   </div>
 </details>
 
 <details>
-  <summary>문서(이용약관/개인정보처리방침)는 어떻게 업데이트되나요?</summary>
+  <summary>2. Is the data updated in real time?</summary>
   <div class="details-body">
-    GitHub Pages의 Markdown 문서를 수정/커밋하면 즉시 반영됩니다. 앱은 해당 URL을 로드하므로 새로고침 시 최신 내용이 표시됩니다.
+    No. The app does not provide real-time data.<br><br>
+    We show data provided by CNN Business and FRED, and these sources do not update in real time.<br><br>
+    The last update time is displayed on the CNN F&amp;G and FRED VIX sections in the app.<br><br>
+    Except for Fear &amp; Greed, all indicators are from FRED and share the same update time as FRED VIX.
   </div>
 </details>
 
 <details>
-  <summary>FAQ는 오프라인에서도 볼 수 있나요?</summary>
+  <summary>3. Data is not showing.</summary>
   <div class="details-body">
-    이 페이지는 WebView로 제공되어 네트워크 연결이 필요합니다. 중요한 고지 문서는 앱 내부 Markdown 화면으로도 제공할 수 있습니다.
+    First, check your network connection.<br><br>
+    If data providers (CNN Business, FRED) are delayed or temporarily unavailable, the app may not be able to display data.
   </div>
 </details>
 
 <details>
-  <summary>데이터 출처는 무엇인가요?</summary>
+  <summary>4. Do you collect personal information?</summary>
   <div class="details-body">
-    시장 지표는 공신력 있는 공개 소스(CNN Fear &amp; Greed, Google Finance 등)를 참고합니다. 각 화면 하단에 출처를 표기합니다.
+    No. This app has no login feature and does not collect any personal information from users.
   </div>
 </details>
 
 <details>
-  <summary>알림 시간과 조건은 어떻게 설정하나요?</summary>
+  <summary>5. Are there any extra charges?</summary>
   <div class="details-body">
-    앱의 Settings에서 알림 허용, 시간대, 임계값(예: 점수 ≤ 25)을 조정할 수 있습니다. 기기 설정에서 알림 권한을 허용해야 동작합니다.
+    No. This app is sold as a paid app, and there are no in-app purchases or ads.
   </div>
 </details>
 
 <details>
-  <summary>개인정보는 어떻게 처리되나요?</summary>
+  <summary>6. How can I contact you?</summary>
   <div class="details-body">
-    필수 최소한의 정보만 사용하며, 법령 및 개인정보 처리방침에 따라 관리됩니다. 자세한 내용은 Privacy Policy 문서를 참고하세요.
-  </div>
-</details>
-
-<details>
-  <summary>문제가 발생했어요. 어디로 문의하나요?</summary>
-  <div class="details-body">
-    앱의 About 화면에 표기된 이메일/이슈 트래커로 연락 주세요. 가능한 한 빠르게 답변드리겠습니다.
+    If you have any questions, please send us an email:<br>
+    <a href="mailto:arksoft.cs@gmail.com">arksoft.cs@gmail.com</a>
   </div>
 </details>
 
 <hr />
-<div class="updated">Last updated: 2025-08-24</div>
+<div class="updated">Last updated: 2025-09-14</div>
 
 </main>

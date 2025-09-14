@@ -6,7 +6,7 @@ title: FAQ
 <style>
   :root{
     --fg:#111827;         /* 본문 글자 */
-    --bg:#F4F6F9;         /* ✅ 앱 전역 배경색 고정 */
+    --bg:#F4F6F9;         /* 앱 전역 배경색 고정 */
     --muted:#6b7280;      /* 보조 텍스트 */
     --border:#d1d5db;     /* 경계선 */
     --card:#ffffff;       /* 카드 배경 */
@@ -74,62 +74,61 @@ title: FAQ
 <div class="lang-switch">
   <a href="https://thinker89.github.io/docs_hub/project_market_mood/docs/faq_en.html">English</a>
   <a href="https://thinker89.github.io/docs_hub/project_market_mood/docs/faq_ko.html">한국어</a>
+  <a href="https://thinker89.github.io/docs_hub/project_market_mood/docs/faq_ja.html">日本語</a>
 </div>
 
-# 자주 묻는 질문 (FAQ)
-
-<p class="lead">아래 항목을 탭(클릭)해 내용을 펼쳐보세요.</p>
+# FAQ
 
 <details>
-  <summary>앱은 무료인가요?</summary>
+  <summary>1. 알림이 오지 않아요.</summary>
   <div class="details-body">
-    기본 기능은 무료입니다. 일부 고급 기능(예: 고급 알림, 추가 차트)은 구독 기반으로 제공될 수 있습니다.
+    설정 화면에서 알림이 켜져 있는지, 수치와 시간을 원하는 대로 설정했는지, 권한이 허용돼 있는지 확인해 주세요.<br><br>
+    앱을 오래 사용하지 않으면, 단말기 제조사에 따라 앱을 자동으로 휴면 모드로 전환해 알림을 차단하는 경우가 있어요.<br><br>
+    현재 사용 중인 기기의 휴면 예외 앱 설정 방법을 확인해 보시고, 적어도 일주일에 한 번은 앱을 실행해 주시면 휴면 처리되는 것을 막는 데 도움이 돼요.
   </div>
 </details>
 
 <details>
-  <summary>문서(이용약관/개인정보처리방침)는 어떻게 업데이트되나요?</summary>
+  <summary>2. 데이터는 실시간 갱신되나요?</summary>
   <div class="details-body">
-    GitHub Pages의 Markdown 문서를 수정/커밋하면 즉시 반영됩니다. 앱은 해당 URL을 로드하므로 새로고침 시 최신 내용이 표시됩니다.
+    아니요. 이 앱은 실시간 데이터가 아니에요.<br><br>
+    CNN Business와 FRED에서 제공하는 데이터를 가져오는데, 이들은 데이터를 실시간으로 갱신하지 않아요.<br><br>
+    마지막 갱신 시각은 앱 화면의 CNN F&amp;G, FRED VIX 갱신 시각 표시 부분을 참고해 주세요.<br><br>
+    Fear &amp; Greed를 제외한 모든 지표는 FRED의 자료이므로 FRED VIX와 동일한 갱신 시각을 따릅니다.
   </div>
 </details>
 
 <details>
-  <summary>FAQ는 오프라인에서도 볼 수 있나요?</summary>
+  <summary>3. 데이터가 표시되지 않아요.</summary>
   <div class="details-body">
-    이 페이지는 WebView로 제공되어 네트워크 연결이 필요합니다. 중요한 고지 문서는 앱 내부 Markdown 화면으로도 제공할 수 있습니다.
+    먼저 네트워크 연결 상태를 확인해 주세요.<br><br>
+    데이터 제공자(CNN Business, FRED)의 상황에 따라 제공이 지연되거나 일시적으로 중단될 수 있어, 앱에 데이터가 표시되지 않을 수 있어요.
   </div>
 </details>
 
 <details>
-  <summary>데이터 출처는 무엇인가요?</summary>
+  <summary>4. 개인정보를 수집하나요?</summary>
   <div class="details-body">
-    시장 지표는 공신력 있는 공개 소스(CNN Fear &amp; Greed, Google Finance 등)를 참고합니다. 각 화면 하단에 출처를 표기합니다.
+    아니요. 이 앱은 로그인 기능도 없으며, 유저의 개인정보를 따로 수집하지 않아요.
   </div>
 </details>
 
 <details>
-  <summary>알림 시간과 조건은 어떻게 설정하나요?</summary>
+  <summary>5. 추가 과금이 있나요?</summary>
   <div class="details-body">
-    앱의 Settings에서 알림 허용, 시간대, 임계값(예: 점수 ≤ 25)을 조정할 수 있습니다. 기기 설정에서 알림 권한을 허용해야 동작합니다.
+    아니요. 이 앱은 유료로 판매되며, 앱 내 추가 과금이나 광고는 없어요.
   </div>
 </details>
 
 <details>
-  <summary>개인정보는 어떻게 처리되나요?</summary>
+  <summary>6. 문의 사항이 있어요.</summary>
   <div class="details-body">
-    필수 최소한의 정보만 사용하며, 법령 및 개인정보 처리방침에 따라 관리됩니다. 자세한 내용은 Privacy Policy 문서를 참고하세요.
-  </div>
-</details>
-
-<details>
-  <summary>문제가 발생했어요. 어디로 문의하나요?</summary>
-  <div class="details-body">
-    앱의 About 화면에 표기된 이메일/이슈 트래커로 연락 주세요. 가능한 한 빠르게 답변드리겠습니다.
+    궁금한 점이 있으시면 아래 메일로 연락해 주세요.<br>
+    <a href="mailto:arksoft.cs@gmail.com">arksoft.cs@gmail.com</a>
   </div>
 </details>
 
 <hr />
-<div class="updated">Last updated: 2025-08-24</div>
+<div class="updated">Last updated: 2025-09-14</div>
 
 </main>
