@@ -76,7 +76,7 @@ title: About This App
   <a href="https://thinker89.github.io/docs_hub/project_market_mood/docs/what_is_this_app_ja.html">日本語</a>
 </div>
 
-# Another window to the market. Catch the mood at a glance.
+# Another window to the market. Market Sentiment at a glance.
 
 <details>
   <summary>What is this app?</summary>
@@ -92,7 +92,7 @@ title: About This App
     Focus on three key signals: Fear &amp; Greed, VIX, and the 10Y–2Y yield spread.<br><br>
     Turn on alerts to keep track of the shifts that matter to you.<br><br>
     Arrange the dashboard the way you like.<br><br>
-    Note: This app does not provide investment advice. You are fully responsible for how you interpret the data and any decisions you make.
+    Note: This app does not provide investment advice. You are responsible for verifying the accuracy of the information displayed and for all investment decisions you make.
   </div>
 </details>
 
@@ -100,7 +100,7 @@ title: About This App
   <summary>What is Fear &amp; Greed?</summary>
   <div class="details-body">
     A CNN Business index that scores market sentiment from 0 to 100.<br><br>
-    Near 0 means fear, near 100 means greed. Some investors use it as a contrarian signal—buying when others panic, selling when euphoria takes over.
+    Near 0 means fear, near 100 means greed. It’s widely referenced as a simple way to gauge overall market mood.
   </div>
 </details>
 
@@ -117,7 +117,7 @@ title: About This App
   <div class="details-body">
     Normally, long-term bond yields are higher than short-term ones.<br><br>
     When the U.S. 10-year yield falls below the 2-year yield, the bond market is flashing a warning: recession risk ahead.<br><br>
-    Historically, such inversions often precede shocks in the stock market.
+    Historically, such inversions were often followed by shocks in the stock market.
   </div>
 </details>
 
