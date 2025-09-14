@@ -81,7 +81,7 @@ title: About This App
 <details>
   <summary>이 앱은 무엇인가요?</summary>
   <div class="details-body">
-    현재 미국 주식 시장 분위기를 쉽고 빠르게 파악하기 위한 보조 도구예요.<br><br>
+    미국 주식 시장의 분위기를 쉽고 빠르게 파악하기 위한 보조 도구예요.<br><br>
     CNN Fear &amp; Greed, VIX 등 시장 심리를 나타내는 지표를 한눈에 쉽게 확인할 수 있어요.
   </div>
 </details>
