@@ -1,6 +1,6 @@
 ---
 layout: null
-title: About This App
+title: このアプリについて
 ---
 
 <style>
@@ -76,52 +76,52 @@ title: About This App
   <a href="https://thinker89.github.io/docs_hub/project_market_mood/docs/what_is_this_app_ja.html">日本語</a>
 </div>
 
-# Another window to the market. Catch the mood at a glance.
+# 市場をのぞくもうひとつの窓。気分をサッとチェック。
 
 <details>
-  <summary>What is this app?</summary>
+  <summary>このアプリは何ですか？</summary>
   <div class="details-body">
-    It’s a simple tool to quickly sense the mood of the U.S. stock market.<br><br>
-    You can check sentiment indicators like CNN’s Fear &amp; Greed Index and the VIX in one place, without the clutter.
+    米国株式市場のムードを手軽に感じ取るためのシンプルなツールです。<br><br>
+    CNNのFear &amp; GreedやVIXなど、投資家心理を示す指標を一目で確認できます。
   </div>
 </details>
 
 <details>
-  <summary>How do I use it?</summary>
+  <summary>どう使えばいいですか？</summary>
   <div class="details-body">
-    Focus on three key signals: Fear &amp; Greed, VIX, and the 10Y–2Y yield spread.<br><br>
-    Turn on alerts to keep track of the shifts that matter to you.<br><br>
-    Arrange the dashboard the way you like.<br><br>
-    Note: This app does not provide investment advice. You are fully responsible for how you interpret the data and any decisions you make.
+    注目すべきは3つの指標：Fear &amp; Greed、VIX、長短金利差。<br><br>
+    アラートを設定すれば、気になる動きを効率よく追跡できます。<br><br>
+    画面の配置も自由にカスタマイズできます。<br><br>
+    ※本アプリは投資助言を行うものではありません。表示された情報の正確性や、それに基づく判断・行動は利用者自身の責任となります。
   </div>
 </details>
 
 <details>
-  <summary>What is Fear &amp; Greed?</summary>
+  <summary>Fear &amp; Greedとは？</summary>
   <div class="details-body">
-    A CNN Business index that scores market sentiment from 0 to 100.<br><br>
-    Near 0 means fear, near 100 means greed. Some investors use it as a contrarian signal—buying when others panic, selling when euphoria takes over.
+    CNN Businessが算出する指標で、0に近いほど「恐怖」、100に近いほど「強欲」を示します。<br><br>
+    恐怖の時に買い、強欲の時に売る――逆張り戦略をとる投資家にとって参考になると言われています。
   </div>
 </details>
 
 <details>
-  <summary>What is VIX?</summary>
+  <summary>VIXとは？</summary>
   <div class="details-body">
-    The Market Volatility Index, often called the “fear gauge.”<br><br>
-    It usually sits around 10–20, but spikes when markets turn chaotic.
+    Volatility Index、いわゆる「恐怖指数」です。<br><br>
+    通常は10～20程度ですが、市場が荒れると急騰する傾向があります。
   </div>
 </details>
 
 <details>
-  <summary>What is yield curve inversion?</summary>
+  <summary>長短金利の逆転とは？</summary>
   <div class="details-body">
-    Normally, long-term bond yields are higher than short-term ones.<br><br>
-    When the U.S. 10-year yield falls below the 2-year yield, the bond market is flashing a warning: recession risk ahead.<br><br>
-    Historically, such inversions often precede shocks in the stock market.
+    通常、長期国債の利回りは短期国債より高くなります。<br><br>
+    しかし米国10年債の利回りが2年債を下回る「逆イールド」が起きると、景気後退への警戒を意味します。<br><br>
+    歴史的に、逆イールドの後には株式市場にもショックが訪れるとされています。
   </div>
 </details>
 
 <hr />
-<div class="updated">Last updated: 2025-09-14</div>
+<div class="updated">最終更新日: 2025-09-14</div>
 
 </main>
