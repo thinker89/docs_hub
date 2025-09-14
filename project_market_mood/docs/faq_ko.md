@@ -80,7 +80,7 @@ title: FAQ
 # FAQ
 
 <details>
-  <summary>1. 알림이 오지 않아요.</summary>
+  <summary>알림이 오지 않아요.</summary>
   <div class="details-body">
     설정 화면에서 알림이 켜져 있는지, 수치와 시간을 원하는 대로 설정했는지, 권한이 허용돼 있는지 확인해 주세요.<br><br>
     앱을 오래 사용하지 않으면, 단말기 제조사에 따라 앱을 자동으로 휴면 모드로 전환해 알림을 차단하는 경우가 있어요.<br><br>
@@ -89,17 +89,17 @@ title: FAQ
 </details>
 
 <details>
-  <summary>2. 데이터는 실시간 갱신되나요?</summary>
+  <summary>데이터는 실시간 갱신되나요?</summary>
   <div class="details-body">
     아니요. 이 앱은 실시간 데이터가 아니에요.<br><br>
     CNN Business와 FRED에서 제공하는 데이터를 가져오는데, 이들은 데이터를 실시간으로 갱신하지 않아요.<br><br>
     마지막 갱신 시각은 앱 화면의 CNN F&amp;G, FRED VIX 갱신 시각 표시 부분을 참고해 주세요.<br><br>
-    Fear &amp; Greed를 제외한 모든 지표는 FRED의 자료이므로 FRED VIX와 동일한 갱신 시각을 따릅니다.
+    Fear &amp; Greed를 제외한 모든 지표는 FRED의 자료이므로 FRED VIX와 동일한 갱신 시각을 따라요.
   </div>
 </details>
 
 <details>
-  <summary>3. 데이터가 표시되지 않아요.</summary>
+  <summary>데이터가 표시되지 않아요.</summary>
   <div class="details-body">
     먼저 네트워크 연결 상태를 확인해 주세요.<br><br>
     데이터 제공자(CNN Business, FRED)의 상황에 따라 제공이 지연되거나 일시적으로 중단될 수 있어, 앱에 데이터가 표시되지 않을 수 있어요.
@@ -107,24 +107,24 @@ title: FAQ
 </details>
 
 <details>
-  <summary>4. 개인정보를 수집하나요?</summary>
+  <summary>개인정보를 수집하나요?</summary>
   <div class="details-body">
     아니요. 이 앱은 로그인 기능도 없으며, 유저의 개인정보를 따로 수집하지 않아요.
   </div>
 </details>
 
 <details>
-  <summary>5. 추가 과금이 있나요?</summary>
+  <summary>추가 과금이 있나요?</summary>
   <div class="details-body">
     아니요. 이 앱은 유료로 판매되며, 앱 내 추가 과금이나 광고는 없어요.
   </div>
 </details>
 
 <details>
-  <summary>6. 문의 사항이 있어요.</summary>
+  <summary>문의 사항이 있어요.</summary>
   <div class="details-body">
     궁금한 점이 있으시면 아래 메일로 연락해 주세요.<br>
-    <a href="mailto:arksoft.cs@gmail.com">arksoft.cs@gmail.com</a>
+    "arksoft.cs@gmail.com"
   </div>
 </details>
 

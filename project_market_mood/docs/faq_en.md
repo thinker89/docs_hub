@@ -80,7 +80,7 @@ title: FAQ
 # FAQ
 
 <details>
-  <summary>1. I’m not receiving notifications.</summary>
+  <summary>I’m not receiving notifications.</summary>
   <div class="details-body">
     Please check if notifications are turned on in the app settings, if your thresholds and time options are set as you want, and if notification permission is granted.<br><br>
     Some devices may automatically put the app into “sleep mode” after long periods of inactivity, which can block notifications.<br><br>
@@ -89,7 +89,7 @@ title: FAQ
 </details>
 
 <details>
-  <summary>2. Is the data updated in real time?</summary>
+  <summary>Is the data updated in real time?</summary>
   <div class="details-body">
     No. The app does not provide real-time data.<br><br>
     We show data provided by CNN Business and FRED, and these sources do not update in real time.<br><br>
@@ -99,7 +99,7 @@ title: FAQ
 </details>
 
 <details>
-  <summary>3. Data is not showing.</summary>
+  <summary>Data is not showing.</summary>
   <div class="details-body">
     First, check your network connection.<br><br>
     If data providers (CNN Business, FRED) are delayed or temporarily unavailable, the app may not be able to display data.
@@ -107,24 +107,24 @@ title: FAQ
 </details>
 
 <details>
-  <summary>4. Do you collect personal information?</summary>
+  <summary>Do you collect personal information?</summary>
   <div class="details-body">
     No. This app has no login feature and does not collect any personal information from users.
   </div>
 </details>
 
 <details>
-  <summary>5. Are there any extra charges?</summary>
+  <summary>Are there any extra charges?</summary>
   <div class="details-body">
     No. This app is sold as a paid app, and there are no in-app purchases or ads.
   </div>
 </details>
 
 <details>
-  <summary>6. How can I contact you?</summary>
+  <summary>How can I contact you?</summary>
   <div class="details-body">
     If you have any questions, please send us an email:<br>
-    <a href="mailto:arksoft.cs@gmail.com">arksoft.cs@gmail.com</a>
+    "arksoft.cs@gmail.com"
   </div>
 </details>
 

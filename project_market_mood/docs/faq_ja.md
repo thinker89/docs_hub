@@ -80,7 +80,7 @@ title: FAQ
 # FAQ
 
 <details>
-  <summary>1. 通知が届きません。</summary>
+  <summary>通知が届きません。</summary>
   <div class="details-body">
     設定画面で通知がオンになっているか、数値や時間が希望通りに設定されているか、通知権限が許可されているかを確認してください。<br><br>
     アプリを長期間起動しないと、端末メーカーによって自動的にスリープモードに移行し、通知がブロックされる場合があります。<br><br>
@@ -89,7 +89,7 @@ title: FAQ
 </details>
 
 <details>
-  <summary>2. データはリアルタイム更新ですか？</summary>
+  <summary>データはリアルタイム更新ですか？</summary>
   <div class="details-body">
     いいえ、このアプリのデータはリアルタイムではありません。<br><br>
     CNN BusinessとFREDが提供するデータを利用していますが、これらはリアルタイム更新ではありません。<br><br>
@@ -99,7 +99,7 @@ title: FAQ
 </details>
 
 <details>
-  <summary>3. データが表示されません。</summary>
+  <summary>データが表示されません。</summary>
   <div class="details-body">
     まずネットワーク接続をご確認ください。<br><br>
     データ提供元（CNN Business、FRED）の都合により、提供が遅延または一時停止されると、アプリにデータが表示されない場合があります。
@@ -107,24 +107,24 @@ title: FAQ
 </details>
 
 <details>
-  <summary>4. 個人情報を収集していますか？</summary>
+  <summary>個人情報を収集していますか？</summary>
   <div class="details-body">
     いいえ。このアプリにはログイン機能がなく、ユーザーの個人情報を収集することもありません。
   </div>
 </details>
 
 <details>
-  <summary>5. 追加料金はありますか？</summary>
+  <summary>追加料金はありますか？</summary>
   <div class="details-body">
     いいえ。このアプリは有料販売であり、アプリ内課金や広告はありません。
   </div>
 </details>
 
 <details>
-  <summary>6. 問い合わせはどこにすればいいですか？</summary>
+  <summary>問い合わせはどこにすればいいですか？</summary>
   <div class="details-body">
-    ご不明な点があれば、以下のメールアドレスにご連絡ください。<br>
-    <a href="mailto:arksoft.cs@gmail.com">arksoft.cs@gmail.com</a>
+    問い合わせは下記のメールアドレスにご連絡ください。<br>
+    "arksoft.cs@gmail.com"
   </div>
 </details>
 
