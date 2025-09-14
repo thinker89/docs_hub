@@ -64,7 +64,7 @@ title: Terms of Service
 # Terms of Service
 
 ## 1. Purpose
-These Terms define the rights, obligations, and responsibilities of users when using this app.
+These Terms define the rights, obligations, and responsibilities of users when using this app. By installing, launching, or using this app, you are deemed to have agreed to these Terms / this Policy.
 
 ## 2. Service Description
 - The app visualizes financial market indicators (Fear &amp; Greed Index, VIX, yield spreads, etc.).  

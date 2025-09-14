@@ -64,7 +64,7 @@ title: Privacy Policy
 # Privacy Policy
 
 ## 1. General
-We value your privacy and handle your information with care. This app processes only minimal technical data and complies with applicable laws.
+We value your privacy and handle your information with care. This app processes only minimal technical data and complies with applicable laws. By installing, launching, or using this app, you are deemed to have agreed to these Terms / this Policy.
 
 ## 2. Data Collection
 - This app does not include login, sign-up, or social account integration.  
