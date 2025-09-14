@@ -9,11 +9,12 @@ These Terms define the rights, obligations, and responsibilities of users when u
 
 ## 3. Paid App and Refunds
 - This app is sold as a one-time paid app. No in-app purchases or subscriptions are provided.  
-- Refunds follow the policies of Google Play / Apple App Store and applicable local laws. The developer does not provide separate guarantees for refunds.  
+- The refund policy follows the rules of Google Play / Apple App Store and applicable laws.
 
 ## 4. User Obligations
 - The app is provided for personal use only.  
 - Users must not use the app for illegal purposes or disrupt its normal operation.  
+- Unauthorized reproduction, modification, distribution, or reverse engineering of the app’s source code, images, or resources is prohibited.  
 
 ## 5. Disclaimer
 - Data is sourced from public providers such as CNN Business and FRED. Delays, errors, or interruptions may occur.  
@@ -30,7 +31,7 @@ These Terms define the rights, obligations, and responsibilities of users when u
 
 ## 8. Governing Law and Jurisdiction
 - These Terms are governed by the laws of the Republic of Korea.  
-- Any disputes related to this service shall be subject to the exclusive jurisdiction of the Seoul Central District Court in Korea.  
+- The court of jurisdiction for disputes related to this service shall be the Seoul Central District Court.
 
 ## 9. Contact
 - For inquiries regarding these Terms, please contact:  

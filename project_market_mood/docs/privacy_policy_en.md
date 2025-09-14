@@ -19,12 +19,13 @@ We value your privacy and handle your information with care. This app processes 
 
 ## 6. Security
 - This app does not directly collect, store, or process any personal information.  
-- However, certain technical data may be automatically collected through basic analytics or crash reporting features provided by the App Store, Google Play Store, or the operating system (OS).  
+- However, certain technical data may be automatically collected through basic analytics or crash reporting features provided by the Apple App Store, Google Play, or the operating system (OS).  
 Such technical data does not include personally identifiable information and is managed by the OS and platform providers.  
 We may review automatically collected technical data for the purpose of improving service quality and resolving errors.
 
 ## 7. Changes
-- This Policy may be updated as needed. Updates will be posted in the app or on the website and become effective immediately.  
+- This Policy may be updated as needed. Updates will be posted in the app or on the website and become effective immediately.
+- If the user continues to use the app after the changes, it will be deemed that they have agreed to the revised Privacy Policy.
 
 ## 8. Contact
 - For questions about this Privacy Policy, please contact:  
