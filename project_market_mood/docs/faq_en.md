@@ -83,6 +83,7 @@ title: FAQ
   <summary>I’m not receiving notifications.</summary>
   <div class="details-body">
     Please check if notifications are turned on in the app settings, if your thresholds and time options are set as you want, and if notification permission is granted.<br><br>
+    If it has been less than one hour since you installed the app, notifications may not arrive yet.<br><br>
     Some devices may automatically put the app into “sleep mode” after long periods of inactivity, which can block notifications.<br><br>
     Check your device manufacturer’s instructions on how to exclude the app from sleep mode. Opening the app at least once a week also helps prevent the system from treating it as inactive.
   </div>
