@@ -1,35 +1,32 @@
 # Privacy Policy
 
-## 1. General
-We value your privacy and handle your information with care. This app processes only minimal technical data and complies with applicable laws. By installing, launching, or using this app, you are deemed to have agreed to these Terms / this Policy.
+## 1. General Provisions
+We value the protection of users’ personal information. This app does not collect personal information and is operated in compliance with applicable personal information protection laws. By installing, running, or using this app, the user is deemed to have agreed to this Policy.
 
-## 2. Data Collection
-- This app does not include login, sign-up, or social account integration.  
-- We do not collect any personal information such as names, email addresses, locations, or contacts.  
+## 2. Collection of Personal Information
+- This app does not provide login, sign-up, or social account linkage functions.  
+- It does not collect any personal information such as the user’s name, email, location, or contact information.  
 
 ## 3. Use of Data
-- The app displays market indicators using public sources such as CNN Business and FRED.  
-- Network communication is used only to retrieve this data. No personal user information is collected or stored.  
+- This app displays market indicators using publicly available data sources such as CNN Business and FRED.  
+- Only network communication necessary to provide app functionality occurs, and no individual user information is collected or stored.  
 
-## 4. Sharing of Data
-- This app does not collect any personal information from users. Accordingly, it is not sold, shared, or provided to any third parties.
+## 4. Provision to Third Parties
+- This app does not collect users’ personal information. Accordingly, it is not sold, shared, or provided to any third parties.  
 
 ## 5. Retention and Deletion
-- Since no personal data is collected, there are no retention or deletion procedures.  
+- As no personal information is collected, there are no separate procedures for retention or deletion.  
 
 ## 6. Security
-- This app does not directly collect, store, or process any personal information.  
-- However, certain technical data may be automatically collected through basic analytics or crash reporting features provided by the Apple App Store, Google Play, or the operating system (OS).  
-Such technical data does not include personally identifiable information and is managed by the OS and platform providers.  
-We may review automatically collected technical data for the purpose of improving service quality and resolving errors.
+- This app does not directly collect, store, or process personal information.  
+- However, certain technical data may be automatically collected through basic analytics or crash reporting features provided by Apple App Store, Google Play, or the operating system (OS). Such technical data does not include personally identifiable information and is managed by the OS and platform providers.  
+- The Company may review such technical data solely for the purposes of improving service quality and resolving errors.  
 
-## 7. Changes
-- This Policy may be updated as needed. Updates will be posted in the app or on the website and become effective immediately.
-- If the user continues to use the app after the changes, it will be deemed that they have agreed to the revised Privacy Policy.
+## 7. Amendments
+- This Policy may be amended as necessary. Any changes will be announced through the app or website and shall take effect immediately upon posting.  
+- If the user continues to use the app after changes, the user shall be deemed to have agreed to the revised Privacy Policy.  
 
 ## 8. Contact
-- For questions about this Privacy Policy, please contact:  
-**arksoft.cs@gmail.com**
+- For inquiries regarding this Privacy Policy: arksoft.cs@gmail.com  
 
-
-Last updated: September 14, 2025
+Last updated: 2025-09-15
