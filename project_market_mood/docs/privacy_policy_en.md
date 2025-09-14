@@ -12,13 +12,16 @@ We value your privacy and handle your information with care. This app processes 
 - Network communication is used only to retrieve this data. No personal user information is collected or stored.  
 
 ## 4. Sharing of Data
-- We do not sell, share, or provide personal data to third parties.  
+- This app does not collect any personal information from users. Accordingly, it is not sold, shared, or provided to any third parties.
 
 ## 5. Retention and Deletion
 - Since no personal data is collected, there are no retention or deletion procedures.  
 
 ## 6. Security
-- Although we do not collect personal information, any minimal technical data (e.g., error logs) that may arise during service operation is handled securely.  
+- This app does not directly collect, store, or process any personal information.  
+- However, certain technical data may be automatically collected through basic analytics or crash reporting features provided by the App Store, Google Play Store, or the operating system (OS).  
+Such technical data does not include personally identifiable information and is managed by the OS and platform providers.  
+We may review automatically collected technical data for the purpose of improving service quality and resolving errors.
 
 ## 7. Changes
 - This Policy may be updated as needed. Updates will be posted in the app or on the website and become effective immediately.  
