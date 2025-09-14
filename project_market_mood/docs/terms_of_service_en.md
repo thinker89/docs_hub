@@ -36,4 +36,5 @@ These Terms define the rights, obligations, and responsibilities of users when u
 - For inquiries regarding these Terms, please contact:  
 **arksoft.cs@gmail.com**
 
-##### Last updated: September 14, 2025
+
+Last updated: September 14, 2025

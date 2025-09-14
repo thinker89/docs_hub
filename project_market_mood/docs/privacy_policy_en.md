@@ -27,4 +27,5 @@ We value your privacy and handle your information with care. This app processes 
 - For questions about this Privacy Policy, please contact:  
 **arksoft.cs@gmail.com**
 
-##### Last updated: September 14, 2025
+
+Last updated: September 14, 2025
