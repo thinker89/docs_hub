@@ -1,13 +1,11 @@
 # docs_hub
 manage all docs for projects.
 
-- Home
-
-https://thinker89.github.io/docs_hub/
+- blog
+https://blog.freenaru.com
 
 
 - kanji master
-
 
 
 - market mood
