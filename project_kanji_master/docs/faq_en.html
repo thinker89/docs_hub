@@ -1,0 +1,149 @@
+---
+layout: null
+title: FAQ
+---
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no">
+
+<style>
+  :root{
+    --fg:#111827;         /* 본문 글자 */
+    --bg:#F4F6F9;         /* 앱 전역 배경색 고정 */
+    --muted:#6b7280;      /* 보조 텍스트 */
+    --border:#d1d5db;     /* 경계선 */
+    --card:#ffffff;       /* 카드 배경 */
+    --primary:#142743;    /* 브랜드 포인트 */
+  }
+
+  html, body { -webkit-text-size-adjust: 100%; }
+  main.doc {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: calc(20px + env(safe-area-inset-top)) 
+            max(16px, env(safe-area-inset-right))
+            calc(48px + env(safe-area-inset-bottom))
+            max(16px, env(safe-area-inset-left));
+  }
+
+  /* language switch */
+  .lang-switch {
+    display:flex; gap:8px; margin-bottom:16px;
+  }
+  .lang-switch a {
+    padding:5px 12px; border-radius:6px;
+    border:1px solid var(--primary);
+    color:var(--primary);
+    font-size:14px; font-weight:600;
+    text-decoration:none;
+    transition: all .2s;
+    background:var(--bg);
+  }
+  .lang-switch a:hover {
+    background:var(--primary); color:white;
+  }
+
+  h1 {
+    font-size: 22px; font-weight: 800; letter-spacing:-0.2px;
+    margin: 6px 0 12px;
+  }
+  p.lead { margin: 0 0 12px; color: var(--muted); }
+
+  details {
+    border:1px solid var(--border);
+    border-radius:12px; background:var(--card);
+    overflow:hidden; margin:12px 0;
+    box-shadow:0 1px 2px rgba(0,0,0,0.03);
+  }
+  summary {
+    list-style:none; cursor:pointer; font-weight:600;
+    padding:14px 16px; user-select:none;
+  }
+  summary::-webkit-details-marker { display:none; }
+  summary::before {
+    content:"▸"; display:inline-block; margin-right:8px;
+    transition: transform .18s ease;
+  }
+  details[open] summary::before { transform: rotate(90deg); }
+  .details-body { padding: 0 16px 14px; }
+
+  hr { border:0; border-top:1px solid var(--border); margin:20px 0; }
+  .updated { color:var(--muted); font-style:italic; font-size:.95rem; margin-top:16px; }
+</style>
+
+<main class="doc">
+
+<div class="lang-switch">
+  <a href="https://thinker89.github.io/docs_hub/project_market_mood/docs/faq_en.html">English</a>
+  <a href="https://thinker89.github.io/docs_hub/project_market_mood/docs/faq_ko.html">한국어</a>
+  <a href="https://thinker89.github.io/docs_hub/project_market_mood/docs/faq_ja.html">日本語</a>
+</div>
+
+# FAQ
+
+<details>
+  <summary>I’m not receiving notifications.</summary>
+  <div class="details-body">
+    Please check if notifications are turned on in the app settings, if your thresholds and time options are set as you want, and if notification permission is granted.<br><br>
+    If notifications don’t arrive after restarting your phone, please set the notification time again.<br><br>
+    If it has been less than one hour since you installed the app, notifications may not arrive yet.<br><br>
+    Some devices may automatically put the app into “sleep mode” after long periods of inactivity, which can block notifications.<br><br>
+    Check your device manufacturer’s instructions on how to exclude the app from sleep mode. Opening the app at least once a week also helps prevent the system from treating it as inactive.
+  </div>
+</details>
+
+<details>
+  <summary>Where does the data come from?</summary>
+  <div class="details-body">
+    This app visualizes market indicators that are publicly provided by CNN Business and FRED. 
+    It is not an official service of CNN Business or FRED, but an independent third-party app that utilizes publicly available data.
+  </div>
+</details>
+
+<details>
+  <summary>Is the data updated in real time?</summary>
+  <div class="details-body">
+    No. This app displays the latest data provided by CNN Business and FRED, but each source updates its data every few minutes or on a daily basis.<br><br>
+    You can check the update time in the [Data Timestamp] widget on the main screen, and tap it for more detailed information.<br><br>
+    Before making any important decisions, please make sure the information in this app is up to date.
+  </div>
+</details>
+
+<details>
+  <summary>The data is not displayed.</summary>
+  <div class="details-body">
+    First, check that your network connection is stable, then completely close and restart the app.<br><br>
+    Even with a stable connection, data may not appear due to the data providers’ conditions. In this case, please wait a while and try launching the app again later.
+  </div>
+</details>
+
+<details>
+  <summary>Do you collect personal information?</summary>
+  <div class="details-body">
+    No. This app has no login feature and does not collect any personal information from users.
+  </div>
+</details>
+
+<details>
+  <summary>Are there any extra charges?</summary>
+  <div class="details-body">
+    No. This app is sold as a paid app, and there are no in-app purchases or ads.
+  </div>
+</details>
+
+<details>
+  <summary>When does the market sentiment image change?</summary>
+  <div class="details-body">
+    The market sentiment image changes according to the 5 levels of the Fear &amp; Greed Index.
+  </div>
+</details>
+
+<details>
+  <summary>How can I contact you?</summary>
+  <div class="details-body">
+    If you have any questions, please send us an email:<br>
+    contact@freenaru.com
+  </div>
+</details>
+
+</main>
