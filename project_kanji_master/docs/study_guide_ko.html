@@ -4,23 +4,33 @@ title: About This App
 ---
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta charset="utf-8">
+<meta name="color-scheme" content="light dark">
 <meta name="format-detection" content="telephone=no">
 
 <style>
   :root{
-    --fg:#111827;         /* 본문 글자 */
-    --bg:#F4F6F9;         /* 앱 전역 배경색 고정 */
-    --muted:#6b7280;      /* 보조 텍스트 */
-    --border:#d1d5db;     /* 경계선 */
-    --card:#ffffff;       /* 카드 배경 */
-    --primary:#142743;    /* 브랜드 포인트 */
+    color-scheme: light dark;
+
+    --fg:#111827;
+    --bg:#F4F6F9;
+    --muted:#6b7280;
+    --border:#d1d5db;
+    --card:#ffffff;
+    --primary:#142743;
+    --shadow: 0 1px 2px rgba(0,0,0,0.03);
+  }
+
+  body{
+    margin:0;
+    background: var(--bg);
+    color: var(--fg);
   }
 
   html, body { -webkit-text-size-adjust: 100%; }
   main.doc {
     max-width: 720px;
     margin: 0 auto;
-    padding: calc(20px + env(safe-area-inset-top)) 
+    padding: env(safe-area-inset-top)
             max(16px, env(safe-area-inset-right))
             calc(48px + env(safe-area-inset-bottom))
             max(16px, env(safe-area-inset-left));
@@ -36,7 +46,7 @@ title: About This App
     font-size:14px; font-weight:600;
     text-decoration:none;
     transition: all .2s;
-    background:var(--bg);
+    background: transparent;
   }
   .lang-switch a:hover {
     background:var(--primary); color:white;
@@ -52,7 +62,7 @@ title: About This App
     border:1px solid var(--border);
     border-radius:12px; background:var(--card);
     overflow:hidden; margin:12px 0;
-    box-shadow:0 1px 2px rgba(0,0,0,0.03);
+    box-shadow:var(--shadow);
   }
   summary {
     list-style:none; cursor:pointer; font-weight:600;
@@ -68,6 +78,18 @@ title: About This App
 
   hr { border:0; border-top:1px solid var(--border); margin:20px 0; }
   .updated { color:var(--muted); font-style:italic; font-size:.95rem; margin-top:16px; }
+
+  @media (prefers-color-scheme: dark){
+  :root{
+    --fg:#E5E7EB;
+    --bg:#0B1220;
+    --muted:#9CA3AF;
+    --border:#243041;
+    --card:#111827;
+    --primary:#8AB4FF;
+    --shadow: 0 1px 2px rgba(0,0,0,0.35);
+  }
+}
 </style>
 
 <main class="doc">
