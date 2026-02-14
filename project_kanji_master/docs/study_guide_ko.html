@@ -8,25 +8,69 @@ title: About This App
 <meta name="format-detection" content="telephone=no">
 
 <style>
+  /* ===============================
+     기본: LIGHT 테마
+     =============================== */
   :root{
     color-scheme: light dark;
 
     --fg:#111827;
     --bg:#F4F6F9;
     --muted:#6b7280;
-    --border:#d1d5db;
-    --card:#ffffff;
+
+    --border: rgba(17,24,39,0.12);
+    --card:#FFFFFF;
+
     --primary:#142743;
-    --shadow: 0 1px 2px rgba(0,0,0,0.03);
+    --shadow: 0 6px 18px rgba(17,24,39,0.08);
+  }
+
+  /* ===============================
+     Flutter가 강제 DARK 주입할 때
+     =============================== */
+  :root[data-theme="dark"]{
+    --fg:#E5E7EB;
+    --bg:#0B1220;
+    --muted:#9CA3AF;
+
+    --border: rgba(229,231,235,0.16);
+    --card:#121C2E; /* bg보다 살짝 밝게 */
+
+    --primary:#8AB4FF;
+    --shadow: 0 10px 28px rgba(0,0,0,0.40);
+  }
+
+  /* ===============================
+     data-theme 없을 때만 시스템 따라감
+     =============================== */
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme]){
+      --fg:#E5E7EB;
+      --bg:#0B1220;
+      --muted:#9CA3AF;
+
+      --border: rgba(229,231,235,0.16);
+      --card:#121C2E;
+
+      --primary:#8AB4FF;
+      --shadow: 0 10px 28px rgba(0,0,0,0.40);
+    }
+  }
+
+  /* =============================== */
+
+  html, body {
+    -webkit-text-size-adjust: 100%;
   }
 
   body{
     margin:0;
     background: var(--bg);
     color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                 Roboto, "Noto Sans KR", sans-serif;
   }
 
-  html, body { -webkit-text-size-adjust: 100%; }
   main.doc {
     max-width: 720px;
     margin: 0 auto;
@@ -36,65 +80,83 @@ title: About This App
             max(16px, env(safe-area-inset-left));
   }
 
-  .lang-switch {
-    display:flex; gap:8px; margin-bottom:16px;
-  }
-  .lang-switch a {
-    padding:5px 12px; border-radius:6px;
-    border:1px solid var(--primary);
-    color:var(--primary);
-    font-size:14px; font-weight:600;
-    text-decoration:none;
-    transition: all .2s;
-    background: transparent;
-  }
-  .lang-switch a:hover {
-    background:var(--primary); color:white;
-  }
+  /* =============================== */
 
   h1 {
-    font-size: 22px; font-weight: 800; letter-spacing:-0.2px;
-    margin: 6px 0 12px;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing:-0.2px;
+    margin: 0 0 16px;
   }
-  p.lead { margin: 0 0 12px; color: var(--muted); }
+
+  p.lead {
+    margin: 0 0 12px;
+    color: var(--muted);
+  }
+
+  /* ===============================
+     카드 스타일
+     =============================== */
 
   details {
     border:1px solid var(--border);
-    border-radius:12px; background:var(--card);
-    overflow:hidden; margin:12px 0;
+    border-radius:14px;
+    background:var(--card);
+    overflow:hidden;
+    margin:14px 0;
     box-shadow:var(--shadow);
+    transition: all .2s ease;
   }
+
   summary {
-    list-style:none; cursor:pointer; font-weight:600;
-    padding:14px 16px; user-select:none;
+    list-style:none;
+    cursor:pointer;
+    font-weight:600;
+    padding:16px;
+    user-select:none;
+    color: var(--fg);
   }
-  summary::-webkit-details-marker { display:none; }
+
+  summary::-webkit-details-marker {
+    display:none;
+  }
+
   summary::before {
-    content:"▸"; display:inline-block; margin-right:8px;
+    content:"▸";
+    display:inline-block;
+    margin-right:8px;
     transition: transform .18s ease;
+    color: var(--muted);
   }
-  details[open] summary::before { transform: rotate(90deg); }
-  .details-body { padding: 0 16px 14px; }
 
-  hr { border:0; border-top:1px solid var(--border); margin:20px 0; }
-  .updated { color:var(--muted); font-style:italic; font-size:.95rem; margin-top:16px; }
-
-  @media (prefers-color-scheme: dark){
-  :root{
-    --fg:#E5E7EB;
-    --bg:#0B1220;
-    --muted:#9CA3AF;
-    --border:#243041;
-    --card:#111827;
-    --primary:#8AB4FF;
-    --shadow: 0 1px 2px rgba(0,0,0,0.35);
+  details[open] summary::before {
+    transform: rotate(90deg);
   }
-}
+
+  .details-body {
+    padding: 0 16px 16px;
+    line-height:1.7;
+    color: var(--muted);
+  }
+
+  hr {
+    border:0;
+    border-top:1px solid var(--border);
+    margin:20px 0;
+  }
+
+  .updated {
+    color:var(--muted);
+    font-style:italic;
+    font-size:.95rem;
+    margin-top:16px;
+  }
+
 </style>
 
 <main class="doc">
 
-# 한자를 마스터하는 가장 빠른 길. 일본어 한자 마스터.
+<h1>한자를 마스터하는 가장 빠른 길. 일본어 한자 마스터.</h1>
 
 <details>
   <summary>어떻게 학습하면 좋을까요?</summary>
@@ -146,18 +208,17 @@ title: About This App
 <details>
   <summary>한자의 난이도</summary>
   <div class="details-body">
-    이 앱의 한자 난이도는 일본 현지의 한자검정시험 분류에 따라요.<br><br>
     1~6단계 : 초등학교 한자.<br>
     7~8단계 : 중학교 한자.<br>
     9~10단계 : 고등학교 한자.<br>
     11단계 : 일상에서 많이 쓰는 비공식 한자.<br><br>
-    JLPT 시험을 목표로 한다면 기준은 다음과 같습니다.<br><br>
-    N5 : 1단계.<br>
-    N4 : 2~3단계.<br>
-    N3 : 4~5단계.<br>
-    N2 : 6~7단계.<br>
-    N1 : 8~9단계.<br>
-    N1 고득점 : 10단계.
+    JLPT 기준:<br>
+    N5 : 1단계<br>
+    N4 : 2~3단계<br>
+    N3 : 4~5단계<br>
+    N2 : 6~7단계<br>
+    N1 : 8~9단계<br>
+    N1 고득점 : 10단계
   </div>
 </details>
 
@@ -167,7 +228,7 @@ title: About This App
     모든 한자 카드에는 활용 단어가 적혀있어요.<br><br>
     예문 보기를 터치하면 예문도 확인할 수 있어요.<br><br>
     예문을 터치하면 자동음성 발음을 들어볼 수 있어요.<br><br>
-    한자가 실제로 어떻게 쓰이는지 단어와 예문을 통해 학습해 주세요.
+    단어와 예문을 통해 실제 사용 맥락을 학습해 주세요.
   </div>
 </details>
 
