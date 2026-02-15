@@ -1,0 +1,183 @@
+---
+layout: null
+title: Privacy Policy
+---
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta charset="utf-8">
+<meta name="color-scheme" content="light dark">
+<meta name="format-detection" content="telephone=no">
+
+<style>
+  :root{
+    color-scheme: light dark;
+
+    --fg:#111827;
+    --bg:#fffbf3;
+    --body:#374151;
+    --muted:#070708;
+
+    --border: rgba(6, 9, 16, 0.12);
+    --card:#FFFFFF;
+
+    --primary:#142743;
+    --shadow: 0 6px 18px rgba(17,24,39,0.08);
+  }
+
+  :root[data-theme="dark"]{
+    --fg:#E5E7EB;
+    --bg:#0B1220;
+    --body:#D1D5DB;
+    --muted:#9CA3AF;
+
+    --border: rgba(229,231,235,0.16);
+    --card:#121C2E;
+
+    --primary:#8AB4FF;
+    --shadow: 0 10px 28px rgba(0,0,0,0.40);
+  }
+
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme]){
+      --fg:#E5E7EB;
+      --bg:#0B1220;
+      --body:#D1D5DB;
+      --muted:#9CA3AF;
+
+      --border: rgba(229,231,235,0.16);
+      --card:#121C2E;
+
+      --primary:#8AB4FF;
+      --shadow: 0 10px 28px rgba(0,0,0,0.40);
+    }
+  }
+
+  html, body { -webkit-text-size-adjust: 100%; }
+  body{ margin:0; background:var(--bg); color:var(--fg); }
+
+  main.doc{
+    max-width: 720px;
+    margin: 0 auto;
+    padding: env(safe-area-inset-top)
+            max(16px, env(safe-area-inset-right))
+            calc(48px + env(safe-area-inset-bottom))
+            max(16px, env(safe-area-inset-left));
+  }
+
+  /* language switch (필요하면 유지) */
+  .lang-switch { display:flex; gap:8px; margin: 14px 0 10px; flex-wrap:wrap; }
+  .lang-switch a{
+    padding:6px 12px; border-radius:8px;
+    border:1px solid var(--border);
+    background:var(--card);
+    color:var(--fg);
+    text-decoration:none;
+    font-size:14px; font-weight:700;
+    box-shadow:var(--shadow);
+  }
+
+  h1{ font-size: 22px; font-weight: 800; letter-spacing:-0.2px; margin: 10px 0 12px; }
+  h2{ font-size:18px; font-weight:800; margin: 0 0 8px; }
+  p.lead{ margin: 0 0 12px; color: var(--muted); }
+
+  .card{
+    border:1px solid var(--border);
+    border-radius:14px;
+    background:var(--card);
+    overflow:hidden;
+    margin:14px 0;
+    box-shadow:var(--shadow);
+    padding:16px;
+  }
+
+  ul { padding-left: 18px; margin: 8px 0 0; color: var(--body); line-height: 1.7; }
+  p { margin: 8px 0 0; color: var(--body); line-height: 1.7; }
+
+  hr { border:0; border-top:1px solid var(--border); margin:18px 0; }
+  .updated{ color:var(--muted); font-style:italic; font-size:.95rem; margin-top:16px; }
+</style>
+
+<main class="doc">
+
+  <div class="updated">วันที่มีผลบังคับใช้: 13 กุมภาพันธ์ 2026</div>
+  <hr />
+
+  <h1>นโยบายความเป็นส่วนตัว</h1>
+  <p class="lead">
+  แอปพลิเคชันนี้ไม่ได้เก็บรวบรวมข้อมูลส่วนบุคคลของผู้ใช้โดยตรง
+  ด้านล่างนี้เป็นรายละเอียดเกี่ยวกับนโยบายและสิทธิของผู้ใช้
+  </p>
+
+  <div class="card">
+  <h2>1. ข้อกำหนดทั่วไป</h2>
+  <p>
+  เราให้ความสำคัญกับการคุ้มครองข้อมูลส่วนบุคคลของผู้ใช้ นโยบายฉบับนี้ใช้บังคับเมื่อคุณใช้งานแอปนี้
+  เมื่อคุณติดตั้ง เปิดใช้งาน หรือใช้แอปนี้ จะถือว่าคุณยอมรับนโยบายฉบับนี้
+  </p>
+  </div>
+
+  <div class="card">
+  <h2>2. การเก็บรวบรวมข้อมูลส่วนบุคคล</h2>
+  <ul>
+  <li>แอปนี้ไม่มีระบบสมัครสมาชิกหรือเข้าสู่ระบบผ่านโซเชียลมีเดีย</li>
+  <li>เราไม่เก็บรวบรวมข้อมูลที่สามารถระบุตัวตนได้โดยตรง เช่น ชื่อ อีเมล หรือข้อมูลติดต่อ</li>
+  <li>เพื่อปรับปรุงคุณภาพบริการ อาจมีการเก็บข้อมูลทางเทคนิค เช่น รูปแบบการใช้งาน ผ่าน Firebase Analytics ในลักษณะที่ไม่ระบุตัวตน</li>
+  </ul>
+  </div>
+
+  <div class="card">
+  <h2>3. การจัดเก็บข้อมูลการเรียนรู้</h2>
+  <ul>
+  <li>ข้อมูลความคืบหน้าในการเรียนและประวัติการทบทวนจะถูกจัดเก็บไว้ในอุปกรณ์ของผู้ใช้เป็นหลัก</li>
+  <li>ผู้ใช้สามารถเลือกสำรองข้อมูลการเรียนไปยัง Google Drive หรือ iCloud ได้</li>
+  <li>ข้อมูลสำรองจะไม่รวมข้อมูลส่วนบุคคลที่สามารถระบุตัวตนได้ เช่น ชื่อหรืออีเมล</li>
+  <li>การสำรองข้อมูลผ่านคลาวด์เป็นการดำเนินการตามความสมัครใจของผู้ใช้ และการจัดการข้อมูลในบริการดังกล่าวเป็นไปตามนโยบายของแต่ละแพลตฟอร์ม</li>
+  </ul>
+  </div>
+
+  <div class="card">
+  <h2>4. การเปิดเผยข้อมูลแก่บุคคลที่สาม</h2>
+  <p>
+  เนื่องจากแอปนี้ไม่ได้เก็บรวบรวมข้อมูลส่วนบุคคลโดยตรง เราจึงไม่ขาย ให้เช่า หรือแบ่งปันข้อมูลส่วนบุคคลแก่บุคคลที่สาม
+  อย่างไรก็ตาม หากผู้ใช้เลือกใช้บริการสำรองข้อมูลผ่านคลาวด์ (Google Drive หรือ iCloud) แพลตฟอร์มดังกล่าวอาจประมวลผลข้อมูลทางเทคนิคตามนโยบายความเป็นส่วนตัวของตนเอง
+  </p>
+  </div>
+
+  <div class="card">
+  <h2>5. ข้อมูลทางเทคนิค (การวิเคราะห์และรายงานข้อผิดพลาด)</h2>
+  <p>
+  แอปนี้ใช้ Google Firebase Analytics เพื่อปรับปรุงคุณภาพบริการและวิเคราะห์รูปแบบการใช้งาน
+  โดยอาจมีการเก็บข้อมูลการใช้งาน ข้อมูลข้อผิดพลาด ข้อมูลอุปกรณ์ เวอร์ชันของแอป และข้อมูลระดับประเทศโดยอัตโนมัติ
+  </p>
+  <p>
+  ข้อมูลที่เก็บรวบรวมจะไม่รวมข้อมูลที่สามารถระบุตัวบุคคลได้โดยตรง เช่น ชื่อหรืออีเมล
+  ข้อมูลดังกล่าวจะถูกประมวลผลตามนโยบายความเป็นส่วนตัวของ Google Firebase Analytics
+  </p>
+  </div>
+
+  <div class="card">
+  <h2>6. การเก็บรักษาและการลบข้อมูล</h2>
+  <p>
+  เนื่องจากแอปนี้ไม่ได้เก็บรวบรวมข้อมูลส่วนบุคคลโดยตรง จึงไม่มีขั้นตอนเฉพาะสำหรับการจัดเก็บหรือลบข้อมูลส่วนบุคคล
+  ข้อมูลการเรียนที่บันทึกไว้ในแอปจะถูกลบเมื่อผู้ใช้ลบแอปออกจากอุปกรณ์
+  </p>
+  </div>
+
+  <div class="card">
+  <h2>7. การเปลี่ยนแปลงนโยบาย</h2>
+  <p>
+  เราอาจปรับปรุงนโยบายฉบับนี้เมื่อจำเป็น
+  การเปลี่ยนแปลงจะมีผลทันทีเมื่อเผยแพร่บนหน้านี้
+  การใช้งานแอปต่อไปหลังจากมีการแก้ไข ถือว่าผู้ใช้ยอมรับนโยบายฉบับปรับปรุง
+  </p>
+  </div>
+
+  <div class="card">
+  <h2>8. ติดต่อเรา</h2>
+  <p>สอบถามเกี่ยวกับนโยบายความเป็นส่วนตัว: contact@freenaru.com</p>
+  </div>
+
+  <p style="margin-top:16px; font-size:0.9rem; color:var(--muted);">
+  หากมีความแตกต่างในการตีความระหว่างเวอร์ชันภาษา ให้ยึดถือเวอร์ชันภาษาอังกฤษเป็นหลัก
+  </p>
+  
+</main>

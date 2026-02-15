@@ -4,126 +4,176 @@ title: プライバシーポリシー
 ---
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta charset="utf-8">
+<meta name="color-scheme" content="light dark">
 <meta name="format-detection" content="telephone=no">
 
 <style>
   :root{
-    --fg:#111827;         /* 본문 글자 */
-    --bg:#F4F6F9;         /* 앱 전역 배경색 고정 */
-    --muted:#6b7280;      /* 보조 텍스트 */
-    --border:#d1d5db;     /* 경계선 */
-    --card:#ffffff;       /* 카드 배경 */
-    --primary:#142743;    /* 브랜드 포인트 */
+    color-scheme: light dark;
+
+    --fg:#111827;
+    --bg:#fffbf3;
+    --body:#374151;
+    --muted:#070708;
+
+    --border: rgba(6, 9, 16, 0.12);
+    --card:#FFFFFF;
+
+    --primary:#142743;
+    --shadow: 0 6px 18px rgba(17,24,39,0.08);
+  }
+
+  :root[data-theme="dark"]{
+    --fg:#E5E7EB;
+    --bg:#0B1220;
+    --body:#D1D5DB;
+    --muted:#9CA3AF;
+
+    --border: rgba(229,231,235,0.16);
+    --card:#121C2E;
+
+    --primary:#8AB4FF;
+    --shadow: 0 10px 28px rgba(0,0,0,0.40);
+  }
+
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme]){
+      --fg:#E5E7EB;
+      --bg:#0B1220;
+      --body:#D1D5DB;
+      --muted:#9CA3AF;
+
+      --border: rgba(229,231,235,0.16);
+      --card:#121C2E;
+
+      --primary:#8AB4FF;
+      --shadow: 0 10px 28px rgba(0,0,0,0.40);
+    }
   }
 
   html, body { -webkit-text-size-adjust: 100%; }
-  main.doc {
+  body{ margin:0; background:var(--bg); color:var(--fg); }
+
+  main.doc{
     max-width: 720px;
     margin: 0 auto;
-    padding: calc(20px + env(safe-area-inset-top)) 
+    padding: env(safe-area-inset-top)
             max(16px, env(safe-area-inset-right))
             calc(48px + env(safe-area-inset-bottom))
             max(16px, env(safe-area-inset-left));
   }
 
-  /* language switch */
-  .lang-switch {
-    display:flex; gap:8px; margin-bottom:16px;
-  }
-  .lang-switch a {
-    padding:5px 12px; border-radius:6px;
-    border:1px solid var(--primary);
-    color:var(--primary);
-    font-size:14px; font-weight:600;
-    text-decoration:none;
-    transition: all .2s;
-    background:var(--bg);
-  }
-  .lang-switch a:hover {
-    background:var(--primary); color:white;
-  }
-
-  h1 {
-    font-size: 22px; font-weight: 800; letter-spacing:-0.2px;
-    margin: 6px 0 12px;
-  }
-  h2 {
-    font-size:18px; font-weight:700; margin:18px 0 8px;
-  }
-  p.lead { margin: 0 0 12px; color: var(--muted); }
-
-  .card {
-    background:var(--card);
+  /* language switch (필요하면 유지) */
+  .lang-switch { display:flex; gap:8px; margin: 14px 0 10px; flex-wrap:wrap; }
+  .lang-switch a{
+    padding:6px 12px; border-radius:8px;
     border:1px solid var(--border);
-    border-radius:12px;
-    padding:16px;
-    margin:12px 0;
-    box-shadow:0 1px 2px rgba(0,0,0,0.03);
+    background:var(--card);
+    color:var(--fg);
+    text-decoration:none;
+    font-size:14px; font-weight:700;
+    box-shadow:var(--shadow);
   }
 
-  ul { padding-left: 18px; }
-  hr { border:0; border-top:1px solid var(--border); margin:20px 0; }
-  .updated { color:var(--muted); font-style:italic; font-size:.95rem; margin-top:16px; }
+  h1{ font-size: 22px; font-weight: 800; letter-spacing:-0.2px; margin: 10px 0 12px; }
+  h2{ font-size:18px; font-weight:800; margin: 0 0 8px; }
+  p.lead{ margin: 0 0 12px; color: var(--muted); }
+
+  .card{
+    border:1px solid var(--border);
+    border-radius:14px;
+    background:var(--card);
+    overflow:hidden;
+    margin:14px 0;
+    box-shadow:var(--shadow);
+    padding:16px;
+  }
+
+  ul { padding-left: 18px; margin: 8px 0 0; color: var(--body); line-height: 1.7; }
+  p { margin: 8px 0 0; color: var(--body); line-height: 1.7; }
+
+  hr { border:0; border-top:1px solid var(--border); margin:18px 0; }
+  .updated{ color:var(--muted); font-style:italic; font-size:.95rem; margin-top:16px; }
 </style>
 
 <main class="doc">
 
-  <div class="lang-switch">
-    <a href="https://thinker89.github.io/docs_hub/project_market_mood/docs/privacy_policy_en.html">English</a>
-    <a href="https://thinker89.github.io/docs_hub/project_market_mood/docs/privacy_policy_ko.html">한국어</a>
-    <a href="https://thinker89.github.io/docs_hub/project_market_mood/docs/privacy_policy_ja.html">日本語</a>
-  </div>
-
-  <div class="updated">発効日: 2025年9月20日</div>
+  <div class="updated">施行日：2026年2月13日</div>
   <hr />
 
   <h1>プライバシーポリシー</h1>
-  <p class="lead">本アプリは個人情報を収集しません。以下に当社の方針を明記します。</p>
+  <p class="lead">
+  本アプリは、ユーザーの個人情報を直接収集しません。
+  以下に当社の方針およびユーザーの権利についてご説明いたします。
+  </p>
 
   <div class="card">
-    <h2>1. 総則</h2>
-    <p>当社は利用者の個人情報の保護を重視します。本アプリは個人情報を収集せず、個人情報保護に関する法令を遵守して運営されます。利用者が本アプリをインストール、実行または利用した場合、本ポリシーに同意したものとみなします。</p>
+  <h2>1. 総則</h2>
+  <p>
+  当社はユーザーの個人情報保護を重要視しています。本ポリシーは本アプリの利用に適用されます。
+  ユーザーが本アプリをインストール、起動、または利用した場合、本ポリシーに同意したものとみなします。
+  </p>
   </div>
 
   <div class="card">
-    <h2>2. 個人情報の収集有無</h2>
-    <ul>
-      <li>本アプリはログイン、会員登録、ソーシャルアカウント連携機能を提供しません。</li>
-      <li>利用者の氏名、メールアドレス、位置情報、連絡先など、いかなる個人情報も収集しません。</li>
-    </ul>
+  <h2>2. 個人情報の収集について</h2>
+  <ul>
+  <li>本アプリは会員登録やソーシャルログイン機能を提供していません。</li>
+  <li>氏名、メールアドレス、連絡先など、直接個人を特定できる情報は収集しません。</li>
+  <li>サービス品質向上のため、Firebase Analytics を利用し、利用状況などの技術的情報が匿名形式で収集される場合があります。</li>
+  </ul>
   </div>
 
   <div class="card">
-    <h2>3. データの利用</h2>
-    <ul>
-      <li>本アプリは、サービス提供に必要なネットワーク通信のみを行います。</li>
-      <li>アプリ利用中に利用者の個人を特定できる情報を収集または保存することはありません。</li>
-    </ul>
+  <h2>3. 学習データの保存</h2>
+  <ul>
+  <li>学習進捗や復習履歴などのデータは、原則としてユーザーの端末内に保存されます。</li>
+  <li>ユーザーが選択した場合、Google Drive または iCloud に学習データをバックアップすることができます。</li>
+  <li>バックアップデータには、氏名やメールアドレスなどの個人情報は含まれません。</li>
+  <li>クラウドバックアップはユーザーの選択により行われ、当該サービスにおける個人情報の取扱いおよび安全管理は各プラットフォームのポリシーに従います。</li>
+  </ul>
   </div>
 
   <div class="card">
-    <h2>4. 第三者提供</h2>
-    <p>本アプリは利用者の個人情報を収集しません。したがって、第三者への販売、共有、提供は一切ありません。</p>
+  <h2>4. 第三者提供について</h2>
+  <p>
+  本アプリは個人情報を直接収集しないため、ユーザーの個人情報を第三者に販売・貸与・共有することはありません。
+  ただし、ユーザーがクラウドバックアップ（Google Drive または iCloud）を利用する場合、当該プラットフォームが技術情報を処理することがあります。クラウドサービスにおける個人情報の取扱いは各プラットフォームのポリシーに従います。
+  </p>
   </div>
 
   <div class="card">
-    <h2>5. 保管および削除</h2>
-    <p>個人情報を収集しないため、別途の保管および削除手続きは存在しません。</p>
+  <h2>5. 技術情報（診断・解析等）</h2>
+  <p>
+  本アプリは、サービス品質向上および利用状況分析のために Google Firebase Analytics を使用しています。
+  これにより、アプリの利用状況、エラー情報、端末情報、アプリのバージョン、国レベルの位置情報などが自動的に収集される場合があります。
+  </p>
+  <p>
+  収集される情報には、氏名やメールアドレスなど直接個人を特定できる情報は含まれません。
+  これらのデータは Google Firebase Analytics のプライバシーポリシーに基づいて処理されます。
+  </p>
   </div>
 
   <div class="card">
-    <h2>6. セキュリティ</h2>
-    <p>本アプリは個人情報を直接収集、保存、処理しません。ただし、Apple App Store、Google Play、オペレーティングシステム（OS）が提供する基本的な分析機能またはクラッシュレポート機能を通じて、一部の技術的情報が自動的に収集される場合があります。これらの技術的情報には個人を特定できる情報は含まれず、収集された情報は OS およびプラットフォーム事業者によって管理されます。当社はサービス品質の改善および不具合解決のために、当該技術的情報を閲覧することがあります。</p>
+  <h2>6. 保管および削除</h2>
+  <p>
+  本アプリは個人情報を直接収集しないため、個人情報の保管および削除に関する特別な手続きはありません。
+  アプリ内に保存された学習データは、ユーザーがアプリを削除することで消去されます。
+  </p>
   </div>
 
   <div class="card">
-    <h2>7. 変更事項</h2>
-    <p>本ポリシーは必要に応じて変更されることがあります。変更内容はアプリまたはウェブページを通じて告知され、告知後直ちに効力を生じます。利用者が変更後も本アプリを継続して利用する場合、変更後のプライバシーポリシーに同意したものとみなします。</p>
+  <h2>7. 本ポリシーの変更</h2>
+  <p>
+  当社は必要に応じて本ポリシーを変更することがあります。
+  変更後の内容は本ページに掲載した時点で効力を生じます。
+  変更後も本アプリを継続して利用した場合、変更後のポリシーに同意したものとみなします。
+  </p>
   </div>
 
   <div class="card">
-    <h2>8. お問い合わせ</h2>
-    <p>プライバシーポリシーに関するお問い合わせ: contact@freenaru.com</p>
+  <h2>8. お問い合わせ</h2>
+  <p>本ポリシーに関するお問い合わせ：contact@freenaru.com</p>
   </div>
-  
+
 </main>

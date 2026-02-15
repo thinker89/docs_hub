@@ -1,0 +1,183 @@
+---
+layout: null
+title: Privacy Policy
+---
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta charset="utf-8">
+<meta name="color-scheme" content="light dark">
+<meta name="format-detection" content="telephone=no">
+
+<style>
+  :root{
+    color-scheme: light dark;
+
+    --fg:#111827;
+    --bg:#fffbf3;
+    --body:#374151;
+    --muted:#070708;
+
+    --border: rgba(6, 9, 16, 0.12);
+    --card:#FFFFFF;
+
+    --primary:#142743;
+    --shadow: 0 6px 18px rgba(17,24,39,0.08);
+  }
+
+  :root[data-theme="dark"]{
+    --fg:#E5E7EB;
+    --bg:#0B1220;
+    --body:#D1D5DB;
+    --muted:#9CA3AF;
+
+    --border: rgba(229,231,235,0.16);
+    --card:#121C2E;
+
+    --primary:#8AB4FF;
+    --shadow: 0 10px 28px rgba(0,0,0,0.40);
+  }
+
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme]){
+      --fg:#E5E7EB;
+      --bg:#0B1220;
+      --body:#D1D5DB;
+      --muted:#9CA3AF;
+
+      --border: rgba(229,231,235,0.16);
+      --card:#121C2E;
+
+      --primary:#8AB4FF;
+      --shadow: 0 10px 28px rgba(0,0,0,0.40);
+    }
+  }
+
+  html, body { -webkit-text-size-adjust: 100%; }
+  body{ margin:0; background:var(--bg); color:var(--fg); }
+
+  main.doc{
+    max-width: 720px;
+    margin: 0 auto;
+    padding: env(safe-area-inset-top)
+            max(16px, env(safe-area-inset-right))
+            calc(48px + env(safe-area-inset-bottom))
+            max(16px, env(safe-area-inset-left));
+  }
+
+  /* language switch (필요하면 유지) */
+  .lang-switch { display:flex; gap:8px; margin: 14px 0 10px; flex-wrap:wrap; }
+  .lang-switch a{
+    padding:6px 12px; border-radius:8px;
+    border:1px solid var(--border);
+    background:var(--card);
+    color:var(--fg);
+    text-decoration:none;
+    font-size:14px; font-weight:700;
+    box-shadow:var(--shadow);
+  }
+
+  h1{ font-size: 22px; font-weight: 800; letter-spacing:-0.2px; margin: 10px 0 12px; }
+  h2{ font-size:18px; font-weight:800; margin: 0 0 8px; }
+  p.lead{ margin: 0 0 12px; color: var(--muted); }
+
+  .card{
+    border:1px solid var(--border);
+    border-radius:14px;
+    background:var(--card);
+    overflow:hidden;
+    margin:14px 0;
+    box-shadow:var(--shadow);
+    padding:16px;
+  }
+
+  ul { padding-left: 18px; margin: 8px 0 0; color: var(--body); line-height: 1.7; }
+  p { margin: 8px 0 0; color: var(--body); line-height: 1.7; }
+
+  hr { border:0; border-top:1px solid var(--border); margin:18px 0; }
+  .updated{ color:var(--muted); font-style:italic; font-size:.95rem; margin-top:16px; }
+</style>
+
+<main class="doc">
+
+  <div class="updated">Tanggal Berlaku: 13 Februari 2026</div>
+  <hr />
+
+  <h1>Kebijakan Privasi</h1>
+  <p class="lead">
+  Aplikasi ini tidak secara langsung mengumpulkan informasi pribadi pengguna.
+  Di bawah ini kami menjelaskan kebijakan kami serta hak pengguna terkait privasi.
+  </p>
+
+  <div class="card">
+  <h2>1. Ketentuan Umum</h2>
+  <p>
+  Kami menghargai dan melindungi privasi pengguna. Kebijakan ini berlaku saat Anda menggunakan aplikasi ini.
+  Dengan menginstal, mengakses, atau menggunakan aplikasi, Anda dianggap telah menyetujui Kebijakan ini.
+  </p>
+  </div>
+
+  <div class="card">
+  <h2>2. Pengumpulan Informasi Pribadi</h2>
+  <ul>
+  <li>Aplikasi ini tidak menyediakan fitur pendaftaran akun atau login melalui media sosial.</li>
+  <li>Kami tidak mengumpulkan informasi yang dapat mengidentifikasi individu secara langsung, seperti nama, alamat email, atau informasi kontak.</li>
+  <li>Untuk meningkatkan kualitas layanan, data teknis seperti pola penggunaan dapat dikumpulkan secara anonim melalui Firebase Analytics.</li>
+  </ul>
+  </div>
+
+  <div class="card">
+  <h2>3. Penyimpanan Data Pembelajaran</h2>
+  <ul>
+  <li>Data kemajuan belajar dan riwayat ulasan disimpan secara lokal di perangkat pengguna.</li>
+  <li>Pengguna dapat memilih untuk mencadangkan data pembelajaran ke Google Drive atau iCloud.</li>
+  <li>Data cadangan tidak mencakup informasi pribadi yang dapat mengidentifikasi individu secara langsung, seperti nama atau alamat email.</li>
+  <li>Pencadangan cloud dilakukan atas pilihan pengguna, dan pemrosesan serta keamanan data dalam layanan tersebut diatur oleh kebijakan masing-masing platform.</li>
+  </ul>
+  </div>
+
+  <div class="card">
+  <h2>4. Pembagian kepada Pihak Ketiga</h2>
+  <p>
+  Karena aplikasi ini tidak secara langsung mengumpulkan informasi pribadi, kami tidak menjual, menyewakan, atau membagikan informasi pribadi pengguna kepada pihak ketiga.
+  Namun, jika pengguna menggunakan fitur pencadangan cloud (Google Drive atau iCloud), platform terkait dapat memproses informasi teknis sesuai dengan kebijakan privasi mereka sendiri.
+  </p>
+  </div>
+
+  <div class="card">
+  <h2>5. Informasi Teknis (Analitik dan Diagnostik)</h2>
+  <p>
+  Aplikasi ini menggunakan Google Firebase Analytics untuk meningkatkan kualitas layanan dan menganalisis pola penggunaan.
+  Melalui layanan ini, data penggunaan aplikasi, informasi kesalahan, informasi perangkat, versi aplikasi, dan informasi lokasi tingkat negara dapat dikumpulkan secara otomatis.
+  </p>
+  <p>
+  Data yang dikumpulkan tidak mencakup informasi yang dapat mengidentifikasi individu secara langsung, seperti nama atau alamat email.
+  Data tersebut diproses sesuai dengan kebijakan privasi Google Firebase Analytics.
+  </p>
+  </div>
+
+  <div class="card">
+  <h2>6. Penyimpanan dan Penghapusan Data</h2>
+  <p>
+  Karena aplikasi ini tidak secara langsung mengumpulkan informasi pribadi, tidak ada prosedur khusus untuk penyimpanan atau penghapusan informasi pribadi.
+  Data pembelajaran yang tersimpan di aplikasi akan dihapus ketika pengguna menghapus aplikasi dari perangkatnya.
+  </p>
+  </div>
+
+  <div class="card">
+  <h2>7. Perubahan terhadap Kebijakan</h2>
+  <p>
+  Kami dapat memperbarui Kebijakan ini apabila diperlukan.
+  Perubahan akan berlaku segera setelah dipublikasikan di halaman ini.
+  Dengan terus menggunakan aplikasi setelah perubahan dilakukan, pengguna dianggap telah menyetujui Kebijakan yang telah diperbarui.
+  </p>
+  </div>
+
+  <div class="card">
+  <h2>8. Kontak</h2>
+  <p>Pertanyaan terkait Kebijakan Privasi: contact@freenaru.com</p>
+  </div>
+
+  <p style="margin-top:16px; font-size:0.9rem; color:var(--muted);">
+  Apabila terdapat perbedaan penafsiran antara versi bahasa, versi bahasa Inggris yang akan berlaku.
+  </p>
+  
+</main>
