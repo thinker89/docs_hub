@@ -4,144 +4,199 @@ title: FAQ
 ---
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta charset="utf-8">
+<meta name="color-scheme" content="light dark">
 <meta name="format-detection" content="telephone=no">
 
 <style>
+  /* ===============================
+     기본: LIGHT 테마
+     =============================== */
   :root{
-    --fg:#111827;         /* 본문 글자 */
-    --bg:#F4F6F9;         /* 앱 전역 배경색 고정 */
-    --muted:#6b7280;      /* 보조 텍스트 */
-    --border:#d1d5db;     /* 경계선 */
-    --card:#ffffff;       /* 카드 배경 */
-    --primary:#142743;    /* 브랜드 포인트 */
+    color-scheme: light dark;
+
+    --fg:#111827;
+    --bg:#fffbf3;
+    --body:#374151;
+    --muted:#070708;
+
+    --border: rgba(6, 9, 16, 0.12);
+    --card:#FFFFFF;
+
+    --primary:#142743;
+    --shadow: 0 6px 18px rgba(17,24,39,0.08);
   }
 
-  html, body { -webkit-text-size-adjust: 100%; }
+  /* ===============================
+     Flutter가 강제 DARK 주입할 때
+     =============================== */
+  :root[data-theme="dark"]{
+    --fg:#E5E7EB;
+    --bg:#0B1220;
+    --body:#D1D5DB;
+    --muted:#9CA3AF;
+
+    --border: rgba(229,231,235,0.16);
+    --card:#121C2E; /* bg보다 살짝 밝게 */
+
+    --primary:#8AB4FF;
+    --shadow: 0 10px 28px rgba(0,0,0,0.40);
+  }
+
+  /* ===============================
+     data-theme 없을 때만 시스템 따라감
+     =============================== */
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme]){
+      --fg:#E5E7EB;
+      --bg:#0B1220;
+      --body:#D1D5DB;
+      --muted:#9CA3AF;
+
+      --border: rgba(229,231,235,0.16);
+      --card:#121C2E;
+
+      --primary:#8AB4FF;
+      --shadow: 0 10px 28px rgba(0,0,0,0.40);
+    }
+  }
+
+  /* =============================== */
+
+  html, body {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body{
+    margin:0;
+    background: var(--bg);
+    color: var(--fg);
+  }
+
   main.doc {
     max-width: 720px;
     margin: 0 auto;
-    padding: calc(20px + env(safe-area-inset-top)) 
+    padding: env(safe-area-inset-top)
             max(16px, env(safe-area-inset-right))
             calc(48px + env(safe-area-inset-bottom))
             max(16px, env(safe-area-inset-left));
   }
 
-  /* 言語切り替えボタン */
-  .lang-switch {
-    display:flex; gap:8px; margin-bottom:16px;
-  }
-  .lang-switch a {
-    padding:5px 12px; border-radius:6px;
-    border:1px solid var(--primary);
-    color:var(--primary);
-    font-size:14px; font-weight:600;
-    text-decoration:none;
-    transition: all .2s;
-    background:var(--bg);
-  }
-  .lang-switch a:hover {
-    background:var(--primary); color:white;
+  /* =============================== */
+
+  p.lead {
+    margin: 0 0 12px;
+    color: var(--muted);
   }
 
-  h1 {
-    font-size: 22px; font-weight: 800; letter-spacing:-0.2px;
-    margin: 6px 0 12px;
-  }
-  p.lead { margin: 0 0 12px; color: var(--muted); }
+  /* ===============================
+     카드 스타일
+     =============================== */
 
   details {
     border:1px solid var(--border);
-    border-radius:12px; background:var(--card);
-    overflow:hidden; margin:12px 0;
-    box-shadow:0 1px 2px rgba(0,0,0,0.03);
+    border-radius:14px;
+    background:var(--card);
+    overflow:hidden;
+    margin:14px 0;
+    box-shadow:var(--shadow);
+    transition: all .2s ease;
   }
-  summary {
-    list-style:none; cursor:pointer; font-weight:600;
-    padding:14px 16px; user-select:none;
-  }
-  summary::-webkit-details-marker { display:none; }
-  summary::before {
-    content:"▸"; display:inline-block; margin-right:8px;
-    transition: transform .18s ease;
-  }
-  details[open] summary::before { transform: rotate(90deg); }
-  .details-body { padding: 0 16px 14px; }
 
-  hr { border:0; border-top:1px solid var(--border); margin:20px 0; }
-  .updated { color:var(--muted); font-style:italic; font-size:.95rem; margin-top:16px; }
+  summary {
+    list-style:none;
+    cursor:pointer;
+    font-weight:600;
+    padding:16px;
+    user-select:none;
+    color: var(--fg);
+  }
+
+  summary::-webkit-details-marker {
+    display:none;
+  }
+
+  summary::before {
+    content:"▸";
+    display:inline-block;
+    margin-right:8px;
+    transition: transform .18s ease;
+    color: var(--muted);
+  }
+
+  details[open] summary::before {
+    transform: rotate(90deg);
+  }
+
+  .details-body{
+    padding: 0 16px 16px;
+    line-height: 1.7;
+    color: var(--body);
+  }
+
+  hr {
+    border:0;
+    border-top:1px solid var(--border);
+    margin:20px 0;
+  }
+
+  .updated {
+    color:var(--muted);
+    font-style:italic;
+    font-size:.95rem;
+    margin-top:16px;
+  }
+
 </style>
 
 <main class="doc">
 
-<div class="lang-switch">
-  <a href="https://thinker89.github.io/docs_hub/project_market_mood/docs/faq_en.html">English</a>
-  <a href="https://thinker89.github.io/docs_hub/project_market_mood/docs/faq_ko.html">한국어</a>
-  <a href="https://thinker89.github.io/docs_hub/project_market_mood/docs/faq_ja.html">日本語</a>
-</div>
-
-# FAQ
+<p># FAQ</p>
 
 <details>
-  <summary>通知が届きません。</summary>
+  <summary>復習通知が届きません</summary>
   <div class="details-body">
-    設定画面で通知がオンになっているか、数値や時間が希望通りに設定されているか、通知権限が許可されているかを確認してください。<br><br>
-    携帯電話を再起動した後に通知が届かない場合は、もう一度通知時間を設定してください。<br><br>
-    アプリをインストールしてからまだ1時間経過していない場合、通知が届かないことがあります。<br><br>
-    アプリを長期間起動しないと、端末メーカーによって自動的にスリープモードに移行し、通知がブロックされる場合があります。<br><br>
-    ご利用の端末でスリープ対象外アプリに設定する方法をご確認ください。少なくとも週に1回はアプリを起動すると、スリープ扱いを防ぐのに役立ちます。
+    メニュー-設定画面で復習通知をオンにし、通知の許可を有効にしてください。当日にアプリを一度でも起動した場合、その日は通知を送らず、翌日に再度通知を送ります。
   </div>
 </details>
 
 <details>
-  <summary>データの出所はどこですか？</summary>
+  <summary>漢字の由来は学説に基づいていますか？</summary>
   <div class="details-body">
-    本アプリは、CNN BusinessとFREDが一般に公開している市場指標データを可視化しています。 
-    CNN BusinessまたはFREDの公式サービスではなく、公開データを活用する独立したサードパーティ製アプリです。
+    漢字カードに記載されている由来には、伝統的な学説に基づく説明もありますが、学習を効率化するために創作した説明も含まれています。伝統的な学説を正確に学びたい場合は、専門的な論文などもあわせてご参照ください。
   </div>
 </details>
 
 <details>
-  <summary>データはリアルタイムで更新されますか？</summary>
+  <summary>学習進捗を保存したいです</summary>
   <div class="details-body">
-    いいえ。このアプリはCNN BusinessとFREDの最新データを表示していますが、各機関のデータは数十分、または日単位で更新される場合があります。<br><br>
-    メイン画面の［データ基準時刻］で更新時点を確認でき、ウィジェットをタップすると詳しい情報を見ることができます。<br><br>
-    重要な判断を行う前に、このアプリの情報が最新の状態であることを必ず確認してください。
+    アプリを削除したり、別の端末で利用する前に、[メニュー-設定-学習進捗を保存]機能で学習進捗を保存してください。保存先としてiCloudやGoogle Driveを選択すると、より簡単にバックアップと復元ができます。<br><br>
+    進捗を復元する端末で[メニュー-設定-復元する]機能を使い、保存したバックアップファイルを読み込んでください。<br><br>
+    バックアップを行わずにアプリを削除した場合、アプリ設定および学習進捗は失われ、復元できませんのでご注意ください。
   </div>
 </details>
 
 <details>
-  <summary>データが表示されません。</summary>
+  <summary>課金したのにすべての漢字を学習できません</summary>
   <div class="details-body">
-    まずネットワーク接続が安定しているか確認し、アプリを完全に終了してから再起動してください。<br><br>
-    ネットワークが安定していても、データ提供元の状況により表示されない場合があります。その場合は少し時間をおいてから再度アプリを起動して確認してください。
+    決済が正常に完了しているのにすべての漢字を利用できない場合は、まずアプリを完全に終了してから再度起動してください。<br><br>
+    問題が続く場合は、[メニュー → 設定 → 購入を復元]をタップして購入履歴を復元してください。<br><br>
+    アプリを削除して再インストールした場合や、端末を変更した場合も[購入を復元]を実行してください。<br><br>
+    購入履歴はGoogle PlayまたはApp Storeの同一アカウントでのみ復元できます。別のアカウントで決済した場合は、そのアカウントでストアにログインしたうえで購入を復元してください。
   </div>
 </details>
 
 <details>
-  <summary>個人情報を収集していますか？</summary>
+  <summary>個人情報を収集しますか？</summary>
   <div class="details-body">
-    いいえ。このアプリにはログイン機能がなく、ユーザーの個人情報を収集することもありません。
+    本アプリは、氏名、メールアドレス、連絡先など個人を特定できる情報を収集しません。アプリの品質向上のため、利用パターンや学習進捗などの技術的な分析情報が自動的に収集される場合があります。<br><br>
+    ユーザーが希望する場合、自身のGoogle DriveまたはiCloudに学習データをバックアップできます。これらのクラウドサービスが収集する個人情報は各プラットフォームのポリシーに従います。バックアップデータにはアプリ設定および学習進捗が含まれ、メールアドレスや氏名などの個人情報は含まれません。
   </div>
 </details>
 
 <details>
-  <summary>追加料金はありますか？</summary>
+  <summary>お問い合わせがあります</summary>
   <div class="details-body">
-    いいえ。このアプリは有料販売であり、アプリ内課金や広告はありません。
-  </div>
-</details>
-
-<details>
-  <summary>現在雰囲気イラストはいつ変わりますか？</summary>
-  <div class="details-body">
-    Fear&amp;Greed指数の5段階区分に応じて変わります。
-  </div>
-</details>
-
-<details>
-  <summary>問い合わせはどこにすればいいですか？</summary>
-  <div class="details-body">
-    問い合わせは下記のメールアドレスにご連絡ください。<br>
+    ご不明な点がございましたら、下記のメールアドレスまでご連絡ください。<br>
     contact@freenaru.com
   </div>
 </details>

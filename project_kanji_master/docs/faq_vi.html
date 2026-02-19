@@ -1,0 +1,204 @@
+---
+layout: null
+title: FAQ
+---
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta charset="utf-8">
+<meta name="color-scheme" content="light dark">
+<meta name="format-detection" content="telephone=no">
+
+<style>
+  /* ===============================
+     기본: LIGHT 테마
+     =============================== */
+  :root{
+    color-scheme: light dark;
+
+    --fg:#111827;
+    --bg:#fffbf3;
+    --body:#374151;
+    --muted:#070708;
+
+    --border: rgba(6, 9, 16, 0.12);
+    --card:#FFFFFF;
+
+    --primary:#142743;
+    --shadow: 0 6px 18px rgba(17,24,39,0.08);
+  }
+
+  /* ===============================
+     Flutter가 강제 DARK 주입할 때
+     =============================== */
+  :root[data-theme="dark"]{
+    --fg:#E5E7EB;
+    --bg:#0B1220;
+    --body:#D1D5DB;
+    --muted:#9CA3AF;
+
+    --border: rgba(229,231,235,0.16);
+    --card:#121C2E; /* bg보다 살짝 밝게 */
+
+    --primary:#8AB4FF;
+    --shadow: 0 10px 28px rgba(0,0,0,0.40);
+  }
+
+  /* ===============================
+     data-theme 없을 때만 시스템 따라감
+     =============================== */
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme]){
+      --fg:#E5E7EB;
+      --bg:#0B1220;
+      --body:#D1D5DB;
+      --muted:#9CA3AF;
+
+      --border: rgba(229,231,235,0.16);
+      --card:#121C2E;
+
+      --primary:#8AB4FF;
+      --shadow: 0 10px 28px rgba(0,0,0,0.40);
+    }
+  }
+
+  /* =============================== */
+
+  html, body {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body{
+    margin:0;
+    background: var(--bg);
+    color: var(--fg);
+  }
+
+  main.doc {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: env(safe-area-inset-top)
+            max(16px, env(safe-area-inset-right))
+            calc(48px + env(safe-area-inset-bottom))
+            max(16px, env(safe-area-inset-left));
+  }
+
+  /* =============================== */
+
+  p.lead {
+    margin: 0 0 12px;
+    color: var(--muted);
+  }
+
+  /* ===============================
+     카드 스타일
+     =============================== */
+
+  details {
+    border:1px solid var(--border);
+    border-radius:14px;
+    background:var(--card);
+    overflow:hidden;
+    margin:14px 0;
+    box-shadow:var(--shadow);
+    transition: all .2s ease;
+  }
+
+  summary {
+    list-style:none;
+    cursor:pointer;
+    font-weight:600;
+    padding:16px;
+    user-select:none;
+    color: var(--fg);
+  }
+
+  summary::-webkit-details-marker {
+    display:none;
+  }
+
+  summary::before {
+    content:"▸";
+    display:inline-block;
+    margin-right:8px;
+    transition: transform .18s ease;
+    color: var(--muted);
+  }
+
+  details[open] summary::before {
+    transform: rotate(90deg);
+  }
+
+  .details-body{
+    padding: 0 16px 16px;
+    line-height: 1.7;
+    color: var(--body);
+  }
+
+  hr {
+    border:0;
+    border-top:1px solid var(--border);
+    margin:20px 0;
+  }
+
+  .updated {
+    color:var(--muted);
+    font-style:italic;
+    font-size:.95rem;
+    margin-top:16px;
+  }
+
+</style>
+
+<main class="doc">
+
+<p># FAQ</p>
+
+<details>
+  <summary>Tôi không nhận được thông báo ôn tập</summary>
+  <div class="details-body">
+    Vui lòng bật thông báo ôn tập trong Menu - Cài đặt và đảm bảo quyền thông báo đã được cho phép. Nếu bạn mở ứng dụng ít nhất một lần trong ngày, hệ thống sẽ không gửi thông báo vào ngày đó và sẽ gửi lại vào ngày hôm sau.
+  </div>
+</details>
+
+<details>
+  <summary>Nguồn gốc của kanji có dựa trên học thuyết học thuật không?</summary>
+  <div class="details-body">
+    Một số giải thích về nguồn gốc kanji trên thẻ dựa trên các học thuyết truyền thống, trong khi một số khác được sáng tạo nhằm giúp bạn học nhanh hơn. Nếu bạn muốn tìm hiểu chính xác các học thuyết truyền thống, vui lòng tham khảo thêm các tài liệu hoặc nghiên cứu chuyên sâu.
+  </div>
+</details>
+
+<details>
+  <summary>Tôi muốn lưu tiến độ học</summary>
+  <div class="details-body">
+    Trước khi xóa ứng dụng hoặc sử dụng trên thiết bị khác, vui lòng dùng chức năng [Menu - Cài đặt - Lưu tiến độ học] để sao lưu tiến độ của bạn. Chọn iCloud hoặc Google Drive làm nơi lưu trữ sẽ giúp việc sao lưu và khôi phục thuận tiện hơn.<br><br>
+    Trên thiết bị muốn khôi phục tiến độ, hãy dùng chức năng [Menu - Cài đặt - Khôi phục] và tải tệp sao lưu đã lưu trước đó.<br><br>
+    Nếu bạn xóa ứng dụng mà không sao lưu, cài đặt ứng dụng và tiến độ học sẽ bị mất và không thể khôi phục.
+  </div>
+</details>
+
+<details>
+  <summary>Tôi đã thanh toán nhưng không thể học tất cả kanji</summary>
+  <div class="details-body">
+    Nếu thanh toán đã hoàn tất nhưng bạn vẫn không thể truy cập tất cả kanji, vui lòng đóng hoàn toàn ứng dụng rồi mở lại.<br><br>
+    Nếu vấn đề vẫn tiếp diễn, hãy nhấn [Menu → Cài đặt → Khôi phục giao dịch] để khôi phục lịch sử mua hàng.<br><br>
+    Nếu bạn đã xóa và cài đặt lại ứng dụng hoặc thay đổi thiết bị, vui lòng cũng sử dụng chức năng [Khôi phục giao dịch].<br><br>
+    Lịch sử mua hàng chỉ có thể được khôi phục bằng cùng một tài khoản Google Play hoặc App Store đã sử dụng để thanh toán. Nếu bạn thanh toán bằng tài khoản khác, hãy đăng nhập vào cửa hàng bằng tài khoản đó rồi thực hiện khôi phục giao dịch.
+  </div>
+</details>
+
+<details>
+  <summary>Ứng dụng có thu thập thông tin cá nhân không?</summary>
+  <div class="details-body">
+    Ứng dụng này không thu thập thông tin có thể nhận dạng cá nhân như tên, email hoặc thông tin liên hệ. Để cải thiện chất lượng ứng dụng, dữ liệu phân tích kỹ thuật như thói quen sử dụng và tiến độ học có thể được thu thập tự động.<br><br>
+    Nếu bạn muốn, bạn có thể sao lưu dữ liệu học tập lên Google Drive hoặc iCloud của riêng mình. Mọi dữ liệu cá nhân được thu thập bởi các dịch vụ đám mây đó sẽ tuân theo chính sách của từng nền tảng. Dữ liệu sao lưu bao gồm cài đặt ứng dụng và tiến độ học, nhưng không bao gồm thông tin cá nhân như tên hoặc email.
+  </div>
+</details>
+
+<details>
+  <summary>Tôi có câu hỏi</summary>
+  <div class="details-body">
+    Nếu bạn có bất kỳ câu hỏi nào, vui lòng liên hệ với chúng tôi qua email bên dưới.<br>
+    contact@freenaru.com
+  </div>
+</details>
+
+</main>

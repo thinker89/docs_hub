@@ -1,0 +1,220 @@
+---
+layout: null
+title: Study Guide
+---
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta charset="utf-8">
+<meta name="color-scheme" content="light dark">
+<meta name="format-detection" content="telephone=no">
+
+<style>
+  /* ===============================
+     기본: LIGHT 테마
+     =============================== */
+  :root{
+    color-scheme: light dark;
+
+    --fg:#111827;
+    --bg:#fffbf3;
+    --body:#374151;
+    --muted:#070708;
+
+    --border: rgba(6, 9, 16, 0.12);
+    --card:#FFFFFF;
+
+    --primary:#142743;
+    --shadow: 0 6px 18px rgba(17,24,39,0.08);
+  }
+
+  /* ===============================
+     Flutter가 강제 DARK 주입할 때
+     =============================== */
+  :root[data-theme="dark"]{
+    --fg:#E5E7EB;
+    --bg:#0B1220;
+    --body:#D1D5DB;
+    --muted:#9CA3AF;
+
+    --border: rgba(229,231,235,0.16);
+    --card:#121C2E; /* bg보다 살짝 밝게 */
+
+    --primary:#8AB4FF;
+    --shadow: 0 10px 28px rgba(0,0,0,0.40);
+  }
+
+  /* ===============================
+     data-theme 없을 때만 시스템 따라감
+     =============================== */
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme]){
+      --fg:#E5E7EB;
+      --bg:#0B1220;
+      --body:#D1D5DB;
+      --muted:#9CA3AF;
+
+      --border: rgba(229,231,235,0.16);
+      --card:#121C2E;
+
+      --primary:#8AB4FF;
+      --shadow: 0 10px 28px rgba(0,0,0,0.40);
+    }
+  }
+
+  /* =============================== */
+
+  html, body {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body{
+    margin:0;
+    background: var(--bg);
+    color: var(--fg);
+  }
+
+  main.doc {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: env(safe-area-inset-top)
+            max(16px, env(safe-area-inset-right))
+            calc(48px + env(safe-area-inset-bottom))
+            max(16px, env(safe-area-inset-left));
+  }
+
+  /* =============================== */
+
+  p.lead {
+    margin: 0 0 12px;
+    color: var(--muted);
+  }
+
+  /* ===============================
+     카드 스타일
+     =============================== */
+
+  details {
+    border:1px solid var(--border);
+    border-radius:14px;
+    background:var(--card);
+    overflow:hidden;
+    margin:14px 0;
+    box-shadow:var(--shadow);
+    transition: all .2s ease;
+  }
+
+  summary {
+    list-style:none;
+    cursor:pointer;
+    font-weight:600;
+    padding:16px;
+    user-select:none;
+    color: var(--fg);
+  }
+
+  summary::-webkit-details-marker {
+    display:none;
+  }
+
+  summary::before {
+    content:"▸";
+    display:inline-block;
+    margin-right:8px;
+    transition: transform .18s ease;
+    color: var(--muted);
+  }
+
+  details[open] summary::before {
+    transform: rotate(90deg);
+  }
+
+  .details-body{
+    padding: 0 16px 16px;
+    line-height: 1.7;
+    color: var(--body);
+  }
+
+  hr {
+    border:0;
+    border-top:1px solid var(--border);
+    margin:20px 0;
+  }
+
+  .updated {
+    color:var(--muted);
+    font-style:italic;
+    font-size:.95rem;
+    margin-top:16px;
+  }
+
+</style>
+
+<main class="doc">
+
+<p># เส้นทางที่เร็วที่สุดในการเชี่ยวชาญคันจิ Japanese Kanji Master</p>
+
+<details>
+  <summary>วิธีใช้งานแอป</summary>
+  <div class="details-body">
+    1) กดปุ่ม “เริ่มเรียน”<br><br>
+    2) หลังจากดูคันจิแล้ว ให้กดปุ่ม “ดูคำตอบ” ที่ด้านล่าง<br><br>
+    3) หลังจากตรวจสอบรายละเอียดแล้ว หากเป็นคันจิที่คุณรู้แล้วให้เลือก “ปกติ” หรือ “ง่าย” หากยากให้เลือก “ยาก” หรือ “ทบทวน”<br><br>
+    4) ทำความคุ้นเคยกับรูปร่างโดยรวมของคันจิด้วยสายตา แล้วไปยังตัวถัดไปอย่างรวดเร็ว อย่าใช้เวลานานเกินไป ศึกษาแบบดูผ่านเร็ว ๆ เหมือนเปิดอ่านการ์ตูน
+  </div>
+</details>
+
+<details>
+  <summary>ควรเรียนอย่างไรให้จำได้เร็ว?</summary>
+  <div class="details-body">
+    ไม่จำเป็นต้องจำจำนวนขีดให้แม่นยำ เพียงคุ้นเคยกับรูปร่างโดยรวมและไปต่ออย่างรวดเร็ว พยายามเรียนคันจิ 20 ตัวให้เสร็จภายใน 10 นาที<br><br>
+    อย่าลืมเรียนคำศัพท์ตัวอย่างควบคู่กันไปด้วย<br><br>
+    การเรียนวันละเล็กน้อยอย่างสม่ำเสมอมีประสิทธิภาพมากกว่าการเรียนจำนวนมากในครั้งเดียว
+  </div>
+</details>
+
+<details>
+  <summary>มีคันจิบางตัวที่จำไม่ได้เลย</summary>
+  <div class="details-body">
+    หากจำไม่ได้ ให้เลือก “ยาก” แล้วไปต่ออย่างรวดเร็ว<br><br>
+    คันจิที่เลือก “ยาก” จะกลับมาอีกครั้งในการทบทวนวันถัดไป<br><br>
+    หากทบทวนทุกวัน สักวันหนึ่งคุณจะจำได้เองโดยธรรมชาติ<br><br>
+    สำหรับคันจิที่มีจำนวนขีดมากและซับซ้อน อย่าพยายามจำจำนวนขีดให้เป๊ะ ให้จับภาพรวมของรูปร่างและคุ้นเคยกับมันแทน
+  </div>
+</details>
+
+<details>
+  <summary>ระบบทบทวนอัตโนมัติ</summary>
+  <div class="details-body">
+    แอปนี้จะจดจำคำตอบของคุณ และกำหนดคันจิที่ต้องทบทวนพร้อมช่วงเวลาทบทวนโดยอัตโนมัติ<br><br>
+    ดังนั้นคุณไม่จำเป็นต้องวางแผนทบทวนเอง<br><br>
+    เชื่อมั่นในระบบทบทวนอัตโนมัติ และเรียนอย่างสม่ำเสมอทุกวันเพื่อฟื้นความจำ
+  </div>
+</details>
+
+<details>
+  <summary>ควรฝึกเขียนคันจิหรือไม่?</summary>
+  <div class="details-body">
+    ไม่แนะนำ การฝึกให้มองและจดจำรูปร่างโดยรวมของคันจิอย่างรวดเร็วมีประสิทธิภาพมากกว่า<br><br>
+    ภาษาญี่ปุ่นสมัยใหม่ส่วนใหญ่ใช้การพิมพ์ผ่านคีย์บอร์ดพร้อมระบบแปลงอัตโนมัติ ดังนั้นทักษะการอ่านที่ดีจะช่วยทักษะการเขียนโดยธรรมชาติ<br><br>
+    หากงานของคุณไม่ได้จำเป็นต้องเขียนด้วยมือ หรือคุณไม่ได้สนใจศิลปะการเขียนพู่กัน ควรเน้นการฝึกอ่านเป็นหลัก
+  </div>
+</details>
+
+<details>
+  <summary>ระดับความยากของคันจิ</summary>
+  <div class="details-body">
+    ระดับความยากของคันจิในแอปนี้อ้างอิงตามการจัดระดับของการสอบวัดระดับคันจิของญี่ปุ่น<br><br>
+    ระดับ 1–6: คันจิระดับประถมศึกษา<br>
+    ระดับ 7–8: คันจิระดับมัธยมต้น<br>
+    ระดับ 9–10: คันจิระดับมัธยมปลาย<br>
+    ระดับ 11: คันจิที่ใช้บ่อยในชีวิตประจำวันแต่ไม่อยู่ในรายการทางการ<br><br>
+    หากคุณมีเป้าหมายสอบ JLPT โปรดอ้างอิงดังนี้:<br><br>
+    N5: ระดับ 1<br>
+    N4: ระดับ 2–3<br>
+    N3: ระดับ 4–5<br>
+    N2: ระดับ 6–7<br>
+    N1: ระดับ 8–9<br>
+    N1 คะแนนสูง: ระดับ 10
+  </div>
+</details>
+
+</main>

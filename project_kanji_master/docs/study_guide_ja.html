@@ -1,124 +1,219 @@
 ---
 layout: null
-title: このアプリについて
+title: Study Guide
 ---
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta charset="utf-8">
+<meta name="color-scheme" content="light dark">
 <meta name="format-detection" content="telephone=no">
 
 <style>
+  /* ===============================
+     기본: LIGHT 테마
+     =============================== */
   :root{
-    --fg:#111827;         /* 본문 글자 */
-    --bg:#F4F6F9;         /* 앱 전역 배경색 고정 */
-    --muted:#6b7280;      /* 보조 텍스트 */
-    --border:#d1d5db;     /* 경계선 */
-    --card:#ffffff;       /* 카드 배경 */
-    --primary:#142743;    /* 브랜드 포인트 */
+    color-scheme: light dark;
+
+    --fg:#111827;
+    --bg:#fffbf3;
+    --body:#374151;
+    --muted:#070708;
+
+    --border: rgba(6, 9, 16, 0.12);
+    --card:#FFFFFF;
+
+    --primary:#142743;
+    --shadow: 0 6px 18px rgba(17,24,39,0.08);
   }
 
-  html, body { -webkit-text-size-adjust: 100%; }
+  /* ===============================
+     Flutter가 강제 DARK 주입할 때
+     =============================== */
+  :root[data-theme="dark"]{
+    --fg:#E5E7EB;
+    --bg:#0B1220;
+    --body:#D1D5DB;
+    --muted:#9CA3AF;
+
+    --border: rgba(229,231,235,0.16);
+    --card:#121C2E; /* bg보다 살짝 밝게 */
+
+    --primary:#8AB4FF;
+    --shadow: 0 10px 28px rgba(0,0,0,0.40);
+  }
+
+  /* ===============================
+     data-theme 없을 때만 시스템 따라감
+     =============================== */
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme]){
+      --fg:#E5E7EB;
+      --bg:#0B1220;
+      --body:#D1D5DB;
+      --muted:#9CA3AF;
+
+      --border: rgba(229,231,235,0.16);
+      --card:#121C2E;
+
+      --primary:#8AB4FF;
+      --shadow: 0 10px 28px rgba(0,0,0,0.40);
+    }
+  }
+
+  /* =============================== */
+
+  html, body {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body{
+    margin:0;
+    background: var(--bg);
+    color: var(--fg);
+  }
+
   main.doc {
     max-width: 720px;
     margin: 0 auto;
-    padding: calc(20px + env(safe-area-inset-top)) 
+    padding: env(safe-area-inset-top)
             max(16px, env(safe-area-inset-right))
             calc(48px + env(safe-area-inset-bottom))
             max(16px, env(safe-area-inset-left));
   }
 
-  .lang-switch {
-    display:flex; gap:8px; margin-bottom:16px;
-  }
-  .lang-switch a {
-    padding:5px 12px; border-radius:6px;
-    border:1px solid var(--primary);
-    color:var(--primary);
-    font-size:14px; font-weight:600;
-    text-decoration:none;
-    transition: all .2s;
-    background:var(--bg);
-  }
-  .lang-switch a:hover {
-    background:var(--primary); color:white;
+  /* =============================== */
+
+  p.lead {
+    margin: 0 0 12px;
+    color: var(--muted);
   }
 
-  h1 {
-    font-size: 22px; font-weight: 800; letter-spacing:-0.2px;
-    margin: 6px 0 12px;
-  }
-  p.lead { margin: 0 0 12px; color: var(--muted); }
+  /* ===============================
+     카드 스타일
+     =============================== */
 
   details {
     border:1px solid var(--border);
-    border-radius:12px; background:var(--card);
-    overflow:hidden; margin:12px 0;
-    box-shadow:0 1px 2px rgba(0,0,0,0.03);
+    border-radius:14px;
+    background:var(--card);
+    overflow:hidden;
+    margin:14px 0;
+    box-shadow:var(--shadow);
+    transition: all .2s ease;
   }
-  summary {
-    list-style:none; cursor:pointer; font-weight:600;
-    padding:14px 16px; user-select:none;
-  }
-  summary::-webkit-details-marker { display:none; }
-  summary::before {
-    content:"▸"; display:inline-block; margin-right:8px;
-    transition: transform .18s ease;
-  }
-  details[open] summary::before { transform: rotate(90deg); }
-  .details-body { padding: 0 16px 14px; }
 
-  hr { border:0; border-top:1px solid var(--border); margin:20px 0; }
-  .updated { color:var(--muted); font-style:italic; font-size:.95rem; margin-top:16px; }
+  summary {
+    list-style:none;
+    cursor:pointer;
+    font-weight:600;
+    padding:16px;
+    user-select:none;
+    color: var(--fg);
+  }
+
+  summary::-webkit-details-marker {
+    display:none;
+  }
+
+  summary::before {
+    content:"▸";
+    display:inline-block;
+    margin-right:8px;
+    transition: transform .18s ease;
+    color: var(--muted);
+  }
+
+  details[open] summary::before {
+    transform: rotate(90deg);
+  }
+
+  .details-body{
+    padding: 0 16px 16px;
+    line-height: 1.7;
+    color: var(--body);
+  }
+
+  hr {
+    border:0;
+    border-top:1px solid var(--border);
+    margin:20px 0;
+  }
+
+  .updated {
+    color:var(--muted);
+    font-style:italic;
+    font-size:.95rem;
+    margin-top:16px;
+  }
+
 </style>
 
 <main class="doc">
 
-<div class="lang-switch">
-  <a href="https://thinker89.github.io/docs_hub/project_market_mood/docs/what_is_this_app_en.html">English</a>
-  <a href="https://thinker89.github.io/docs_hub/project_market_mood/docs/what_is_this_app_ko.html">한국어</a>
-  <a href="https://thinker89.github.io/docs_hub/project_market_mood/docs/what_is_this_app_ja.html">日本語</a>
-</div>
-
-# 市場を覗くもう一つの窓。雰囲気をサッとチェック。
+<p># 漢字をマスターする最速ルート。Japanese Kanji Master。</p>
 
 <details>
-  <summary>このアプリは何ですか？</summary>
+  <summary>アプリの使い方</summary>
   <div class="details-body">
-    米国株式市場の雰囲気を手軽に感じ取るためのシンプルな道具です。<br><br>
-    Fear &amp; GreedやVIXなど、投資家心理を示す指標を一目で確認できます。
+    1) 「学習を始める」ボタンを押してください。<br><br>
+    2) 漢字を確認した後、下部の「答えを見る」ボタンを押してください。<br><br>
+    3) 詳細を確認したら、知っていた漢字は「普通」または「簡単」、難しかった漢字は「難しい」または「復習」で答えてください。<br><br>
+    4) 漢字の大まかな形を目で覚えたら、すぐに次の漢字へ進んでください。長時間じっくり学習するのではなく、漫画をめくるようにテンポよく進めましょう。
   </div>
 </details>
 
 <details>
-  <summary>どう使えばいいですか？</summary>
+  <summary>どうすれば早く覚えられますか？</summary>
   <div class="details-body">
-    注目すべきは3つの指標：Fear &amp; Greed、VIX、長短金利差。<br><br>
-    通知を設定すれば、気になる動きを効果的に追跡できます。<br><br>
-    画面の配置も自由にカスタマイズできます。<br><br>
-    ※ このアプリは投資アドバイスを提供せず、遅延または日単位の簡易データのみを提供します。
+    正確な画数を覚える必要はありません。漢字の大まかな形を目で覚えて、どんどん先へ進みましょう。20個の漢字を10分以内にテンポよく進めるのがおすすめです。<br><br>
+    例単語も必ず一緒に覚えてください。<br><br>
+    一度に大量に学習するよりも、毎日少しずつ繰り返すほうがはるかに効果的です。
   </div>
 </details>
 
 <details>
-  <summary>Fear &amp; Greedとは？</summary>
+  <summary>どうしても覚えられない漢字があります</summary>
   <div class="details-body">
-    市場の雰囲気を簡単に把握できる指標として有名です。0に近いと恐怖、100に近いと強欲を示します。
+    覚えられない漢字は「難しい」で答えて、すぐに次へ進んでください。<br><br>
+    「難しい」と答えた漢字は、翌日の復習に再び登場します。<br><br>
+    毎日繰り返し見ていれば、ある瞬間に自然と覚えられます。<br><br>
+    画数が多くて複雑な漢字は、正確な画数を覚えようとせず、大まかな形をつかんで目に慣らしてください。
   </div>
 </details>
 
 <details>
-  <summary>VIXとは？</summary>
+  <summary>自動復習機能</summary>
   <div class="details-body">
-    一般的に「恐怖指数」と呼ばれ、市場のボラティリティを示します。<br><br>
-    通常は10～20程度ですが、市場が荒れると急騰する傾向があります。
+    このアプリは学習者の回答を記録し、復習する漢字と復習間隔を自動で設定します。<br><br>
+    そのため、別途復習計画を立てる必要はありません。<br><br>
+    自動復習機能を信頼して、毎日継続的に学習し、記憶を呼び戻してください。
   </div>
 </details>
 
 <details>
-  <summary>長短金利の逆転とは？</summary>
+  <summary>漢字の書き取り練習は必要ですか？</summary>
   <div class="details-body">
-    国債の利回りは、一般的に長期債が高く、短期債が低いものです。<br><br>
-    しかし、米国の10年国債利回りが2年国債利回りを下回ると、投資家が景気後退を予想しているサインとなります。<br><br>
-    歴史的に、長短金利の逆転の後には株式市場に大きな衝撃が訪れることがよくありました。
+    いいえ。おすすめしません。漢字の大まかな形を目で素早く認識する訓練のほうが、はるかに効果的です。<br><br>
+    現代の日本語では、文字を書く際はほとんどがキーボードの自動変換で行われます。そのため、読む力が自然と書く力も補ってくれます。<br><br>
+    仕事で手書きが必要な場合や書道が趣味でない限り、読む練習に集中してください。
+  </div>
+</details>
+
+<details>
+  <summary>漢字の難易度</summary>
+  <div class="details-body">
+    本アプリの漢字難易度は、日本の漢字検定の区分に基づいています。<br><br>
+    1〜6段階：小学校の漢字<br>
+    7〜8段階：中学校の漢字<br>
+    9〜10段階：高校の漢字<br>
+    11段階：日常でよく使われる常用外漢字<br><br>
+    JLPTを目標とする場合は、以下を参考にしてください。<br><br>
+    N5：1段階<br>
+    N4：2〜3段階<br>
+    N3：4〜5段階<br>
+    N2：6〜7段階<br>
+    N1：8〜9段階<br>
+    N1高得点：10段階
   </div>
 </details>
 

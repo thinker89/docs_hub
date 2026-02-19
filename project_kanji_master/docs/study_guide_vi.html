@@ -1,0 +1,220 @@
+---
+layout: null
+title: Study Guide
+---
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta charset="utf-8">
+<meta name="color-scheme" content="light dark">
+<meta name="format-detection" content="telephone=no">
+
+<style>
+  /* ===============================
+     기본: LIGHT 테마
+     =============================== */
+  :root{
+    color-scheme: light dark;
+
+    --fg:#111827;
+    --bg:#fffbf3;
+    --body:#374151;
+    --muted:#070708;
+
+    --border: rgba(6, 9, 16, 0.12);
+    --card:#FFFFFF;
+
+    --primary:#142743;
+    --shadow: 0 6px 18px rgba(17,24,39,0.08);
+  }
+
+  /* ===============================
+     Flutter가 강제 DARK 주입할 때
+     =============================== */
+  :root[data-theme="dark"]{
+    --fg:#E5E7EB;
+    --bg:#0B1220;
+    --body:#D1D5DB;
+    --muted:#9CA3AF;
+
+    --border: rgba(229,231,235,0.16);
+    --card:#121C2E; /* bg보다 살짝 밝게 */
+
+    --primary:#8AB4FF;
+    --shadow: 0 10px 28px rgba(0,0,0,0.40);
+  }
+
+  /* ===============================
+     data-theme 없을 때만 시스템 따라감
+     =============================== */
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme]){
+      --fg:#E5E7EB;
+      --bg:#0B1220;
+      --body:#D1D5DB;
+      --muted:#9CA3AF;
+
+      --border: rgba(229,231,235,0.16);
+      --card:#121C2E;
+
+      --primary:#8AB4FF;
+      --shadow: 0 10px 28px rgba(0,0,0,0.40);
+    }
+  }
+
+  /* =============================== */
+
+  html, body {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body{
+    margin:0;
+    background: var(--bg);
+    color: var(--fg);
+  }
+
+  main.doc {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: env(safe-area-inset-top)
+            max(16px, env(safe-area-inset-right))
+            calc(48px + env(safe-area-inset-bottom))
+            max(16px, env(safe-area-inset-left));
+  }
+
+  /* =============================== */
+
+  p.lead {
+    margin: 0 0 12px;
+    color: var(--muted);
+  }
+
+  /* ===============================
+     카드 스타일
+     =============================== */
+
+  details {
+    border:1px solid var(--border);
+    border-radius:14px;
+    background:var(--card);
+    overflow:hidden;
+    margin:14px 0;
+    box-shadow:var(--shadow);
+    transition: all .2s ease;
+  }
+
+  summary {
+    list-style:none;
+    cursor:pointer;
+    font-weight:600;
+    padding:16px;
+    user-select:none;
+    color: var(--fg);
+  }
+
+  summary::-webkit-details-marker {
+    display:none;
+  }
+
+  summary::before {
+    content:"▸";
+    display:inline-block;
+    margin-right:8px;
+    transition: transform .18s ease;
+    color: var(--muted);
+  }
+
+  details[open] summary::before {
+    transform: rotate(90deg);
+  }
+
+  .details-body{
+    padding: 0 16px 16px;
+    line-height: 1.7;
+    color: var(--body);
+  }
+
+  hr {
+    border:0;
+    border-top:1px solid var(--border);
+    margin:20px 0;
+  }
+
+  .updated {
+    color:var(--muted);
+    font-style:italic;
+    font-size:.95rem;
+    margin-top:16px;
+  }
+
+</style>
+
+<main class="doc">
+
+<p># Con đường nhanh nhất để chinh phục kanji. Japanese Kanji Master.</p>
+
+<details>
+  <summary>Cách sử dụng ứng dụng</summary>
+  <div class="details-body">
+    1) Nhấn nút “Bắt đầu học”.<br><br>
+    2) Sau khi xem kanji, nhấn nút “Xem đáp án” ở phía dưới.<br><br>
+    3) Sau khi kiểm tra chi tiết, với kanji bạn đã biết hãy chọn “Bình thường” hoặc “Dễ”, với kanji khó hãy chọn “Khó” hoặc “Lặp lại”.<br><br>
+    4) Làm quen với hình dạng tổng thể của kanji bằng mắt rồi nhanh chóng chuyển sang ký tự tiếp theo. Đừng học quá lâu và quá chi tiết — hãy lướt nhanh như khi đọc truyện tranh.
+  </div>
+</details>
+
+<details>
+  <summary>Làm thế nào để ghi nhớ nhanh hơn?</summary>
+  <div class="details-body">
+    Bạn không cần nhớ chính xác số nét. Chỉ cần làm quen với hình dạng tổng thể và tiếp tục thật nhanh. Hãy cố gắng học 20 kanji trong vòng 10 phút.<br><br>
+    Đừng quên học các từ ví dụ đi kèm.<br><br>
+    Học một ít mỗi ngày hiệu quả hơn nhiều so với học dồn một lượng lớn trong một lần.
+  </div>
+</details>
+
+<details>
+  <summary>Có những kanji tôi không thể nhớ được</summary>
+  <div class="details-body">
+    Với những kanji khó nhớ, hãy chọn “Khó” và tiếp tục nhanh chóng.<br><br>
+    Những kanji được đánh dấu “Khó” sẽ xuất hiện lại trong buổi ôn tập ngày hôm sau.<br><br>
+    Nếu bạn xem lại mỗi ngày, đến một lúc nào đó bạn sẽ tự nhiên ghi nhớ được.<br><br>
+    Với những kanji phức tạp có nhiều nét, đừng cố ghi nhớ chính xác số nét — chỉ cần nắm được hình dạng tổng thể và làm quen với nó.
+  </div>
+</details>
+
+<details>
+  <summary>Hệ thống ôn tập tự động</summary>
+  <div class="details-body">
+    Ứng dụng ghi nhớ câu trả lời của bạn và tự động thiết lập các kanji cần ôn cùng khoảng thời gian ôn tập.<br><br>
+    Vì vậy bạn không cần tự lập kế hoạch ôn tập riêng.<br><br>
+    Hãy tin tưởng hệ thống ôn tập tự động và học đều đặn mỗi ngày để củng cố trí nhớ.
+  </div>
+</details>
+
+<details>
+  <summary>Tôi có nên luyện viết kanji không?</summary>
+  <div class="details-body">
+    Không. Điều này không được khuyến khích. Việc rèn luyện khả năng nhận diện nhanh hình dạng tổng thể của kanji hiệu quả hơn nhiều.<br><br>
+    Trong tiếng Nhật hiện đại, phần lớn việc viết được thực hiện bằng bàn phím với chức năng chuyển đổi tự động. Vì vậy, khả năng đọc tốt sẽ tự nhiên hỗ trợ khả năng viết.<br><br>
+    Trừ khi công việc của bạn yêu cầu viết tay kanji hoặc bạn có sở thích thư pháp, hãy tập trung vào luyện đọc.
+  </div>
+</details>
+
+<details>
+  <summary>Mức độ khó của kanji</summary>
+  <div class="details-body">
+    Mức độ khó trong ứng dụng này dựa trên phân loại của Kỳ thi Năng lực Kanji Nhật Bản.<br><br>
+    Cấp 1–6: Kanji tiểu học<br>
+    Cấp 7–8: Kanji trung học cơ sở<br>
+    Cấp 9–10: Kanji trung học phổ thông<br>
+    Cấp 11: Kanji thường dùng ngoài danh sách chính thức<br><br>
+    Nếu mục tiêu của bạn là JLPT, vui lòng tham khảo hướng dẫn sau:<br><br>
+    N5: Cấp 1<br>
+    N4: Cấp 2–3<br>
+    N3: Cấp 4–5<br>
+    N2: Cấp 6–7<br>
+    N1: Cấp 8–9<br>
+    N1 điểm cao: Cấp 10
+  </div>
+</details>
+
+</main>

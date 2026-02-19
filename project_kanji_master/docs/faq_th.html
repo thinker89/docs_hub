@@ -1,0 +1,204 @@
+---
+layout: null
+title: FAQ
+---
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta charset="utf-8">
+<meta name="color-scheme" content="light dark">
+<meta name="format-detection" content="telephone=no">
+
+<style>
+  /* ===============================
+     기본: LIGHT 테마
+     =============================== */
+  :root{
+    color-scheme: light dark;
+
+    --fg:#111827;
+    --bg:#fffbf3;
+    --body:#374151;
+    --muted:#070708;
+
+    --border: rgba(6, 9, 16, 0.12);
+    --card:#FFFFFF;
+
+    --primary:#142743;
+    --shadow: 0 6px 18px rgba(17,24,39,0.08);
+  }
+
+  /* ===============================
+     Flutter가 강제 DARK 주입할 때
+     =============================== */
+  :root[data-theme="dark"]{
+    --fg:#E5E7EB;
+    --bg:#0B1220;
+    --body:#D1D5DB;
+    --muted:#9CA3AF;
+
+    --border: rgba(229,231,235,0.16);
+    --card:#121C2E; /* bg보다 살짝 밝게 */
+
+    --primary:#8AB4FF;
+    --shadow: 0 10px 28px rgba(0,0,0,0.40);
+  }
+
+  /* ===============================
+     data-theme 없을 때만 시스템 따라감
+     =============================== */
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme]){
+      --fg:#E5E7EB;
+      --bg:#0B1220;
+      --body:#D1D5DB;
+      --muted:#9CA3AF;
+
+      --border: rgba(229,231,235,0.16);
+      --card:#121C2E;
+
+      --primary:#8AB4FF;
+      --shadow: 0 10px 28px rgba(0,0,0,0.40);
+    }
+  }
+
+  /* =============================== */
+
+  html, body {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body{
+    margin:0;
+    background: var(--bg);
+    color: var(--fg);
+  }
+
+  main.doc {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: env(safe-area-inset-top)
+            max(16px, env(safe-area-inset-right))
+            calc(48px + env(safe-area-inset-bottom))
+            max(16px, env(safe-area-inset-left));
+  }
+
+  /* =============================== */
+
+  p.lead {
+    margin: 0 0 12px;
+    color: var(--muted);
+  }
+
+  /* ===============================
+     카드 스타일
+     =============================== */
+
+  details {
+    border:1px solid var(--border);
+    border-radius:14px;
+    background:var(--card);
+    overflow:hidden;
+    margin:14px 0;
+    box-shadow:var(--shadow);
+    transition: all .2s ease;
+  }
+
+  summary {
+    list-style:none;
+    cursor:pointer;
+    font-weight:600;
+    padding:16px;
+    user-select:none;
+    color: var(--fg);
+  }
+
+  summary::-webkit-details-marker {
+    display:none;
+  }
+
+  summary::before {
+    content:"▸";
+    display:inline-block;
+    margin-right:8px;
+    transition: transform .18s ease;
+    color: var(--muted);
+  }
+
+  details[open] summary::before {
+    transform: rotate(90deg);
+  }
+
+  .details-body{
+    padding: 0 16px 16px;
+    line-height: 1.7;
+    color: var(--body);
+  }
+
+  hr {
+    border:0;
+    border-top:1px solid var(--border);
+    margin:20px 0;
+  }
+
+  .updated {
+    color:var(--muted);
+    font-style:italic;
+    font-size:.95rem;
+    margin-top:16px;
+  }
+
+</style>
+
+<main class="doc">
+
+<p># FAQ</p>
+
+<details>
+  <summary>ฉันไม่ได้รับการแจ้งเตือนทบทวน</summary>
+  <div class="details-body">
+    กรุณาเปิดการแจ้งเตือนทบทวนใน เมนู - การตั้งค่า และตรวจสอบว่าได้อนุญาตการแจ้งเตือนแล้ว หากคุณเปิดแอปอย่างน้อยหนึ่งครั้งในวันนั้น ระบบจะไม่ส่งการแจ้งเตือนในวันเดียวกัน และจะส่งอีกครั้งในวันถัดไป
+  </div>
+</details>
+
+<details>
+  <summary>ที่มาของคันจิอ้างอิงตามทฤษฎีทางวิชาการหรือไม่?</summary>
+  <div class="details-body">
+    คำอธิบายที่มาของคันจิในบัตรบางส่วนอ้างอิงตามทฤษฎีดั้งเดิมทางวิชาการ และบางส่วนเป็นคำอธิบายที่สร้างขึ้นเพื่อช่วยให้เรียนรู้ได้รวดเร็วขึ้น หากคุณต้องการศึกษาทฤษฎีดั้งเดิมอย่างถูกต้อง โปรดอ้างอิงงานวิจัยหรือเอกสารทางวิชาการเพิ่มเติม
+  </div>
+</details>
+
+<details>
+  <summary>ฉันต้องการบันทึกความคืบหน้าการเรียน</summary>
+  <div class="details-body">
+    ก่อนลบแอปหรือเปลี่ยนอุปกรณ์ กรุณาใช้ฟังก์ชัน [เมนู - การตั้งค่า - บันทึกความคืบหน้าการเรียน] เพื่อสำรองข้อมูลความคืบหน้า การเลือก iCloud หรือ Google Drive จะช่วยให้การสำรองและกู้คืนสะดวกยิ่งขึ้น<br><br>
+    บนอุปกรณ์ที่ต้องการกู้คืน ให้ใช้ฟังก์ชัน [เมนู - การตั้งค่า - กู้คืน] และเลือกไฟล์สำรองที่บันทึกไว้ก่อนหน้านี้<br><br>
+    หากลบแอปโดยไม่ได้สำรองข้อมูล การตั้งค่าแอปและความคืบหน้าการเรียนจะสูญหายและไม่สามารถกู้คืนได้
+  </div>
+</details>
+
+<details>
+  <summary>ฉันชำระเงินแล้วแต่ไม่สามารถเรียนคันจิทั้งหมดได้</summary>
+  <div class="details-body">
+    หากการชำระเงินเสร็จสมบูรณ์แต่ยังไม่สามารถใช้งานคันจิทั้งหมดได้ กรุณาปิดแอปให้สนิทแล้วเปิดใหม่อีกครั้ง<br><br>
+    หากปัญหายังคงอยู่ ให้กด [เมนู → การตั้งค่า → กู้คืนการซื้อ] เพื่อกู้คืนประวัติการซื้อ<br><br>
+    หากคุณลบแอปและติดตั้งใหม่ หรือเปลี่ยนอุปกรณ์ กรุณาใช้ฟังก์ชัน [กู้คืนการซื้อ] เช่นกัน<br><br>
+    ประวัติการซื้อสามารถกู้คืนได้เฉพาะกับบัญชี Google Play หรือ App Store เดียวกับที่ใช้ชำระเงิน หากชำระด้วยบัญชีอื่น กรุณาเข้าสู่ระบบสโตร์ด้วยบัญชีนั้นแล้วดำเนินการกู้คืนการซื้อ
+  </div>
+</details>
+
+<details>
+  <summary>มีการเก็บข้อมูลส่วนบุคคลหรือไม่?</summary>
+  <div class="details-body">
+    แอปนี้ไม่เก็บข้อมูลที่สามารถระบุตัวบุคคลได้ เช่น ชื่อ อีเมล หรือข้อมูลติดต่อ เพื่อปรับปรุงคุณภาพของแอป อาจมีการเก็บข้อมูลวิเคราะห์ทางเทคนิค เช่น รูปแบบการใช้งานและความคืบหน้าการเรียนโดยอัตโนมัติ<br><br>
+    หากผู้ใช้ต้องการ สามารถสำรองข้อมูลการเรียนไปยัง Google Drive หรือ iCloud ของตนเองได้ ข้อมูลส่วนบุคคลที่เก็บโดยบริการคลาวด์ดังกล่าวเป็นไปตามนโยบายของแต่ละแพลตฟอร์ม ข้อมูลสำรองประกอบด้วยการตั้งค่าแอปและความคืบหน้าการเรียน และไม่รวมข้อมูลส่วนบุคคล เช่น ชื่อหรืออีเมล
+  </div>
+</details>
+
+<details>
+  <summary>ฉันมีคำถาม</summary>
+  <div class="details-body">
+    หากคุณมีคำถาม กรุณาติดต่อเราที่อีเมลด้านล่าง<br>
+    contact@freenaru.com
+  </div>
+</details>
+
+</main>
