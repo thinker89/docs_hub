@@ -11,63 +11,70 @@ title: Study Guide
   /* ===============================
      기본: LIGHT 테마
      =============================== */
-  :root{
+  :root {
     color-scheme: light dark;
 
-    --fg:#111827;
-    --bg:#fffbf3;
-    --body:#374151;
-    --muted:#070708;
+    --fg: #111827;
+    --bg: #fffbf3;
+    --body: #374151;
+    --muted: #070708;
 
     --border: rgba(6, 9, 16, 0.12);
-    --card:#FFFFFF;
+    --card: #FFFFFF;
 
-    --primary:#142743;
-    --shadow: 0 6px 18px rgba(17,24,39,0.08);
+    --primary: #142743;
+    --shadow: 0 6px 18px rgba(17, 24, 39, 0.08);
   }
 
   /* ===============================
      Flutter가 강제 DARK 주입할 때
      =============================== */
-  :root[data-theme="dark"]{
-    --fg:#E5E7EB;
-    --bg:#0B1220;
-    --body:#D1D5DB;
-    --muted:#9CA3AF;
+  :root[data-theme="dark"] {
+    --fg: #F3EBDD;
+    /* 따뜻한 밝은 글자 */
+    --bg: #17110D;
+    /* 앱 바깥 배경 */
+    --body: #D8CBBB;
+    /* 본문 */
+    --muted: #B7A894;
+    /* 보조 글자 */
 
-    --border: rgba(229,231,235,0.16);
-    --card:#121C2E; /* bg보다 살짝 밝게 */
+    --border: rgba(216, 203, 187, 0.12);
+    --card: #2A1F18;
+    /* 카드 배경 */
 
-    --primary:#8AB4FF;
-    --shadow: 0 10px 28px rgba(0,0,0,0.40);
+    --primary: #B8A3FF;
+    /* 보라 포인트 */
+    --shadow: 0 10px 28px rgba(0, 0, 0, 0.32);
   }
 
   /* ===============================
      data-theme 없을 때만 시스템 따라감
      =============================== */
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme]){
-      --fg:#E5E7EB;
-      --bg:#0B1220;
-      --body:#D1D5DB;
-      --muted:#9CA3AF;
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+      --fg: #E5E7EB;
+      --bg: #0B1220;
+      --body: #D1D5DB;
+      --muted: #9CA3AF;
 
-      --border: rgba(229,231,235,0.16);
-      --card:#121C2E;
+      --border: rgba(229, 231, 235, 0.16);
+      --card: #121C2E;
 
-      --primary:#8AB4FF;
-      --shadow: 0 10px 28px rgba(0,0,0,0.40);
+      --primary: #8AB4FF;
+      --shadow: 0 10px 28px rgba(0, 0, 0, 0.40);
     }
   }
 
   /* =============================== */
 
-  html, body {
+  html,
+  body {
     -webkit-text-size-adjust: 100%;
   }
 
-  body{
-    margin:0;
+  body {
+    margin: 0;
     background: var(--bg);
     color: var(--fg);
   }
@@ -75,10 +82,7 @@ title: Study Guide
   main.doc {
     max-width: 720px;
     margin: 0 auto;
-    padding: env(safe-area-inset-top)
-            max(16px, env(safe-area-inset-right))
-            calc(48px + env(safe-area-inset-bottom))
-            max(16px, env(safe-area-inset-left));
+    padding: env(safe-area-inset-top) max(16px, env(safe-area-inset-right)) calc(48px + env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
   }
 
   /* =============================== */
@@ -93,32 +97,32 @@ title: Study Guide
      =============================== */
 
   details {
-    border:1px solid var(--border);
-    border-radius:14px;
-    background:var(--card);
-    overflow:hidden;
-    margin:14px 0;
-    box-shadow:var(--shadow);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--card);
+    overflow: hidden;
+    margin: 14px 0;
+    box-shadow: var(--shadow);
     transition: all .2s ease;
   }
 
   summary {
-    list-style:none;
-    cursor:pointer;
-    font-weight:600;
-    padding:16px;
-    user-select:none;
+    list-style: none;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 16px;
+    user-select: none;
     color: var(--fg);
   }
 
   summary::-webkit-details-marker {
-    display:none;
+    display: none;
   }
 
   summary::before {
-    content:"▸";
-    display:inline-block;
-    margin-right:8px;
+    content: "▸";
+    display: inline-block;
+    margin-right: 8px;
     transition: transform .18s ease;
     color: var(--muted);
   }
@@ -127,112 +131,120 @@ title: Study Guide
     transform: rotate(90deg);
   }
 
-  .details-body{
+  .details-body {
     padding: 0 16px 16px;
     line-height: 1.7;
     color: var(--body);
   }
 
   hr {
-    border:0;
-    border-top:1px solid var(--border);
-    margin:20px 0;
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: 20px 0;
   }
 
   .updated {
-    color:var(--muted);
-    font-style:italic;
-    font-size:.95rem;
-    margin-top:16px;
+    color: var(--muted);
+    font-style: italic;
+    font-size: .95rem;
+    margin-top: 16px;
   }
-
 </style>
 
 <main class="doc">
 
-<p># The fastest way to master kanji. Japanese Kanji Master.</p>
+  <p># The fastest way to master kanji. Japanese Kanji Master.</p>
 
-<details>
-  <summary>How to use the app</summary>
-  <div class="details-body">
-    1) Tap the “Start Learning” button.<br><br>
-    2) After checking the kanji, tap the “Show Answer” button at the bottom.<br><br>
-    3) After reviewing the details, respond “Normal” or “Easy” for kanji you knew, and “Hard” or “Repeat” for difficult ones.<br><br>
-    4) Get familiar with the overall shape of the kanji at a glance, then quickly move on to the next one. Don’t study too carefully for a long time—skim through them quickly, like flipping through a comic book.
-  </div>
-</details>
+  <details>
+    <summary>How to use the app</summary>
+    <div class="details-body">
+      1) Tap the “Start Learning” button.<br><br>
+      2) After checking the kanji, tap the “Show Answer” button at the bottom.<br><br>
+      3) After reviewing the details, respond “Normal” or “Easy” for kanji you knew, and “Hard” or “Repeat” for
+      difficult ones.<br><br>
+      4) Get familiar with the overall shape of the kanji at a glance, then quickly move on to the next one. Don’t study
+      too carefully for a long time—skim through them quickly, like flipping through a comic book.
+    </div>
+  </details>
 
-<details>
-  <summary>How can I memorize them faster?</summary>
-  <div class="details-body">
-    You don’t need to know the exact stroke count. Just get used to the general shape visually and move on quickly. Try to go through 20 kanji within 10 minutes.<br><br>
-    Make sure to learn the example words together with the kanji.<br><br>
-    Studying a large amount at once is less effective than reviewing a small amount every day.
-  </div>
-</details>
+  <details>
+    <summary>How can I memorize them faster?</summary>
+    <div class="details-body">
+      You don’t need to know the exact stroke count. Just get used to the general shape visually and move on quickly.
+      Try to go through 20 kanji within 10 minutes.<br><br>
+      Make sure to learn the example words together with the kanji.<br><br>
+      Studying a large amount at once is less effective than reviewing a small amount every day.
+    </div>
+  </details>
 
-<details>
-  <summary>There are kanji I just can’t memorize</summary>
-  <div class="details-body">
-    If a kanji won’t stick, mark it as “Hard” and move on quickly.<br><br>
-    Kanji marked as “Hard” will appear again in the next day’s review.<br><br>
-    If you keep reviewing daily, you’ll suddenly realize you remember it.<br><br>
-    For complex kanji with many strokes, don’t try to memorize the exact stroke count—just grasp the overall shape and get used to it visually.
-  </div>
-</details>
+  <details>
+    <summary>There are kanji I just can’t memorize</summary>
+    <div class="details-body">
+      If a kanji won’t stick, mark it as “Hard” and move on quickly.<br><br>
+      Kanji marked as “Hard” will appear again in the next day’s review.<br><br>
+      If you keep reviewing daily, you’ll suddenly realize you remember it.<br><br>
+      For complex kanji with many strokes, don’t try to memorize the exact stroke count—just grasp the overall shape and
+      get used to it visually.
+    </div>
+  </details>
 
-<details>
-  <summary>The Structure of Kanji</summary>
-  <div class="details-body">
-    Kanji can be broken down into smaller components. Let’s look at some examples.<br><br>
-    亻: means “person.”<br>
-    木: means “tree.”<br>
-    「休」: A person (亻) leaning against a tree (木) to rest. It means “rest.”<br><br>
-    石: means “stone.”<br>
-    更: does not have a specific meaning here and only indicates the sound “こう.”<br>
-    「硬」: Means “hard,” like a stone (石). 更 (こう) represents the sound only, without adding meaning.<br><br>
-    In this way, components express either meaning or sound. Most kanji can be understood quickly through this principle.<br><br>
-    Also, a single component can have multiple interpretations.<br><br>
-    口: means “mouth,” but can also represent speech or a square-shaped object.<br>
-    十: means “ten,” but can also represent a cross shape or an intersection.<br><br>
-    There is no need to memorize components separately. As you continue learning with this app, you will naturally become familiar with them.
-  </div>
-</details>
+  <details>
+    <summary>The Structure of Kanji</summary>
+    <div class="details-body">
+      Kanji can be broken down into smaller components. Let’s look at some examples.<br><br>
+      亻: means “person.”<br>
+      木: means “tree.”<br>
+      「休」: A person (亻) leaning against a tree (木) to rest. It means “rest.”<br><br>
+      石: means “stone.”<br>
+      更: does not have a specific meaning here and only indicates the sound “こう.”<br>
+      「硬」: Means “hard,” like a stone (石). 更 (こう) represents the sound only, without adding meaning.<br><br>
+      In this way, components express either meaning or sound. Most kanji can be understood quickly through this
+      principle.<br><br>
+      Also, a single component can have multiple interpretations.<br><br>
+      口: means “mouth,” but can also represent speech or a square-shaped object.<br>
+      十: means “ten,” but can also represent a cross shape or an intersection.<br><br>
+      There is no need to memorize components separately. As you continue learning with this app, you will naturally
+      become familiar with them.
+    </div>
+  </details>
 
-<details>
-  <summary>Automatic review system</summary>
-  <div class="details-body">
-    The app remembers your responses and automatically schedules which kanji to review and when.<br><br>
-    So there’s no need to create your own review plan.<br><br>
-    Trust the automatic review system and study consistently every day to reinforce your memory.
-  </div>
-</details>
+  <details>
+    <summary>Automatic review system</summary>
+    <div class="details-body">
+      The app remembers your responses and automatically schedules which kanji to review and when.<br><br>
+      So there’s no need to create your own review plan.<br><br>
+      Trust the automatic review system and study consistently every day to reinforce your memory.
+    </div>
+  </details>
 
-<details>
-  <summary>Should I practice writing kanji?</summary>
-  <div class="details-body">
-    No. It’s not recommended. Training yourself to quickly recognize the overall shape of kanji is much more effective.<br><br>
-    In modern Japanese, most writing is done through keyboard input with automatic conversion. Strong reading ability naturally supports writing ability.<br><br>
-    Unless your job requires handwriting kanji or you practice calligraphy as a hobby, focus on reading practice.
-  </div>
-</details>
+  <details>
+    <summary>Should I practice writing kanji?</summary>
+    <div class="details-body">
+      No. It’s not recommended. Training yourself to quickly recognize the overall shape of kanji is much more
+      effective.<br><br>
+      In modern Japanese, most writing is done through keyboard input with automatic conversion. Strong reading ability
+      naturally supports writing ability.<br><br>
+      Unless your job requires handwriting kanji or you practice calligraphy as a hobby, focus on reading practice.
+    </div>
+  </details>
 
-<details>
-  <summary>Kanji difficulty levels</summary>
-  <div class="details-body">
-    The difficulty levels in this app follow the classification of the official Japanese Kanji Proficiency Test.<br><br>
-    Level 1–6: Elementary school kanji<br>
-    Level 7–8: Middle school kanji<br>
-    Level 9–10: High school kanji<br>
-    Level 11: Commonly used non-official kanji<br><br>
-    If your goal is the JLPT, please refer to the guide below:<br><br>
-    N5: Level 1<br>
-    N4: Level 2–3<br>
-    N3: Level 4–5<br>
-    N2: Level 6–7<br>
-    N1: Level 8–9<br>
-    High N1 score: Level 10
-  </div>
-</details>
+  <details>
+    <summary>Kanji difficulty levels</summary>
+    <div class="details-body">
+      The difficulty levels in this app follow the classification of the official Japanese Kanji Proficiency
+      Test.<br><br>
+      Level 1–6: Elementary school kanji<br>
+      Level 7–8: Middle school kanji<br>
+      Level 9–10: High school kanji<br>
+      Level 11: Commonly used non-official kanji<br><br>
+      If your goal is the JLPT, please refer to the guide below:<br><br>
+      N5: Level 1<br>
+      N4: Level 2–3<br>
+      N3: Level 4–5<br>
+      N2: Level 6–7<br>
+      N1: Level 8–9<br>
+      High N1 score: Level 10
+    </div>
+  </details>
 
 </main>

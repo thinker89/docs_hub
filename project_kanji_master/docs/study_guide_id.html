@@ -11,63 +11,70 @@ title: Study Guide
   /* ===============================
      기본: LIGHT 테마
      =============================== */
-  :root{
+  :root {
     color-scheme: light dark;
 
-    --fg:#111827;
-    --bg:#fffbf3;
-    --body:#374151;
-    --muted:#070708;
+    --fg: #111827;
+    --bg: #fffbf3;
+    --body: #374151;
+    --muted: #070708;
 
     --border: rgba(6, 9, 16, 0.12);
-    --card:#FFFFFF;
+    --card: #FFFFFF;
 
-    --primary:#142743;
-    --shadow: 0 6px 18px rgba(17,24,39,0.08);
+    --primary: #142743;
+    --shadow: 0 6px 18px rgba(17, 24, 39, 0.08);
   }
 
   /* ===============================
      Flutter가 강제 DARK 주입할 때
      =============================== */
-  :root[data-theme="dark"]{
-    --fg:#E5E7EB;
-    --bg:#0B1220;
-    --body:#D1D5DB;
-    --muted:#9CA3AF;
+  :root[data-theme="dark"] {
+    --fg: #F3EBDD;
+    /* 따뜻한 밝은 글자 */
+    --bg: #17110D;
+    /* 앱 바깥 배경 */
+    --body: #D8CBBB;
+    /* 본문 */
+    --muted: #B7A894;
+    /* 보조 글자 */
 
-    --border: rgba(229,231,235,0.16);
-    --card:#121C2E; /* bg보다 살짝 밝게 */
+    --border: rgba(216, 203, 187, 0.12);
+    --card: #2A1F18;
+    /* 카드 배경 */
 
-    --primary:#8AB4FF;
-    --shadow: 0 10px 28px rgba(0,0,0,0.40);
+    --primary: #B8A3FF;
+    /* 보라 포인트 */
+    --shadow: 0 10px 28px rgba(0, 0, 0, 0.32);
   }
 
   /* ===============================
      data-theme 없을 때만 시스템 따라감
      =============================== */
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme]){
-      --fg:#E5E7EB;
-      --bg:#0B1220;
-      --body:#D1D5DB;
-      --muted:#9CA3AF;
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+      --fg: #E5E7EB;
+      --bg: #0B1220;
+      --body: #D1D5DB;
+      --muted: #9CA3AF;
 
-      --border: rgba(229,231,235,0.16);
-      --card:#121C2E;
+      --border: rgba(229, 231, 235, 0.16);
+      --card: #121C2E;
 
-      --primary:#8AB4FF;
-      --shadow: 0 10px 28px rgba(0,0,0,0.40);
+      --primary: #8AB4FF;
+      --shadow: 0 10px 28px rgba(0, 0, 0, 0.40);
     }
   }
 
   /* =============================== */
 
-  html, body {
+  html,
+  body {
     -webkit-text-size-adjust: 100%;
   }
 
-  body{
-    margin:0;
+  body {
+    margin: 0;
     background: var(--bg);
     color: var(--fg);
   }
@@ -75,10 +82,7 @@ title: Study Guide
   main.doc {
     max-width: 720px;
     margin: 0 auto;
-    padding: env(safe-area-inset-top)
-            max(16px, env(safe-area-inset-right))
-            calc(48px + env(safe-area-inset-bottom))
-            max(16px, env(safe-area-inset-left));
+    padding: env(safe-area-inset-top) max(16px, env(safe-area-inset-right)) calc(48px + env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
   }
 
   /* =============================== */
@@ -93,32 +97,32 @@ title: Study Guide
      =============================== */
 
   details {
-    border:1px solid var(--border);
-    border-radius:14px;
-    background:var(--card);
-    overflow:hidden;
-    margin:14px 0;
-    box-shadow:var(--shadow);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--card);
+    overflow: hidden;
+    margin: 14px 0;
+    box-shadow: var(--shadow);
     transition: all .2s ease;
   }
 
   summary {
-    list-style:none;
-    cursor:pointer;
-    font-weight:600;
-    padding:16px;
-    user-select:none;
+    list-style: none;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 16px;
+    user-select: none;
     color: var(--fg);
   }
 
   summary::-webkit-details-marker {
-    display:none;
+    display: none;
   }
 
   summary::before {
-    content:"▸";
-    display:inline-block;
-    margin-right:8px;
+    content: "▸";
+    display: inline-block;
+    margin-right: 8px;
     transition: transform .18s ease;
     color: var(--muted);
   }
@@ -127,112 +131,122 @@ title: Study Guide
     transform: rotate(90deg);
   }
 
-  .details-body{
+  .details-body {
     padding: 0 16px 16px;
     line-height: 1.7;
     color: var(--body);
   }
 
   hr {
-    border:0;
-    border-top:1px solid var(--border);
-    margin:20px 0;
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: 20px 0;
   }
 
   .updated {
-    color:var(--muted);
-    font-style:italic;
-    font-size:.95rem;
-    margin-top:16px;
+    color: var(--muted);
+    font-style: italic;
+    font-size: .95rem;
+    margin-top: 16px;
   }
-
 </style>
 
 <main class="doc">
 
-<p># Cara tercepat untuk menguasai kanji. Japanese Kanji Master.</p>
+  <p># Cara tercepat untuk menguasai kanji. Japanese Kanji Master.</p>
 
-<details>
-  <summary>Cara menggunakan aplikasi</summary>
-  <div class="details-body">
-    1) Tekan tombol “Mulai Belajar”.<br><br>
-    2) Setelah melihat kanji, tekan tombol “Lihat Jawaban” di bagian bawah.<br><br>
-    3) Setelah memeriksa detailnya, pilih “Biasa” atau “Mudah” untuk kanji yang sudah Anda ketahui, dan “Sulit” atau “Ulangi” untuk kanji yang terasa sulit.<br><br>
-    4) Biasakan mata Anda dengan bentuk umum kanji, lalu segera lanjut ke kanji berikutnya. Jangan belajar terlalu lama dan terlalu detail—lihat sekilas dengan cepat seperti membaca komik.
-  </div>
-</details>
+  <details>
+    <summary>Cara menggunakan aplikasi</summary>
+    <div class="details-body">
+      1) Tekan tombol “Mulai Belajar”.<br><br>
+      2) Setelah melihat kanji, tekan tombol “Lihat Jawaban” di bagian bawah.<br><br>
+      3) Setelah memeriksa detailnya, pilih “Biasa” atau “Mudah” untuk kanji yang sudah Anda ketahui, dan “Sulit” atau
+      “Ulangi” untuk kanji yang terasa sulit.<br><br>
+      4) Biasakan mata Anda dengan bentuk umum kanji, lalu segera lanjut ke kanji berikutnya. Jangan belajar terlalu
+      lama dan terlalu detail—lihat sekilas dengan cepat seperti membaca komik.
+    </div>
+  </details>
 
-<details>
-  <summary>Bagaimana cara menghafal lebih cepat?</summary>
-  <div class="details-body">
-    Anda tidak perlu mengetahui jumlah goresan secara tepat. Cukup kenali bentuk umumnya dengan mata dan lanjutkan dengan cepat. Usahakan menyelesaikan 20 kanji dalam waktu 10 menit.<br><br>
-    Pastikan juga mempelajari kata contoh bersama dengan kanji tersebut.<br><br>
-    Belajar sedikit setiap hari jauh lebih efektif daripada belajar banyak sekaligus dalam satu waktu.
-  </div>
-</details>
+  <details>
+    <summary>Bagaimana cara menghafal lebih cepat?</summary>
+    <div class="details-body">
+      Anda tidak perlu mengetahui jumlah goresan secara tepat. Cukup kenali bentuk umumnya dengan mata dan lanjutkan
+      dengan cepat. Usahakan menyelesaikan 20 kanji dalam waktu 10 menit.<br><br>
+      Pastikan juga mempelajari kata contoh bersama dengan kanji tersebut.<br><br>
+      Belajar sedikit setiap hari jauh lebih efektif daripada belajar banyak sekaligus dalam satu waktu.
+    </div>
+  </details>
 
-<details>
-  <summary>Ada kanji yang benar-benar sulit saya hafal</summary>
-  <div class="details-body">
-    Untuk kanji yang sulit dihafal, pilih “Sulit” lalu lanjutkan dengan cepat.<br><br>
-    Kanji yang ditandai sebagai “Sulit” akan muncul kembali dalam sesi ulasan keesokan harinya.<br><br>
-    Jika Anda melihatnya berulang setiap hari, suatu saat Anda akan menyadari bahwa Anda sudah menghafalnya.<br><br>
-    Untuk kanji yang kompleks dengan banyak goresan, jangan mencoba menghafal jumlah goresannya secara tepat—cukup pahami bentuk umumnya dan biasakan mata Anda.
-  </div>
-</details>
+  <details>
+    <summary>Ada kanji yang benar-benar sulit saya hafal</summary>
+    <div class="details-body">
+      Untuk kanji yang sulit dihafal, pilih “Sulit” lalu lanjutkan dengan cepat.<br><br>
+      Kanji yang ditandai sebagai “Sulit” akan muncul kembali dalam sesi ulasan keesokan harinya.<br><br>
+      Jika Anda melihatnya berulang setiap hari, suatu saat Anda akan menyadari bahwa Anda sudah menghafalnya.<br><br>
+      Untuk kanji yang kompleks dengan banyak goresan, jangan mencoba menghafal jumlah goresannya secara tepat—cukup
+      pahami bentuk umumnya dan biasakan mata Anda.
+    </div>
+  </details>
 
-<details>
-  <summary>Fitur ulasan otomatis</summary>
-  <div class="details-body">
-    Aplikasi ini mengingat jawaban Anda dan secara otomatis mengatur kanji mana yang perlu diulas serta jarak waktu ulasannya.<br><br>
-    Jadi Anda tidak perlu membuat rencana ulasan sendiri.<br><br>
-    Percayalah pada sistem ulasan otomatis dan belajarlah secara konsisten setiap hari untuk memperkuat ingatan Anda.
-  </div>
-</details>
+  <details>
+    <summary>Fitur ulasan otomatis</summary>
+    <div class="details-body">
+      Aplikasi ini mengingat jawaban Anda dan secara otomatis mengatur kanji mana yang perlu diulas serta jarak waktu
+      ulasannya.<br><br>
+      Jadi Anda tidak perlu membuat rencana ulasan sendiri.<br><br>
+      Percayalah pada sistem ulasan otomatis dan belajarlah secara konsisten setiap hari untuk memperkuat ingatan Anda.
+    </div>
+  </details>
 
-<details>
-  <summary>Prinsip Pembentukan Kanji</summary>
-  <div class="details-body">
-    Kanji dapat diuraikan menjadi bagian-bagian yang lebih kecil yang disebut komponen. Mari kita lihat beberapa contoh.<br><br>
-    亻: berarti “orang.”<br>
-    木: berarti “pohon.”<br>
-    「休」: Seseorang (亻) bersandar pada pohon (木) untuk beristirahat. Artinya “istirahat.”<br><br>
-    石: berarti “batu.”<br>
-    更: tidak memiliki arti khusus dan hanya menunjukkan bunyi “kou.”<br>
-    「硬」: Berarti “keras,” seperti batu (石). 更 (kou) hanya menunjukkan bunyi tanpa menambahkan arti.<br><br>
-    Dengan cara ini, komponen dapat menunjukkan makna atau bunyi. Sebagian besar kanji dapat dipahami dengan cepat melalui prinsip ini.<br><br>
-    Selain itu, satu komponen dapat memiliki beberapa penafsiran makna.<br><br>
-    口: berarti “mulut,” tetapi juga dapat melambangkan ucapan atau benda berbentuk persegi.<br>
-    十: berarti “sepuluh,” tetapi juga dapat melambangkan bentuk salib atau persimpangan.<br><br>
-    Tidak perlu menghafal komponen secara terpisah. Seiring belajar melalui aplikasi ini, kamu akan memahaminya secara alami.
-  </div>
-</details>
+  <details>
+    <summary>Prinsip Pembentukan Kanji</summary>
+    <div class="details-body">
+      Kanji dapat diuraikan menjadi bagian-bagian yang lebih kecil yang disebut komponen. Mari kita lihat beberapa
+      contoh.<br><br>
+      亻: berarti “orang.”<br>
+      木: berarti “pohon.”<br>
+      「休」: Seseorang (亻) bersandar pada pohon (木) untuk beristirahat. Artinya “istirahat.”<br><br>
+      石: berarti “batu.”<br>
+      更: tidak memiliki arti khusus dan hanya menunjukkan bunyi “kou.”<br>
+      「硬」: Berarti “keras,” seperti batu (石). 更 (kou) hanya menunjukkan bunyi tanpa menambahkan arti.<br><br>
+      Dengan cara ini, komponen dapat menunjukkan makna atau bunyi. Sebagian besar kanji dapat dipahami dengan cepat
+      melalui prinsip ini.<br><br>
+      Selain itu, satu komponen dapat memiliki beberapa penafsiran makna.<br><br>
+      口: berarti “mulut,” tetapi juga dapat melambangkan ucapan atau benda berbentuk persegi.<br>
+      十: berarti “sepuluh,” tetapi juga dapat melambangkan bentuk salib atau persimpangan.<br><br>
+      Tidak perlu menghafal komponen secara terpisah. Seiring belajar melalui aplikasi ini, kamu akan memahaminya secara
+      alami.
+    </div>
+  </details>
 
-<details>
-  <summary>Apakah saya perlu berlatih menulis kanji?</summary>
-  <div class="details-body">
-    Tidak. Tidak direkomendasikan. Melatih kemampuan mengenali bentuk umum kanji dengan cepat jauh lebih efektif.<br><br>
-    Dalam bahasa Jepang modern, sebagian besar penulisan dilakukan dengan input keyboard dan konversi otomatis. Kemampuan membaca yang baik secara alami mendukung kemampuan menulis.<br><br>
-    Kecuali pekerjaan Anda mengharuskan menulis kanji dengan tangan atau Anda memiliki hobi kaligrafi, fokuslah pada latihan membaca.
-  </div>
-</details>
+  <details>
+    <summary>Apakah saya perlu berlatih menulis kanji?</summary>
+    <div class="details-body">
+      Tidak. Tidak direkomendasikan. Melatih kemampuan mengenali bentuk umum kanji dengan cepat jauh lebih
+      efektif.<br><br>
+      Dalam bahasa Jepang modern, sebagian besar penulisan dilakukan dengan input keyboard dan konversi otomatis.
+      Kemampuan membaca yang baik secara alami mendukung kemampuan menulis.<br><br>
+      Kecuali pekerjaan Anda mengharuskan menulis kanji dengan tangan atau Anda memiliki hobi kaligrafi, fokuslah pada
+      latihan membaca.
+    </div>
+  </details>
 
-<details>
-  <summary>Tingkat kesulitan kanji</summary>
-  <div class="details-body">
-    Tingkat kesulitan kanji dalam aplikasi ini mengikuti klasifikasi Ujian Kemahiran Kanji Jepang.<br><br>
-    Level 1–6: Kanji sekolah dasar<br>
-    Level 7–8: Kanji sekolah menengah pertama<br>
-    Level 9–10: Kanji sekolah menengah atas<br>
-    Level 11: Kanji non-resmi yang sering digunakan dalam kehidupan sehari-hari<br><br>
-    Jika tujuan Anda adalah JLPT, silakan gunakan panduan berikut:<br><br>
-    N5: Level 1<br>
-    N4: Level 2–3<br>
-    N3: Level 4–5<br>
-    N2: Level 6–7<br>
-    N1: Level 8–9<br>
-    Skor tinggi N1: Level 10
-  </div>
-</details>
+  <details>
+    <summary>Tingkat kesulitan kanji</summary>
+    <div class="details-body">
+      Tingkat kesulitan kanji dalam aplikasi ini mengikuti klasifikasi Ujian Kemahiran Kanji Jepang.<br><br>
+      Level 1–6: Kanji sekolah dasar<br>
+      Level 7–8: Kanji sekolah menengah pertama<br>
+      Level 9–10: Kanji sekolah menengah atas<br>
+      Level 11: Kanji non-resmi yang sering digunakan dalam kehidupan sehari-hari<br><br>
+      Jika tujuan Anda adalah JLPT, silakan gunakan panduan berikut:<br><br>
+      N5: Level 1<br>
+      N4: Level 2–3<br>
+      N3: Level 4–5<br>
+      N2: Level 6–7<br>
+      N1: Level 8–9<br>
+      Skor tinggi N1: Level 10
+    </div>
+  </details>
 
 </main>

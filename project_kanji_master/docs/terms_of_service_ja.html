@@ -8,92 +8,145 @@ title: 利用規約
 <meta name="format-detection" content="telephone=no">
 
 <style>
-  :root{
+  :root {
     color-scheme: light dark;
 
-    --fg:#111827;
-    --bg:#fffbf3;
-    --body:#374151;
-    --muted:#070708;
+    --fg: #111827;
+    --bg: #fffbf3;
+    --body: #374151;
+    --muted: #070708;
 
     --border: rgba(6, 9, 16, 0.12);
-    --card:#FFFFFF;
+    --card: #FFFFFF;
 
-    --primary:#142743;
-    --shadow: 0 6px 18px rgba(17,24,39,0.08);
+    --primary: #142743;
+    --shadow: 0 6px 18px rgba(17, 24, 39, 0.08);
   }
 
-  :root[data-theme="dark"]{
-    --fg:#E5E7EB;
-    --bg:#0B1220;
-    --body:#D1D5DB;
-    --muted:#9CA3AF;
+  :root[data-theme="dark"] {
+    --fg: #F3EBDD;
+    /* 따뜻한 밝은 글자 */
+    --bg: #17110D;
+    /* 앱 바깥 배경 */
+    --body: #D8CBBB;
+    /* 본문 */
+    --muted: #B7A894;
+    /* 보조 글자 */
 
-    --border: rgba(229,231,235,0.16);
-    --card:#121C2E;
+    --border: rgba(216, 203, 187, 0.12);
+    --card: #2A1F18;
+    /* 카드 배경 */
 
-    --primary:#8AB4FF;
-    --shadow: 0 10px 28px rgba(0,0,0,0.40);
+    --primary: #B8A3FF;
+    /* 보라 포인트 */
+    --shadow: 0 10px 28px rgba(0, 0, 0, 0.32);
   }
 
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme]){
-      --fg:#E5E7EB;
-      --bg:#0B1220;
-      --body:#D1D5DB;
-      --muted:#9CA3AF;
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+      --fg: #E5E7EB;
+      --bg: #0B1220;
+      --body: #D1D5DB;
+      --muted: #9CA3AF;
 
-      --border: rgba(229,231,235,0.16);
-      --card:#121C2E;
+      --border: rgba(229, 231, 235, 0.16);
+      --card: #121C2E;
 
-      --primary:#8AB4FF;
-      --shadow: 0 10px 28px rgba(0,0,0,0.40);
+      --primary: #8AB4FF;
+      --shadow: 0 10px 28px rgba(0, 0, 0, 0.40);
     }
   }
 
-  html, body { -webkit-text-size-adjust: 100%; }
-  body{ margin:0; background:var(--bg); color:var(--fg); }
+  html,
+  body {
+    -webkit-text-size-adjust: 100%;
+  }
 
-  main.doc{
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+  }
+
+  main.doc {
     max-width: 720px;
     margin: 0 auto;
-    padding: env(safe-area-inset-top)
-            max(16px, env(safe-area-inset-right))
-            calc(48px + env(safe-area-inset-bottom))
-            max(16px, env(safe-area-inset-left));
+    padding: env(safe-area-inset-top) max(16px, env(safe-area-inset-right)) calc(48px + env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
   }
 
   /* language switch (필요하면 유지) */
-  .lang-switch { display:flex; gap:8px; margin: 14px 0 10px; flex-wrap:wrap; }
-  .lang-switch a{
-    padding:6px 12px; border-radius:8px;
-    border:1px solid var(--border);
-    background:var(--card);
-    color:var(--fg);
-    text-decoration:none;
-    font-size:14px; font-weight:700;
-    box-shadow:var(--shadow);
+  .lang-switch {
+    display: flex;
+    gap: 8px;
+    margin: 14px 0 10px;
+    flex-wrap: wrap;
   }
 
-  h1{ font-size: 22px; font-weight: 800; letter-spacing:-0.2px; margin: 10px 0 12px; }
-  h2{ font-size:18px; font-weight:800; margin: 0 0 8px; }
-  p.lead{ margin: 0 0 12px; color: var(--muted); }
-
-  .card{
-    border:1px solid var(--border);
-    border-radius:14px;
-    background:var(--card);
-    overflow:hidden;
-    margin:14px 0;
-    box-shadow:var(--shadow);
-    padding:16px;
+  .lang-switch a {
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--fg);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: var(--shadow);
   }
 
-  ul { padding-left: 18px; margin: 8px 0 0; color: var(--body); line-height: 1.7; }
-  p { margin: 8px 0 0; color: var(--body); line-height: 1.7; }
+  h1 {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.2px;
+    margin: 10px 0 12px;
+  }
 
-  hr { border:0; border-top:1px solid var(--border); margin:18px 0; }
-  .updated{ color:var(--muted); font-style:italic; font-size:.95rem; margin-top:16px; }
+  h2 {
+    font-size: 18px;
+    font-weight: 800;
+    margin: 0 0 8px;
+  }
+
+  p.lead {
+    margin: 0 0 12px;
+    color: var(--muted);
+  }
+
+  .card {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--card);
+    overflow: hidden;
+    margin: 14px 0;
+    box-shadow: var(--shadow);
+    padding: 16px;
+  }
+
+  ul {
+    padding-left: 18px;
+    margin: 8px 0 0;
+    color: var(--body);
+    line-height: 1.7;
+  }
+
+  p {
+    margin: 8px 0 0;
+    color: var(--body);
+    line-height: 1.7;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: 18px 0;
+  }
+
+  .updated {
+    color: var(--muted);
+    font-style: italic;
+    font-size: .95rem;
+    margin-top: 16px;
+  }
 </style>
 
 <main class="doc">
@@ -103,114 +156,115 @@ title: 利用規約
 
   <h1>利用規約</h1>
   <p class="lead">
-  本規約は、本アプリをご利用いただくにあたり、ユーザーの権利・義務および責任事項を定めるものです。
+    本規約は、本アプリをご利用いただくにあたり、ユーザーの権利・義務および責任事項を定めるものです。
   </p>
 
   <div class="card">
-  <h2>1. 目的</h2>
-  <p>
-  本規約は、当社が提供する日本語漢字学習アプリ（以下「本サービス」といいます）の利用条件を定めるものです。
-  ユーザーが本アプリをインストール、起動、または利用した場合、本規約に同意したものとみなします。
-  </p>
+    <h2>1. 目的</h2>
+    <p>
+      本規約は、当社が提供する日本語漢字学習アプリ（以下「本サービス」といいます）の利用条件を定めるものです。
+      ユーザーが本アプリをインストール、起動、または利用した場合、本規約に同意したものとみなします。
+    </p>
   </div>
 
   <div class="card">
-  <h2>2. サービス内容</h2>
-  <ul>
-  <li>本アプリは、日本語の漢字学習を支援する教育用ツールです。</li>
-  <li>漢字の説明、例文、イラスト等は学習補助を目的としたものであり、学術的・辞書的な完全な正確性を保証するものではありません。</li>
-  <li>当社は、本サービスの全部または一部を変更・改善することがあります。</li>
-  </ul>
+    <h2>2. サービス内容</h2>
+    <ul>
+      <li>本アプリは、日本語の漢字学習を支援する教育用ツールです。</li>
+      <li>漢字の説明、例文、イラスト等は学習補助を目的としたものであり、学術的・辞書的な完全な正確性を保証するものではありません。</li>
+      <li>当社は、本サービスの全部または一部を変更・改善することがあります。</li>
+    </ul>
   </div>
 
   <div class="card">
-  <h2>3. 購入および返金</h2>
-  <ul>
-  <li>本アプリは一部機能を無料で提供しています。すべての漢字学習機能を利用するには、アプリ内の一回限りの課金が必要です。</li>
-  <li>決済は、Google Play または Apple App Store を通じて行われます。</li>
-  <li>返金は、各ストアのポリシーおよび関連法令に従います。</li>
-  <li>ストアアカウントの変更、削除、または利用不可となった場合、購入の復元ができないことがあります。</li>
-  </ul>
+    <h2>3. 購入および返金</h2>
+    <ul>
+      <li>本アプリは一部機能を無料で提供しています。すべての漢字学習機能を利用するには、アプリ内の一回限りの課金が必要です。</li>
+      <li>決済は、Google Play または Apple App Store を通じて行われます。</li>
+      <li>返金は、各ストアのポリシーおよび関連法令に従います。</li>
+      <li>ストアアカウントの変更、削除、または利用不可となった場合、購入の復元ができないことがあります。</li>
+    </ul>
   </div>
 
   <div class="card">
-  <h2>4. ユーザーの義務</h2>
-  <ul>
-  <li>ユーザーは、本アプリを個人的な学習目的に限り、非独占的かつ譲渡不可のライセンスのもとで利用できます。</li>
-  <li>本アプリのコード、テキスト、画像、説明、UI/UX などのコンテンツを無断で複製、配布、改変、商用利用することは禁止します。</li>
-  <li>リバースエンジニアリング、自動化プログラムによるアクセス、スクレイピング等の不正な技術的手段は禁止します。</li>
-  <li>法令違反または本サービスの運営を妨害する行為は禁止します。</li>
-  </ul>
+    <h2>4. ユーザーの義務</h2>
+    <ul>
+      <li>ユーザーは、本アプリを個人的な学習目的に限り、非独占的かつ譲渡不可のライセンスのもとで利用できます。</li>
+      <li>本アプリのコード、テキスト、画像、説明、UI/UX などのコンテンツを無断で複製、配布、改変、商用利用することは禁止します。</li>
+      <li>リバースエンジニアリング、自動化プログラムによるアクセス、スクレイピング等の不正な技術的手段は禁止します。</li>
+      <li>法令違反または本サービスの運営を妨害する行為は禁止します。</li>
+    </ul>
   </div>
 
   <div class="card">
-  <h2>5. 知的財産権</h2>
-  <ul>
-  <li>本アプリ内のコード、学習コンテンツ、イラスト、デザイン、ロゴ等の知的財産権は当社に帰属します。</li>
-  <li>ユーザーは本アプリを利用することにより所有権を取得するものではなく、本規約に基づく限定的な利用権のみが付与されます。</li>
-  </ul>
+    <h2>5. 知的財産権</h2>
+    <ul>
+      <li>本アプリ内のコード、学習コンテンツ、イラスト、デザイン、ロゴ等の知的財産権は当社に帰属します。</li>
+      <li>ユーザーは本アプリを利用することにより所有権を取得するものではなく、本規約に基づく限定的な利用権のみが付与されます。</li>
+    </ul>
   </div>
 
   <div class="card">
-  <h2>6. 免責事項</h2>
-  <ul>
-  <li>本アプリは教育目的のツールであり、特定の学習成果を保証するものではありません。</li>
-  <li>学習成果は、ユーザーの努力や学習環境等により異なります。</li>
-  <li>技術的な不具合、ネットワーク環境、端末設定、OSやストアのポリシー変更、第三者サービス（Firebase Analytics 等）などの要因により、本サービスの一部が遅延・中断・利用不可となる場合があります。</li>
-  <li>適用法令で認められる範囲において、当社は間接的・付随的・特別・結果的損害について責任を負いません。</li>
-  <li>当社の責任は、ユーザーが本アプリに実際に支払った金額を上限とします。</li>
-  </ul>
+    <h2>6. 免責事項</h2>
+    <ul>
+      <li>本アプリは教育目的のツールであり、特定の学習成果を保証するものではありません。</li>
+      <li>学習成果は、ユーザーの努力や学習環境等により異なります。</li>
+      <li>技術的な不具合、ネットワーク環境、端末設定、OSやストアのポリシー変更、第三者サービス（Firebase Analytics 等）などの要因により、本サービスの一部が遅延・中断・利用不可となる場合があります。</li>
+      <li>適用法令で認められる範囲において、当社は間接的・付随的・特別・結果的損害について責任を負いません。</li>
+      <li>当社の責任は、ユーザーが本アプリに実際に支払った金額を上限とします。</li>
+    </ul>
   </div>
 
   <div class="card">
-  <h2>7. プライバシー</h2>
-  <ul>
-  <li>本アプリは、氏名やメールアドレス等の直接的に個人を特定できる情報を収集しません。</li>
-  <li>サービス改善のため、Firebase Analytics を利用し、利用状況や技術情報を収集する場合があります。</li>
-  <li>学習データは基本的にユーザーの端末内に保存され、ユーザーの選択により Google Drive または iCloud にバックアップすることができます。</li>
-  <li>詳細については、別途定めるプライバシーポリシーをご確認ください。</li>
-  </ul>
+    <h2>7. プライバシー</h2>
+    <ul>
+      <li>本アプリは、氏名やメールアドレス等の直接的に個人を特定できる情報を収集しません。</li>
+      <li>サービス改善のため、Firebase Analytics を利用し、利用状況や技術情報を収集する場合があります。</li>
+      <li>学習データは基本的にユーザーの端末内に保存され、ユーザーの選択により Google Drive または iCloud にバックアップすることができます。</li>
+      <li>詳細については、別途定めるプライバシーポリシーをご確認ください。</li>
+    </ul>
   </div>
 
   <div class="card">
-  <h2>8. サービスの変更・中止</h2>
-  <ul>
-  <li>当社は、技術的または運営上の理由により、本サービスの全部または一部を変更・中止することがあります。</li>
-  <li>プラットフォームのポリシー変更、OSの仕様変更、ネットワーク障害等の外部要因により、サービスが制限される場合があります。</li>
-  <li>法令で定める場合を除き、サービスの変更・中止により生じた損害について責任を負いません。</li>
-  </ul>
+    <h2>8. サービスの変更・中止</h2>
+    <ul>
+      <li>当社は、技術的または運営上の理由により、本サービスの全部または一部を変更・中止することがあります。</li>
+      <li>プラットフォームのポリシー変更、OSの仕様変更、ネットワーク障害等の外部要因により、サービスが制限される場合があります。</li>
+      <li>法令で定める場合を除き、サービスの変更・中止により生じた損害について責任を負いません。</li>
+    </ul>
   </div>
 
   <div class="card">
-  <h2>9. 学習データの保存および責任</h2>
-  <ul>
-    <li>本アプリは、ユーザーの学習進捗および設定データをユーザーの端末内に保存し、当社の中央サーバーには保存しません。</li>
-    <li>ユーザーは、アプリの削除、端末変更、再インストール、端末の紛失・故障等に備え、バックアップ機能を利用して自己の責任においてデータを保存するものとします。</li>
-    <li>ユーザーがバックアップを行わなかったことにより生じた学習データの消失について、当社は一切の責任を負いません。</li>
-    <li>iCloud、Google Drive等の第三者クラウドサービスを通じたバックアップは、各サービス提供者の方針および技術的環境に従うものであり、これに起因するデータの消失または復元不能について、当社は責任を負いません。</li>
-  </ul>
+    <h2>9. 学習データの保存および責任</h2>
+    <ul>
+      <li>本アプリは、ユーザーの学習進捗および設定データをユーザーの端末内に保存し、当社の中央サーバーには保存しません。</li>
+      <li>ユーザーは、アプリの削除、端末変更、再インストール、端末の紛失・故障等に備え、バックアップ機能を利用して自己の責任においてデータを保存するものとします。</li>
+      <li>ユーザーがバックアップを行わなかったことにより生じた学習データの消失について、当社は一切の責任を負いません。</li>
+      <li>iCloud、Google Drive等の第三者クラウドサービスを通じたバックアップは、各サービス提供者の方針および技術的環境に従うものであり、これに起因するデータの消失または復元不能について、当社は責任を負いません。
+      </li>
+    </ul>
   </div>
 
   <div class="card">
-  <h2>10. 規約の変更</h2>
-  <p>
-  当社は必要に応じて本規約を変更することがあります。
-  変更後の規約は本ページに掲載した時点で効力を生じます。
-  変更後も本アプリを継続して利用した場合、変更後の規約に同意したものとみなします。
-  </p>
+    <h2>10. 規約の変更</h2>
+    <p>
+      当社は必要に応じて本規約を変更することがあります。
+      変更後の規約は本ページに掲載した時点で効力を生じます。
+      変更後も本アプリを継続して利用した場合、変更後の規約に同意したものとみなします。
+    </p>
   </div>
 
   <div class="card">
-  <h2>11. 準拠法</h2>
-  <p>
-  本規約は大韓民国の法令に準拠し、これに従って解釈されます。
-  紛争が生じた場合は、関係法令に基づく管轄裁判所に提起するものとします。
-  </p>
+    <h2>11. 準拠法</h2>
+    <p>
+      本規約は大韓民国の法令に準拠し、これに従って解釈されます。
+      紛争が生じた場合は、関係法令に基づく管轄裁判所に提起するものとします。
+    </p>
   </div>
 
   <div class="card">
-  <h2>12. お問い合わせ</h2>
-  <p>本規約に関するお問い合わせ：contact@freenaru.com</p>
+    <h2>12. お問い合わせ</h2>
+    <p>本規約に関するお問い合わせ：contact@freenaru.com</p>
   </div>
 
 </main>

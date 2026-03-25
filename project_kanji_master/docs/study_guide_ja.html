@@ -11,63 +11,70 @@ title: Study Guide
   /* ===============================
      기본: LIGHT 테마
      =============================== */
-  :root{
+  :root {
     color-scheme: light dark;
 
-    --fg:#111827;
-    --bg:#fffbf3;
-    --body:#374151;
-    --muted:#070708;
+    --fg: #111827;
+    --bg: #fffbf3;
+    --body: #374151;
+    --muted: #070708;
 
     --border: rgba(6, 9, 16, 0.12);
-    --card:#FFFFFF;
+    --card: #FFFFFF;
 
-    --primary:#142743;
-    --shadow: 0 6px 18px rgba(17,24,39,0.08);
+    --primary: #142743;
+    --shadow: 0 6px 18px rgba(17, 24, 39, 0.08);
   }
 
   /* ===============================
      Flutter가 강제 DARK 주입할 때
      =============================== */
-  :root[data-theme="dark"]{
-    --fg:#E5E7EB;
-    --bg:#0B1220;
-    --body:#D1D5DB;
-    --muted:#9CA3AF;
+  :root[data-theme="dark"] {
+    --fg: #F3EBDD;
+    /* 따뜻한 밝은 글자 */
+    --bg: #17110D;
+    /* 앱 바깥 배경 */
+    --body: #D8CBBB;
+    /* 본문 */
+    --muted: #B7A894;
+    /* 보조 글자 */
 
-    --border: rgba(229,231,235,0.16);
-    --card:#121C2E; /* bg보다 살짝 밝게 */
+    --border: rgba(216, 203, 187, 0.12);
+    --card: #2A1F18;
+    /* 카드 배경 */
 
-    --primary:#8AB4FF;
-    --shadow: 0 10px 28px rgba(0,0,0,0.40);
+    --primary: #B8A3FF;
+    /* 보라 포인트 */
+    --shadow: 0 10px 28px rgba(0, 0, 0, 0.32);
   }
 
   /* ===============================
      data-theme 없을 때만 시스템 따라감
      =============================== */
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme]){
-      --fg:#E5E7EB;
-      --bg:#0B1220;
-      --body:#D1D5DB;
-      --muted:#9CA3AF;
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+      --fg: #E5E7EB;
+      --bg: #0B1220;
+      --body: #D1D5DB;
+      --muted: #9CA3AF;
 
-      --border: rgba(229,231,235,0.16);
-      --card:#121C2E;
+      --border: rgba(229, 231, 235, 0.16);
+      --card: #121C2E;
 
-      --primary:#8AB4FF;
-      --shadow: 0 10px 28px rgba(0,0,0,0.40);
+      --primary: #8AB4FF;
+      --shadow: 0 10px 28px rgba(0, 0, 0, 0.40);
     }
   }
 
   /* =============================== */
 
-  html, body {
+  html,
+  body {
     -webkit-text-size-adjust: 100%;
   }
 
-  body{
-    margin:0;
+  body {
+    margin: 0;
     background: var(--bg);
     color: var(--fg);
   }
@@ -75,10 +82,7 @@ title: Study Guide
   main.doc {
     max-width: 720px;
     margin: 0 auto;
-    padding: env(safe-area-inset-top)
-            max(16px, env(safe-area-inset-right))
-            calc(48px + env(safe-area-inset-bottom))
-            max(16px, env(safe-area-inset-left));
+    padding: env(safe-area-inset-top) max(16px, env(safe-area-inset-right)) calc(48px + env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
   }
 
   /* =============================== */
@@ -93,32 +97,32 @@ title: Study Guide
      =============================== */
 
   details {
-    border:1px solid var(--border);
-    border-radius:14px;
-    background:var(--card);
-    overflow:hidden;
-    margin:14px 0;
-    box-shadow:var(--shadow);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--card);
+    overflow: hidden;
+    margin: 14px 0;
+    box-shadow: var(--shadow);
     transition: all .2s ease;
   }
 
   summary {
-    list-style:none;
-    cursor:pointer;
-    font-weight:600;
-    padding:16px;
-    user-select:none;
+    list-style: none;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 16px;
+    user-select: none;
     color: var(--fg);
   }
 
   summary::-webkit-details-marker {
-    display:none;
+    display: none;
   }
 
   summary::before {
-    content:"▸";
-    display:inline-block;
-    margin-right:8px;
+    content: "▸";
+    display: inline-block;
+    margin-right: 8px;
     transition: transform .18s ease;
     color: var(--muted);
   }
@@ -127,103 +131,102 @@ title: Study Guide
     transform: rotate(90deg);
   }
 
-  .details-body{
+  .details-body {
     padding: 0 16px 16px;
     line-height: 1.7;
     color: var(--body);
   }
 
   hr {
-    border:0;
-    border-top:1px solid var(--border);
-    margin:20px 0;
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: 20px 0;
   }
 
   .updated {
-    color:var(--muted);
-    font-style:italic;
-    font-size:.95rem;
-    margin-top:16px;
+    color: var(--muted);
+    font-style: italic;
+    font-size: .95rem;
+    margin-top: 16px;
   }
-
 </style>
 
 <main class="doc">
 
-<p># 漢字をマスターする最速ルート。Japanese Kanji Master。</p>
+  <p># 漢字をマスターする最速ルート。Japanese Kanji Master。</p>
 
-<details>
-  <summary>アプリの使い方</summary>
-  <div class="details-body">
-    1) 「学習を始める」ボタンを押してください。<br><br>
-    2) 漢字を確認した後、下部の「答えを見る」ボタンを押してください。<br><br>
-    3) 詳細を確認したら、知っていた漢字は「普通」または「簡単」、難しかった漢字は「難しい」または「復習」で答えてください。<br><br>
-    4) 漢字の大まかな形を目で覚えたら、すぐに次の漢字へ進んでください。長時間じっくり学習するのではなく、漫画をめくるようにテンポよく進めましょう。
-  </div>
-</details>
+  <details>
+    <summary>アプリの使い方</summary>
+    <div class="details-body">
+      1) 「学習を始める」ボタンを押してください。<br><br>
+      2) 漢字を確認した後、下部の「答えを見る」ボタンを押してください。<br><br>
+      3) 詳細を確認したら、知っていた漢字は「普通」または「簡単」、難しかった漢字は「難しい」または「復習」で答えてください。<br><br>
+      4) 漢字の大まかな形を目で覚えたら、すぐに次の漢字へ進んでください。長時間じっくり学習するのではなく、漫画をめくるようにテンポよく進めましょう。
+    </div>
+  </details>
 
-<details>
-  <summary>どうすれば早く覚えられますか？</summary>
-  <div class="details-body">
-    正確な画数を覚える必要はありません。漢字の大まかな形を目で覚えて、どんどん先へ進みましょう。20個の漢字を10分以内にテンポよく進めるのがおすすめです。<br><br>
-    例単語も必ず一緒に覚えてください。<br><br>
-    一度に大量に学習するよりも、毎日少しずつ繰り返すほうがはるかに効果的です。
-  </div>
-</details>
+  <details>
+    <summary>どうすれば早く覚えられますか？</summary>
+    <div class="details-body">
+      正確な画数を覚える必要はありません。漢字の大まかな形を目で覚えて、どんどん先へ進みましょう。20個の漢字を10分以内にテンポよく進めるのがおすすめです。<br><br>
+      例単語も必ず一緒に覚えてください。<br><br>
+      一度に大量に学習するよりも、毎日少しずつ繰り返すほうがはるかに効果的です。
+    </div>
+  </details>
 
-<details>
-  <summary>どうしても覚えられない漢字があります</summary>
-  <div class="details-body">
-    覚えられない漢字は「難しい」で答えて、すぐに次へ進んでください。<br><br>
-    「難しい」と答えた漢字は、翌日の復習に再び登場します。<br><br>
-    毎日繰り返し見ていれば、ある瞬間に自然と覚えられます。<br><br>
-    画数が多くて複雑な漢字は、正確な画数を覚えようとせず、大まかな形をつかんで目に慣らしてください。
-  </div>
-</details>
+  <details>
+    <summary>どうしても覚えられない漢字があります</summary>
+    <div class="details-body">
+      覚えられない漢字は「難しい」で答えて、すぐに次へ進んでください。<br><br>
+      「難しい」と答えた漢字は、翌日の復習に再び登場します。<br><br>
+      毎日繰り返し見ていれば、ある瞬間に自然と覚えられます。<br><br>
+      画数が多くて複雑な漢字は、正確な画数を覚えようとせず、大まかな形をつかんで目に慣らしてください。
+    </div>
+  </details>
 
-<details>
-  <summary>漢字の構成原理</summary>
-  <div class="details-body">
-    漢字は、より小さな単位である構成要素に分けて考えることができます。いくつか例を見てみましょう。<br><br>
-    亻： 「人」を表します。<br>
-    木： 「木」を表します。<br>
-    「休」： 人（亻）が木（木）にもたれて休むことから、「休む」「休息」の意味になります。<br><br>
-    石： 「石」を表します。<br>
-    更： 特別な意味はなく、音「こう」を示します。<br>
-    「硬」： 石（石）のように「かたい」という意味です。更（こう）は意味を持たず、音だけを表します。<br><br>
-    このように、構成要素は意味や音を表します。多くの漢字は、この原理によって素早く理解することができます。<br><br>
-    また、一つの構成要素が複数の意味で解釈されることもあります。<br><br>
-    口： 「口」を意味しますが、話すことや四角い物を表す場合もあります。<br>
-    十： 「十」を意味しますが、十字形や交差点を表すこともあります。<br><br>
-    構成要素を個別に暗記する必要はありません。このアプリで学習を続けていけば、自然に理解できるようになります。
-  </div>
-</details>
+  <details>
+    <summary>漢字の構成原理</summary>
+    <div class="details-body">
+      漢字は、より小さな単位である構成要素に分けて考えることができます。いくつか例を見てみましょう。<br><br>
+      亻： 「人」を表します。<br>
+      木： 「木」を表します。<br>
+      「休」： 人（亻）が木（木）にもたれて休むことから、「休む」「休息」の意味になります。<br><br>
+      石： 「石」を表します。<br>
+      更： 特別な意味はなく、音「こう」を示します。<br>
+      「硬」： 石（石）のように「かたい」という意味です。更（こう）は意味を持たず、音だけを表します。<br><br>
+      このように、構成要素は意味や音を表します。多くの漢字は、この原理によって素早く理解することができます。<br><br>
+      また、一つの構成要素が複数の意味で解釈されることもあります。<br><br>
+      口： 「口」を意味しますが、話すことや四角い物を表す場合もあります。<br>
+      十： 「十」を意味しますが、十字形や交差点を表すこともあります。<br><br>
+      構成要素を個別に暗記する必要はありません。このアプリで学習を続けていけば、自然に理解できるようになります。
+    </div>
+  </details>
 
-<details>
-  <summary>自動復習機能</summary>
-  <div class="details-body">
-    このアプリは学習者の回答を記録し、復習する漢字と復習間隔を自動で設定します。<br><br>
-    そのため、別途復習計画を立てる必要はありません。<br><br>
-    自動復習機能を信頼して、毎日継続的に学習し、記憶を呼び戻してください。
-  </div>
-</details>
+  <details>
+    <summary>自動復習機能</summary>
+    <div class="details-body">
+      このアプリは学習者の回答を記録し、復習する漢字と復習間隔を自動で設定します。<br><br>
+      そのため、別途復習計画を立てる必要はありません。<br><br>
+      自動復習機能を信頼して、毎日継続的に学習し、記憶を呼び戻してください。
+    </div>
+  </details>
 
-<details>
-  <summary>漢字の難易度</summary>
-  <div class="details-body">
-    本アプリの漢字難易度は、日本の漢字検定の区分に基づいています。<br><br>
-    1〜6段階：小学校の漢字<br>
-    7〜8段階：中学校の漢字<br>
-    9〜10段階：高校の漢字<br>
-    11段階：日常でよく使われる常用外漢字<br><br>
-    JLPTを目標とする場合は、以下を参考にしてください。<br><br>
-    N5：1段階<br>
-    N4：2〜3段階<br>
-    N3：4〜5段階<br>
-    N2：6〜7段階<br>
-    N1：8〜9段階<br>
-    N1高得点：10段階
-  </div>
-</details>
+  <details>
+    <summary>漢字の難易度</summary>
+    <div class="details-body">
+      本アプリの漢字難易度は、日本の漢字検定の区分に基づいています。<br><br>
+      1〜6段階：小学校の漢字<br>
+      7〜8段階：中学校の漢字<br>
+      9〜10段階：高校の漢字<br>
+      11段階：日常でよく使われる常用外漢字<br><br>
+      JLPTを目標とする場合は、以下を参考にしてください。<br><br>
+      N5：1段階<br>
+      N4：2〜3段階<br>
+      N3：4〜5段階<br>
+      N2：6〜7段階<br>
+      N1：8〜9段階<br>
+      N1高得点：10段階
+    </div>
+  </details>
 
 </main>
