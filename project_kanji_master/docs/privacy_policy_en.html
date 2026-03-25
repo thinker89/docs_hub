@@ -8,92 +8,145 @@ title: Privacy Policy
 <meta name="format-detection" content="telephone=no">
 
 <style>
-  :root{
+  :root {
     color-scheme: light dark;
 
-    --fg:#111827;
-    --bg:#fffbf3;
-    --body:#374151;
-    --muted:#070708;
+    --fg: #111827;
+    --bg: #fffbf3;
+    --body: #374151;
+    --muted: #070708;
 
     --border: rgba(6, 9, 16, 0.12);
-    --card:#FFFFFF;
+    --card: #FFFFFF;
 
-    --primary:#142743;
-    --shadow: 0 6px 18px rgba(17,24,39,0.08);
+    --primary: #142743;
+    --shadow: 0 6px 18px rgba(17, 24, 39, 0.08);
   }
 
-  :root[data-theme="dark"]{
-    --fg:#E5E7EB;
-    --bg:#0B1220;
-    --body:#D1D5DB;
-    --muted:#9CA3AF;
+  :root[data-theme="dark"] {
+    --fg: #F3EBDD;
+    /* 따뜻한 밝은 글자 */
+    --bg: #17110D;
+    /* 앱 바깥 배경 */
+    --body: #D8CBBB;
+    /* 본문 */
+    --muted: #B7A894;
+    /* 보조 글자 */
 
-    --border: rgba(229,231,235,0.16);
-    --card:#121C2E;
+    --border: rgba(216, 203, 187, 0.12);
+    --card: #2A1F18;
+    /* 카드 배경 */
 
-    --primary:#8AB4FF;
-    --shadow: 0 10px 28px rgba(0,0,0,0.40);
+    --primary: #B8A3FF;
+    /* 보라 포인트 */
+    --shadow: 0 10px 28px rgba(0, 0, 0, 0.32);
   }
 
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme]){
-      --fg:#E5E7EB;
-      --bg:#0B1220;
-      --body:#D1D5DB;
-      --muted:#9CA3AF;
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+      --fg: #E5E7EB;
+      --bg: #0B1220;
+      --body: #D1D5DB;
+      --muted: #9CA3AF;
 
-      --border: rgba(229,231,235,0.16);
-      --card:#121C2E;
+      --border: rgba(229, 231, 235, 0.16);
+      --card: #121C2E;
 
-      --primary:#8AB4FF;
-      --shadow: 0 10px 28px rgba(0,0,0,0.40);
+      --primary: #8AB4FF;
+      --shadow: 0 10px 28px rgba(0, 0, 0, 0.40);
     }
   }
 
-  html, body { -webkit-text-size-adjust: 100%; }
-  body{ margin:0; background:var(--bg); color:var(--fg); }
+  html,
+  body {
+    -webkit-text-size-adjust: 100%;
+  }
 
-  main.doc{
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+  }
+
+  main.doc {
     max-width: 720px;
     margin: 0 auto;
-    padding: env(safe-area-inset-top)
-            max(16px, env(safe-area-inset-right))
-            calc(48px + env(safe-area-inset-bottom))
-            max(16px, env(safe-area-inset-left));
+    padding: env(safe-area-inset-top) max(16px, env(safe-area-inset-right)) calc(48px + env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
   }
 
   /* language switch (필요하면 유지) */
-  .lang-switch { display:flex; gap:8px; margin: 14px 0 10px; flex-wrap:wrap; }
-  .lang-switch a{
-    padding:6px 12px; border-radius:8px;
-    border:1px solid var(--border);
-    background:var(--card);
-    color:var(--fg);
-    text-decoration:none;
-    font-size:14px; font-weight:700;
-    box-shadow:var(--shadow);
+  .lang-switch {
+    display: flex;
+    gap: 8px;
+    margin: 14px 0 10px;
+    flex-wrap: wrap;
   }
 
-  h1{ font-size: 22px; font-weight: 800; letter-spacing:-0.2px; margin: 10px 0 12px; }
-  h2{ font-size:18px; font-weight:800; margin: 0 0 8px; }
-  p.lead{ margin: 0 0 12px; color: var(--muted); }
-
-  .card{
-    border:1px solid var(--border);
-    border-radius:14px;
-    background:var(--card);
-    overflow:hidden;
-    margin:14px 0;
-    box-shadow:var(--shadow);
-    padding:16px;
+  .lang-switch a {
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--fg);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: var(--shadow);
   }
 
-  ul { padding-left: 18px; margin: 8px 0 0; color: var(--body); line-height: 1.7; }
-  p { margin: 8px 0 0; color: var(--body); line-height: 1.7; }
+  h1 {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.2px;
+    margin: 10px 0 12px;
+  }
 
-  hr { border:0; border-top:1px solid var(--border); margin:18px 0; }
-  .updated{ color:var(--muted); font-style:italic; font-size:.95rem; margin-top:16px; }
+  h2 {
+    font-size: 18px;
+    font-weight: 800;
+    margin: 0 0 8px;
+  }
+
+  p.lead {
+    margin: 0 0 12px;
+    color: var(--muted);
+  }
+
+  .card {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--card);
+    overflow: hidden;
+    margin: 14px 0;
+    box-shadow: var(--shadow);
+    padding: 16px;
+  }
+
+  ul {
+    padding-left: 18px;
+    margin: 8px 0 0;
+    color: var(--body);
+    line-height: 1.7;
+  }
+
+  p {
+    margin: 8px 0 0;
+    color: var(--body);
+    line-height: 1.7;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: 18px 0;
+  }
+
+  .updated {
+    color: var(--muted);
+    font-style: italic;
+    font-size: .95rem;
+    margin-top: 16px;
+  }
 </style>
 
 <main class="doc">
@@ -103,77 +156,85 @@ title: Privacy Policy
 
   <h1>Privacy Policy</h1>
   <p class="lead">
-  This app does not directly collect personal information from users.
-  Below we explain our policies and your rights regarding privacy.
+    This app does not directly collect personal information from users.
+    Below we explain our policies and your rights regarding privacy.
   </p>
 
   <div class="card">
-  <h2>1. General</h2>
-  <p>
-  We value the protection of users’ personal information. This Privacy Policy applies when you use this app.
-  By installing, accessing, or using the app, you agree to this Policy.
-  </p>
+    <h2>1. General</h2>
+    <p>
+      We value the protection of users’ personal information. This Privacy Policy applies when you use this app.
+      By installing, accessing, or using the app, you agree to this Policy.
+    </p>
   </div>
 
   <div class="card">
-  <h2>2. Collection of Personal Information</h2>
-  <ul>
-  <li>This app does not provide account registration or social login features.</li>
-  <li>We do not collect directly identifiable personal information such as name, email address, or contact details.</li>
-  <li>For the purpose of improving service quality, anonymous technical data such as usage patterns may be collected through Firebase Analytics.</li>
-  </ul>
+    <h2>2. Collection of Personal Information</h2>
+    <ul>
+      <li>This app does not provide account registration or social login features.</li>
+      <li>We do not collect directly identifiable personal information such as name, email address, or contact details.
+      </li>
+      <li>For the purpose of improving service quality, anonymous technical data such as usage patterns may be collected
+        through Firebase Analytics.</li>
+    </ul>
   </div>
 
   <div class="card">
-  <h2>3. Storage of Learning Data</h2>
-  <ul>
-  <li>Learning progress, review history, and related data are stored locally on the user’s device.</li>
-  <li>Users may choose to back up their learning data to Google Drive or iCloud.</li>
-  <li>Backup data does not include directly identifiable personal information such as name or email address.</li>
-  <li>Cloud backups are performed at the user’s discretion, and the processing and security of data in those services are governed by the respective platform’s policies.</li>
-  </ul>
+    <h2>3. Storage of Learning Data</h2>
+    <ul>
+      <li>Learning progress, review history, and related data are stored locally on the user’s device.</li>
+      <li>Users may choose to back up their learning data to Google Drive or iCloud.</li>
+      <li>Backup data does not include directly identifiable personal information such as name or email address.</li>
+      <li>Cloud backups are performed at the user’s discretion, and the processing and security of data in those
+        services are governed by the respective platform’s policies.</li>
+    </ul>
   </div>
 
   <div class="card">
-  <h2>4. Sharing with Third Parties</h2>
-  <p>
-  Since this app does not directly collect personal information, we do not sell, rent, or share personal information with third parties.
-  However, when users choose to use cloud backup (Google Drive or iCloud), the respective platform may process technical information in accordance with its own privacy policy.
-  </p>
+    <h2>4. Sharing with Third Parties</h2>
+    <p>
+      Since this app does not directly collect personal information, we do not sell, rent, or share personal information
+      with third parties.
+      However, when users choose to use cloud backup (Google Drive or iCloud), the respective platform may process
+      technical information in accordance with its own privacy policy.
+    </p>
   </div>
 
   <div class="card">
-  <h2>5. Technical Information (Diagnostics and Analytics)</h2>
-  <p>
-  This app uses Google Firebase Analytics to improve service quality and analyze usage patterns.
-  Through this service, app usage data, error logs, device information, app version, and country-level location information may be automatically collected.
-  </p>
-  <p>
-  The information collected does not include directly identifiable personal information such as name or email address.
-  Such data is processed in accordance with Google Firebase Analytics’ privacy policy.
-  </p>
+    <h2>5. Technical Information (Diagnostics and Analytics)</h2>
+    <p>
+      This app uses Google Firebase Analytics to improve service quality and analyze usage patterns.
+      Through this service, app usage data, error logs, device information, app version, and country-level location
+      information may be automatically collected.
+    </p>
+    <p>
+      The information collected does not include directly identifiable personal information such as name or email
+      address.
+      Such data is processed in accordance with Google Firebase Analytics’ privacy policy.
+    </p>
   </div>
 
   <div class="card">
-  <h2>6. Data Retention and Deletion</h2>
-  <p>
-  As this app does not directly collect personal information, there are no separate procedures for storing or deleting such data.
-  Learning data stored within the app will be removed when the app is deleted from the user’s device.
-  </p>
+    <h2>6. Data Retention and Deletion</h2>
+    <p>
+      As this app does not directly collect personal information, there are no separate procedures for storing or
+      deleting such data.
+      Learning data stored within the app will be removed when the app is deleted from the user’s device.
+    </p>
   </div>
 
   <div class="card">
-  <h2>7. Changes to This Policy</h2>
-  <p>
-  We may update this Privacy Policy when necessary.
-  Any changes will be posted on this page and will become effective immediately upon publication.
-  Continued use of the app after changes are made constitutes acceptance of the revised Policy.
-  </p>
+    <h2>7. Changes to This Policy</h2>
+    <p>
+      We may update this Privacy Policy when necessary.
+      Any changes will be posted on this page and will become effective immediately upon publication.
+      Continued use of the app after changes are made constitutes acceptance of the revised Policy.
+    </p>
   </div>
 
   <div class="card">
-  <h2>8. Contact</h2>
-  <p>For inquiries regarding this Privacy Policy: contact@freenaru.com</p>
+    <h2>8. Contact</h2>
+    <p>For inquiries regarding this Privacy Policy: contact@freenaru.com</p>
   </div>
 
 </main>

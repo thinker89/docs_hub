@@ -11,63 +11,70 @@ title: FAQ
   /* ===============================
      기본: LIGHT 테마
      =============================== */
-  :root{
+  :root {
     color-scheme: light dark;
 
-    --fg:#111827;
-    --bg:#fffbf3;
-    --body:#374151;
-    --muted:#070708;
+    --fg: #111827;
+    --bg: #fffbf3;
+    --body: #374151;
+    --muted: #070708;
 
     --border: rgba(6, 9, 16, 0.12);
-    --card:#FFFFFF;
+    --card: #FFFFFF;
 
-    --primary:#142743;
-    --shadow: 0 6px 18px rgba(17,24,39,0.08);
+    --primary: #142743;
+    --shadow: 0 6px 18px rgba(17, 24, 39, 0.08);
   }
 
   /* ===============================
      Flutter가 강제 DARK 주입할 때
      =============================== */
-  :root[data-theme="dark"]{
-    --fg:#E5E7EB;
-    --bg:#0B1220;
-    --body:#D1D5DB;
-    --muted:#9CA3AF;
+  :root[data-theme="dark"] {
+    --fg: #F3EBDD;
+    /* 따뜻한 밝은 글자 */
+    --bg: #17110D;
+    /* 앱 바깥 배경 */
+    --body: #D8CBBB;
+    /* 본문 */
+    --muted: #B7A894;
+    /* 보조 글자 */
 
-    --border: rgba(229,231,235,0.16);
-    --card:#121C2E; /* bg보다 살짝 밝게 */
+    --border: rgba(216, 203, 187, 0.12);
+    --card: #2A1F18;
+    /* 카드 배경 */
 
-    --primary:#8AB4FF;
-    --shadow: 0 10px 28px rgba(0,0,0,0.40);
+    --primary: #B8A3FF;
+    /* 보라 포인트 */
+    --shadow: 0 10px 28px rgba(0, 0, 0, 0.32);
   }
 
   /* ===============================
      data-theme 없을 때만 시스템 따라감
      =============================== */
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme]){
-      --fg:#E5E7EB;
-      --bg:#0B1220;
-      --body:#D1D5DB;
-      --muted:#9CA3AF;
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+      --fg: #E5E7EB;
+      --bg: #0B1220;
+      --body: #D1D5DB;
+      --muted: #9CA3AF;
 
-      --border: rgba(229,231,235,0.16);
-      --card:#121C2E;
+      --border: rgba(229, 231, 235, 0.16);
+      --card: #121C2E;
 
-      --primary:#8AB4FF;
-      --shadow: 0 10px 28px rgba(0,0,0,0.40);
+      --primary: #8AB4FF;
+      --shadow: 0 10px 28px rgba(0, 0, 0, 0.40);
     }
   }
 
   /* =============================== */
 
-  html, body {
+  html,
+  body {
     -webkit-text-size-adjust: 100%;
   }
 
-  body{
-    margin:0;
+  body {
+    margin: 0;
     background: var(--bg);
     color: var(--fg);
   }
@@ -75,10 +82,7 @@ title: FAQ
   main.doc {
     max-width: 720px;
     margin: 0 auto;
-    padding: env(safe-area-inset-top)
-            max(16px, env(safe-area-inset-right))
-            calc(48px + env(safe-area-inset-bottom))
-            max(16px, env(safe-area-inset-left));
+    padding: env(safe-area-inset-top) max(16px, env(safe-area-inset-right)) calc(48px + env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
   }
 
   /* =============================== */
@@ -93,32 +97,32 @@ title: FAQ
      =============================== */
 
   details {
-    border:1px solid var(--border);
-    border-radius:14px;
-    background:var(--card);
-    overflow:hidden;
-    margin:14px 0;
-    box-shadow:var(--shadow);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--card);
+    overflow: hidden;
+    margin: 14px 0;
+    box-shadow: var(--shadow);
     transition: all .2s ease;
   }
 
   summary {
-    list-style:none;
-    cursor:pointer;
-    font-weight:600;
-    padding:16px;
-    user-select:none;
+    list-style: none;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 16px;
+    user-select: none;
     color: var(--fg);
   }
 
   summary::-webkit-details-marker {
-    display:none;
+    display: none;
   }
 
   summary::before {
-    content:"▸";
-    display:inline-block;
-    margin-right:8px;
+    content: "▸";
+    display: inline-block;
+    margin-right: 8px;
     transition: transform .18s ease;
     color: var(--muted);
   }
@@ -127,78 +131,95 @@ title: FAQ
     transform: rotate(90deg);
   }
 
-  .details-body{
+  .details-body {
     padding: 0 16px 16px;
     line-height: 1.7;
     color: var(--body);
   }
 
   hr {
-    border:0;
-    border-top:1px solid var(--border);
-    margin:20px 0;
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: 20px 0;
   }
 
   .updated {
-    color:var(--muted);
-    font-style:italic;
-    font-size:.95rem;
-    margin-top:16px;
+    color: var(--muted);
+    font-style: italic;
+    font-size: .95rem;
+    margin-top: 16px;
   }
-
 </style>
 
 <main class="doc">
 
-<p># FAQ</p>
+  <p># FAQ</p>
 
-<details>
-  <summary>Saya tidak dapat mendengar audio contoh karena tidak ada paket suara.</summary>
-  <div class="details-body">
-    Tergantung pada produsen perangkat, tahun pembuatan, atau negara tempat perangkat dirilis, fitur TTS bahasa Jepang mungkin tidak terpasang secara bawaan. Silakan instal paket suara bahasa Jepang secara manual melalui menu pengaturan perangkat di [Umum - Bahasa - Teks ke Ucapan] atau menu serupa. Untuk petunjuk detail mengenai cara menginstal paket suara TTS bahasa Jepang, silakan merujuk ke panduan resmi dari masing-masing produsen perangkat.
-  </div>
-</details>
+  <details>
+    <summary>Saya tidak dapat mendengar audio contoh karena tidak ada paket suara.</summary>
+    <div class="details-body">
+      Tergantung pada produsen perangkat, tahun pembuatan, atau negara tempat perangkat dirilis, fitur TTS bahasa Jepang
+      mungkin tidak terpasang secara bawaan. Silakan instal paket suara bahasa Jepang secara manual melalui menu
+      pengaturan perangkat di [Umum - Bahasa - Teks ke Ucapan] atau menu serupa. Untuk petunjuk detail mengenai cara
+      menginstal paket suara TTS bahasa Jepang, silakan merujuk ke panduan resmi dari masing-masing produsen perangkat.
+    </div>
+  </details>
 
-<details>
-  <summary>Apakah asal-usul kanji berdasarkan teori akademis?</summary>
-  <div class="details-body">
-    Beberapa penjelasan asal-usul kanji pada kartu didasarkan pada teori akademis tradisional, sementara sebagian lainnya dibuat secara kreatif untuk membantu pembelajaran yang lebih cepat. Jika Anda ingin mempelajari teori tradisional secara lebih mendalam, silakan merujuk pada sumber akademis yang lebih khusus.
-  </div>
-</details>
+  <details>
+    <summary>Apakah asal-usul kanji berdasarkan teori akademis?</summary>
+    <div class="details-body">
+      Beberapa penjelasan asal-usul kanji pada kartu didasarkan pada teori akademis tradisional, sementara sebagian
+      lainnya dibuat secara kreatif untuk membantu pembelajaran yang lebih cepat. Jika Anda ingin mempelajari teori
+      tradisional secara lebih mendalam, silakan merujuk pada sumber akademis yang lebih khusus.
+    </div>
+  </details>
 
-<details>
-  <summary>Saya ingin menyimpan progres belajar</summary>
-  <div class="details-body">
-    Sebelum menghapus aplikasi atau menggunakan perangkat lain, silakan gunakan fitur [Menu - Pengaturan - Simpan progres belajar] untuk mencadangkan progres Anda. Memilih iCloud atau Google Drive sebagai media penyimpanan akan memudahkan proses pencadangan dan pemulihan.<br><br>
-    Pada perangkat yang ingin digunakan untuk memulihkan progres, gunakan fitur [Menu - Pengaturan - Pulihkan] dan muat file cadangan yang telah disimpan sebelumnya.<br><br>
-    Jika Anda menghapus aplikasi tanpa membuat cadangan, pengaturan aplikasi dan progres belajar akan hilang dan tidak dapat dipulihkan.
-  </div>
-</details>
+  <details>
+    <summary>Saya ingin menyimpan progres belajar</summary>
+    <div class="details-body">
+      Sebelum menghapus aplikasi atau menggunakan perangkat lain, silakan gunakan fitur [Menu - Pengaturan - Simpan
+      progres belajar] untuk mencadangkan progres Anda. Memilih iCloud atau Google Drive sebagai media penyimpanan akan
+      memudahkan proses pencadangan dan pemulihan.<br><br>
+      Pada perangkat yang ingin digunakan untuk memulihkan progres, gunakan fitur [Menu - Pengaturan - Pulihkan] dan
+      muat file cadangan yang telah disimpan sebelumnya.<br><br>
+      Jika Anda menghapus aplikasi tanpa membuat cadangan, pengaturan aplikasi dan progres belajar akan hilang dan tidak
+      dapat dipulihkan.
+    </div>
+  </details>
 
-<details>
-  <summary>Saya sudah melakukan pembayaran tetapi tidak bisa mengakses semua kanji</summary>
-  <div class="details-body">
-    Jika pembayaran telah berhasil tetapi Anda masih tidak dapat mengakses semua kanji, silakan tutup aplikasi sepenuhnya lalu buka kembali.<br><br>
-    Jika masalah tetap berlanjut, tekan [Menu → Pengaturan → Pulihkan pembelian] untuk memulihkan riwayat pembelian Anda.<br><br>
-    Jika Anda menghapus dan menginstal ulang aplikasi atau mengganti perangkat, silakan juga gunakan fitur [Pulihkan pembelian].<br><br>
-    Riwayat pembelian hanya dapat dipulihkan dengan akun Google Play atau App Store yang sama dengan yang digunakan saat melakukan pembayaran. Jika Anda membayar dengan akun lain, silakan masuk ke toko dengan akun tersebut lalu jalankan Pulihkan pembelian.
-  </div>
-</details>
+  <details>
+    <summary>Saya sudah melakukan pembayaran tetapi tidak bisa mengakses semua kanji</summary>
+    <div class="details-body">
+      Jika pembayaran telah berhasil tetapi Anda masih tidak dapat mengakses semua kanji, silakan tutup aplikasi
+      sepenuhnya lalu buka kembali.<br><br>
+      Jika masalah tetap berlanjut, tekan [Menu → Pengaturan → Pulihkan pembelian] untuk memulihkan riwayat pembelian
+      Anda.<br><br>
+      Jika Anda menghapus dan menginstal ulang aplikasi atau mengganti perangkat, silakan juga gunakan fitur [Pulihkan
+      pembelian].<br><br>
+      Riwayat pembelian hanya dapat dipulihkan dengan akun Google Play atau App Store yang sama dengan yang digunakan
+      saat melakukan pembayaran. Jika Anda membayar dengan akun lain, silakan masuk ke toko dengan akun tersebut lalu
+      jalankan Pulihkan pembelian.
+    </div>
+  </details>
 
-<details>
-  <summary>Apakah aplikasi ini mengumpulkan data pribadi?</summary>
-  <div class="details-body">
-    Aplikasi ini tidak mengumpulkan informasi yang dapat mengidentifikasi pribadi seperti nama, alamat email, atau kontak. Untuk peningkatan kualitas aplikasi, data analitik teknis seperti pola penggunaan dan progres belajar dapat dikumpulkan secara otomatis.<br><br>
-    Jika Anda menginginkan, Anda dapat mencadangkan data belajar ke Google Drive atau iCloud pribadi Anda. Data pribadi yang dikumpulkan oleh layanan cloud tersebut mengikuti kebijakan masing-masing platform. Data cadangan mencakup pengaturan aplikasi dan progres belajar, tetapi tidak mencakup informasi pribadi seperti nama atau email.
-  </div>
-</details>
+  <details>
+    <summary>Apakah aplikasi ini mengumpulkan data pribadi?</summary>
+    <div class="details-body">
+      Aplikasi ini tidak mengumpulkan informasi yang dapat mengidentifikasi pribadi seperti nama, alamat email, atau
+      kontak. Untuk peningkatan kualitas aplikasi, data analitik teknis seperti pola penggunaan dan progres belajar
+      dapat dikumpulkan secara otomatis.<br><br>
+      Jika Anda menginginkan, Anda dapat mencadangkan data belajar ke Google Drive atau iCloud pribadi Anda. Data
+      pribadi yang dikumpulkan oleh layanan cloud tersebut mengikuti kebijakan masing-masing platform. Data cadangan
+      mencakup pengaturan aplikasi dan progres belajar, tetapi tidak mencakup informasi pribadi seperti nama atau email.
+    </div>
+  </details>
 
-<details>
-  <summary>Saya memiliki pertanyaan</summary>
-  <div class="details-body">
-    Jika Anda memiliki pertanyaan, silakan hubungi kami melalui email berikut.<br>
-    contact@freenaru.com
-  </div>
-</details>
+  <details>
+    <summary>Saya memiliki pertanyaan</summary>
+    <div class="details-body">
+      Jika Anda memiliki pertanyaan, silakan hubungi kami melalui email berikut.<br>
+      contact@freenaru.com
+    </div>
+  </details>
 
 </main>

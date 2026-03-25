@@ -11,63 +11,70 @@ title: FAQ
   /* ===============================
      기본: LIGHT 테마
      =============================== */
-  :root{
+  :root {
     color-scheme: light dark;
 
-    --fg:#111827;
-    --bg:#fffbf3;
-    --body:#374151;
-    --muted:#070708;
+    --fg: #111827;
+    --bg: #fffbf3;
+    --body: #374151;
+    --muted: #070708;
 
     --border: rgba(6, 9, 16, 0.12);
-    --card:#FFFFFF;
+    --card: #FFFFFF;
 
-    --primary:#142743;
-    --shadow: 0 6px 18px rgba(17,24,39,0.08);
+    --primary: #142743;
+    --shadow: 0 6px 18px rgba(17, 24, 39, 0.08);
   }
 
   /* ===============================
      Flutter가 강제 DARK 주입할 때
      =============================== */
-  :root[data-theme="dark"]{
-    --fg:#E5E7EB;
-    --bg:#0B1220;
-    --body:#D1D5DB;
-    --muted:#9CA3AF;
+  :root[data-theme="dark"] {
+    --fg: #F3EBDD;
+    /* 따뜻한 밝은 글자 */
+    --bg: #17110D;
+    /* 앱 바깥 배경 */
+    --body: #D8CBBB;
+    /* 본문 */
+    --muted: #B7A894;
+    /* 보조 글자 */
 
-    --border: rgba(229,231,235,0.16);
-    --card:#121C2E; /* bg보다 살짝 밝게 */
+    --border: rgba(216, 203, 187, 0.12);
+    --card: #2A1F18;
+    /* 카드 배경 */
 
-    --primary:#8AB4FF;
-    --shadow: 0 10px 28px rgba(0,0,0,0.40);
+    --primary: #B8A3FF;
+    /* 보라 포인트 */
+    --shadow: 0 10px 28px rgba(0, 0, 0, 0.32);
   }
 
   /* ===============================
      data-theme 없을 때만 시스템 따라감
      =============================== */
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme]){
-      --fg:#E5E7EB;
-      --bg:#0B1220;
-      --body:#D1D5DB;
-      --muted:#9CA3AF;
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+      --fg: #E5E7EB;
+      --bg: #0B1220;
+      --body: #D1D5DB;
+      --muted: #9CA3AF;
 
-      --border: rgba(229,231,235,0.16);
-      --card:#121C2E;
+      --border: rgba(229, 231, 235, 0.16);
+      --card: #121C2E;
 
-      --primary:#8AB4FF;
-      --shadow: 0 10px 28px rgba(0,0,0,0.40);
+      --primary: #8AB4FF;
+      --shadow: 0 10px 28px rgba(0, 0, 0, 0.40);
     }
   }
 
   /* =============================== */
 
-  html, body {
+  html,
+  body {
     -webkit-text-size-adjust: 100%;
   }
 
-  body{
-    margin:0;
+  body {
+    margin: 0;
     background: var(--bg);
     color: var(--fg);
   }
@@ -75,10 +82,7 @@ title: FAQ
   main.doc {
     max-width: 720px;
     margin: 0 auto;
-    padding: env(safe-area-inset-top)
-            max(16px, env(safe-area-inset-right))
-            calc(48px + env(safe-area-inset-bottom))
-            max(16px, env(safe-area-inset-left));
+    padding: env(safe-area-inset-top) max(16px, env(safe-area-inset-right)) calc(48px + env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
   }
 
   /* =============================== */
@@ -93,32 +97,32 @@ title: FAQ
      =============================== */
 
   details {
-    border:1px solid var(--border);
-    border-radius:14px;
-    background:var(--card);
-    overflow:hidden;
-    margin:14px 0;
-    box-shadow:var(--shadow);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--card);
+    overflow: hidden;
+    margin: 14px 0;
+    box-shadow: var(--shadow);
     transition: all .2s ease;
   }
 
   summary {
-    list-style:none;
-    cursor:pointer;
-    font-weight:600;
-    padding:16px;
-    user-select:none;
+    list-style: none;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 16px;
+    user-select: none;
     color: var(--fg);
   }
 
   summary::-webkit-details-marker {
-    display:none;
+    display: none;
   }
 
   summary::before {
-    content:"▸";
-    display:inline-block;
-    margin-right:8px;
+    content: "▸";
+    display: inline-block;
+    margin-right: 8px;
     transition: transform .18s ease;
     color: var(--muted);
   }
@@ -127,78 +131,93 @@ title: FAQ
     transform: rotate(90deg);
   }
 
-  .details-body{
+  .details-body {
     padding: 0 16px 16px;
     line-height: 1.7;
     color: var(--body);
   }
 
   hr {
-    border:0;
-    border-top:1px solid var(--border);
-    margin:20px 0;
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: 20px 0;
   }
 
   .updated {
-    color:var(--muted);
-    font-style:italic;
-    font-size:.95rem;
-    margin-top:16px;
+    color: var(--muted);
+    font-style: italic;
+    font-size: .95rem;
+    margin-top: 16px;
   }
-
 </style>
 
 <main class="doc">
 
-<p># FAQ</p>
+  <p># FAQ</p>
 
-<details>
-  <summary>Tôi không thể nghe âm thanh ví dụ vì không có gói giọng nói.</summary>
-  <div class="details-body">
-    Tùy theo nhà sản xuất thiết bị, năm sản xuất hoặc quốc gia phát hành, tính năng TTS tiếng Nhật có thể không được cài đặt sẵn. Vui lòng vào phần cài đặt của thiết bị tại [Chung - Ngôn ngữ - Chuyển văn bản thành giọng nói] hoặc mục tương tự để cài đặt thủ công gói giọng nói tiếng Nhật. Để biết cách cài đặt chi tiết gói TTS tiếng Nhật, vui lòng tham khảo hướng dẫn sử dụng của nhà sản xuất thiết bị.
-  </div>
-</details>
+  <details>
+    <summary>Tôi không thể nghe âm thanh ví dụ vì không có gói giọng nói.</summary>
+    <div class="details-body">
+      Tùy theo nhà sản xuất thiết bị, năm sản xuất hoặc quốc gia phát hành, tính năng TTS tiếng Nhật có thể không được
+      cài đặt sẵn. Vui lòng vào phần cài đặt của thiết bị tại [Chung - Ngôn ngữ - Chuyển văn bản thành giọng nói] hoặc
+      mục tương tự để cài đặt thủ công gói giọng nói tiếng Nhật. Để biết cách cài đặt chi tiết gói TTS tiếng Nhật, vui
+      lòng tham khảo hướng dẫn sử dụng của nhà sản xuất thiết bị.
+    </div>
+  </details>
 
-<details>
-  <summary>Nguồn gốc của kanji có dựa trên học thuyết học thuật không?</summary>
-  <div class="details-body">
-    Một số giải thích về nguồn gốc kanji trên thẻ dựa trên các học thuyết truyền thống, trong khi một số khác được sáng tạo nhằm giúp bạn học nhanh hơn. Nếu bạn muốn tìm hiểu chính xác các học thuyết truyền thống, vui lòng tham khảo thêm các tài liệu hoặc nghiên cứu chuyên sâu.
-  </div>
-</details>
+  <details>
+    <summary>Nguồn gốc của kanji có dựa trên học thuyết học thuật không?</summary>
+    <div class="details-body">
+      Một số giải thích về nguồn gốc kanji trên thẻ dựa trên các học thuyết truyền thống, trong khi một số khác được
+      sáng tạo nhằm giúp bạn học nhanh hơn. Nếu bạn muốn tìm hiểu chính xác các học thuyết truyền thống, vui lòng tham
+      khảo thêm các tài liệu hoặc nghiên cứu chuyên sâu.
+    </div>
+  </details>
 
-<details>
-  <summary>Tôi muốn lưu tiến độ học</summary>
-  <div class="details-body">
-    Trước khi xóa ứng dụng hoặc sử dụng trên thiết bị khác, vui lòng dùng chức năng [Menu - Cài đặt - Lưu tiến độ học] để sao lưu tiến độ của bạn. Chọn iCloud hoặc Google Drive làm nơi lưu trữ sẽ giúp việc sao lưu và khôi phục thuận tiện hơn.<br><br>
-    Trên thiết bị muốn khôi phục tiến độ, hãy dùng chức năng [Menu - Cài đặt - Khôi phục] và tải tệp sao lưu đã lưu trước đó.<br><br>
-    Nếu bạn xóa ứng dụng mà không sao lưu, cài đặt ứng dụng và tiến độ học sẽ bị mất và không thể khôi phục.
-  </div>
-</details>
+  <details>
+    <summary>Tôi muốn lưu tiến độ học</summary>
+    <div class="details-body">
+      Trước khi xóa ứng dụng hoặc sử dụng trên thiết bị khác, vui lòng dùng chức năng [Menu - Cài đặt - Lưu tiến độ học]
+      để sao lưu tiến độ của bạn. Chọn iCloud hoặc Google Drive làm nơi lưu trữ sẽ giúp việc sao lưu và khôi phục thuận
+      tiện hơn.<br><br>
+      Trên thiết bị muốn khôi phục tiến độ, hãy dùng chức năng [Menu - Cài đặt - Khôi phục] và tải tệp sao lưu đã lưu
+      trước đó.<br><br>
+      Nếu bạn xóa ứng dụng mà không sao lưu, cài đặt ứng dụng và tiến độ học sẽ bị mất và không thể khôi phục.
+    </div>
+  </details>
 
-<details>
-  <summary>Tôi đã thanh toán nhưng không thể học tất cả kanji</summary>
-  <div class="details-body">
-    Nếu thanh toán đã hoàn tất nhưng bạn vẫn không thể truy cập tất cả kanji, vui lòng đóng hoàn toàn ứng dụng rồi mở lại.<br><br>
-    Nếu vấn đề vẫn tiếp diễn, hãy nhấn [Menu → Cài đặt → Khôi phục giao dịch] để khôi phục lịch sử mua hàng.<br><br>
-    Nếu bạn đã xóa và cài đặt lại ứng dụng hoặc thay đổi thiết bị, vui lòng cũng sử dụng chức năng [Khôi phục giao dịch].<br><br>
-    Lịch sử mua hàng chỉ có thể được khôi phục bằng cùng một tài khoản Google Play hoặc App Store đã sử dụng để thanh toán. Nếu bạn thanh toán bằng tài khoản khác, hãy đăng nhập vào cửa hàng bằng tài khoản đó rồi thực hiện khôi phục giao dịch.
-  </div>
-</details>
+  <details>
+    <summary>Tôi đã thanh toán nhưng không thể học tất cả kanji</summary>
+    <div class="details-body">
+      Nếu thanh toán đã hoàn tất nhưng bạn vẫn không thể truy cập tất cả kanji, vui lòng đóng hoàn toàn ứng dụng rồi mở
+      lại.<br><br>
+      Nếu vấn đề vẫn tiếp diễn, hãy nhấn [Menu → Cài đặt → Khôi phục giao dịch] để khôi phục lịch sử mua hàng.<br><br>
+      Nếu bạn đã xóa và cài đặt lại ứng dụng hoặc thay đổi thiết bị, vui lòng cũng sử dụng chức năng [Khôi phục giao
+      dịch].<br><br>
+      Lịch sử mua hàng chỉ có thể được khôi phục bằng cùng một tài khoản Google Play hoặc App Store đã sử dụng để thanh
+      toán. Nếu bạn thanh toán bằng tài khoản khác, hãy đăng nhập vào cửa hàng bằng tài khoản đó rồi thực hiện khôi phục
+      giao dịch.
+    </div>
+  </details>
 
-<details>
-  <summary>Ứng dụng có thu thập thông tin cá nhân không?</summary>
-  <div class="details-body">
-    Ứng dụng này không thu thập thông tin có thể nhận dạng cá nhân như tên, email hoặc thông tin liên hệ. Để cải thiện chất lượng ứng dụng, dữ liệu phân tích kỹ thuật như thói quen sử dụng và tiến độ học có thể được thu thập tự động.<br><br>
-    Nếu bạn muốn, bạn có thể sao lưu dữ liệu học tập lên Google Drive hoặc iCloud của riêng mình. Mọi dữ liệu cá nhân được thu thập bởi các dịch vụ đám mây đó sẽ tuân theo chính sách của từng nền tảng. Dữ liệu sao lưu bao gồm cài đặt ứng dụng và tiến độ học, nhưng không bao gồm thông tin cá nhân như tên hoặc email.
-  </div>
-</details>
+  <details>
+    <summary>Ứng dụng có thu thập thông tin cá nhân không?</summary>
+    <div class="details-body">
+      Ứng dụng này không thu thập thông tin có thể nhận dạng cá nhân như tên, email hoặc thông tin liên hệ. Để cải thiện
+      chất lượng ứng dụng, dữ liệu phân tích kỹ thuật như thói quen sử dụng và tiến độ học có thể được thu thập tự
+      động.<br><br>
+      Nếu bạn muốn, bạn có thể sao lưu dữ liệu học tập lên Google Drive hoặc iCloud của riêng mình. Mọi dữ liệu cá nhân
+      được thu thập bởi các dịch vụ đám mây đó sẽ tuân theo chính sách của từng nền tảng. Dữ liệu sao lưu bao gồm cài
+      đặt ứng dụng và tiến độ học, nhưng không bao gồm thông tin cá nhân như tên hoặc email.
+    </div>
+  </details>
 
-<details>
-  <summary>Tôi có câu hỏi</summary>
-  <div class="details-body">
-    Nếu bạn có bất kỳ câu hỏi nào, vui lòng liên hệ với chúng tôi qua email bên dưới.<br>
-    contact@freenaru.com
-  </div>
-</details>
+  <details>
+    <summary>Tôi có câu hỏi</summary>
+    <div class="details-body">
+      Nếu bạn có bất kỳ câu hỏi nào, vui lòng liên hệ với chúng tôi qua email bên dưới.<br>
+      contact@freenaru.com
+    </div>
+  </details>
 
 </main>

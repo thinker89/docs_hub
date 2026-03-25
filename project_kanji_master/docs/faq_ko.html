@@ -11,63 +11,70 @@ title: FAQ
   /* ===============================
      기본: LIGHT 테마
      =============================== */
-  :root{
+  :root {
     color-scheme: light dark;
 
-    --fg:#111827;
-    --bg:#fffbf3;
-    --body:#374151;
-    --muted:#070708;
+    --fg: #111827;
+    --bg: #fffbf3;
+    --body: #374151;
+    --muted: #070708;
 
     --border: rgba(6, 9, 16, 0.12);
-    --card:#FFFFFF;
+    --card: #FFFFFF;
 
-    --primary:#142743;
-    --shadow: 0 6px 18px rgba(17,24,39,0.08);
+    --primary: #142743;
+    --shadow: 0 6px 18px rgba(17, 24, 39, 0.08);
   }
 
   /* ===============================
      Flutter가 강제 DARK 주입할 때
      =============================== */
-  :root[data-theme="dark"]{
-    --fg:#E5E7EB;
-    --bg:#0B1220;
-    --body:#D1D5DB;
-    --muted:#9CA3AF;
+  :root[data-theme="dark"] {
+    --fg: #F3EBDD;
+    /* 따뜻한 밝은 글자 */
+    --bg: #17110D;
+    /* 앱 바깥 배경 */
+    --body: #D8CBBB;
+    /* 본문 */
+    --muted: #B7A894;
+    /* 보조 글자 */
 
-    --border: rgba(229,231,235,0.16);
-    --card:#121C2E; /* bg보다 살짝 밝게 */
+    --border: rgba(216, 203, 187, 0.12);
+    --card: #2A1F18;
+    /* 카드 배경 */
 
-    --primary:#8AB4FF;
-    --shadow: 0 10px 28px rgba(0,0,0,0.40);
+    --primary: #B8A3FF;
+    /* 보라 포인트 */
+    --shadow: 0 10px 28px rgba(0, 0, 0, 0.32);
   }
 
   /* ===============================
      data-theme 없을 때만 시스템 따라감
      =============================== */
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme]){
-      --fg:#E5E7EB;
-      --bg:#0B1220;
-      --body:#D1D5DB;
-      --muted:#9CA3AF;
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+      --fg: #E5E7EB;
+      --bg: #0B1220;
+      --body: #D1D5DB;
+      --muted: #9CA3AF;
 
-      --border: rgba(229,231,235,0.16);
-      --card:#121C2E;
+      --border: rgba(229, 231, 235, 0.16);
+      --card: #121C2E;
 
-      --primary:#8AB4FF;
-      --shadow: 0 10px 28px rgba(0,0,0,0.40);
+      --primary: #8AB4FF;
+      --shadow: 0 10px 28px rgba(0, 0, 0, 0.40);
     }
   }
 
   /* =============================== */
 
-  html, body {
+  html,
+  body {
     -webkit-text-size-adjust: 100%;
   }
 
-  body{
-    margin:0;
+  body {
+    margin: 0;
     background: var(--bg);
     color: var(--fg);
   }
@@ -75,10 +82,7 @@ title: FAQ
   main.doc {
     max-width: 720px;
     margin: 0 auto;
-    padding: env(safe-area-inset-top)
-            max(16px, env(safe-area-inset-right))
-            calc(48px + env(safe-area-inset-bottom))
-            max(16px, env(safe-area-inset-left));
+    padding: env(safe-area-inset-top) max(16px, env(safe-area-inset-right)) calc(48px + env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
   }
 
   /* =============================== */
@@ -93,32 +97,32 @@ title: FAQ
      =============================== */
 
   details {
-    border:1px solid var(--border);
-    border-radius:14px;
-    background:var(--card);
-    overflow:hidden;
-    margin:14px 0;
-    box-shadow:var(--shadow);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--card);
+    overflow: hidden;
+    margin: 14px 0;
+    box-shadow: var(--shadow);
     transition: all .2s ease;
   }
 
   summary {
-    list-style:none;
-    cursor:pointer;
-    font-weight:600;
-    padding:16px;
-    user-select:none;
+    list-style: none;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 16px;
+    user-select: none;
     color: var(--fg);
   }
 
   summary::-webkit-details-marker {
-    display:none;
+    display: none;
   }
 
   summary::before {
-    content:"▸";
-    display:inline-block;
-    margin-right:8px;
+    content: "▸";
+    display: inline-block;
+    margin-right: 8px;
     transition: transform .18s ease;
     color: var(--muted);
   }
@@ -127,78 +131,80 @@ title: FAQ
     transform: rotate(90deg);
   }
 
-  .details-body{
+  .details-body {
     padding: 0 16px 16px;
     line-height: 1.7;
     color: var(--body);
   }
 
   hr {
-    border:0;
-    border-top:1px solid var(--border);
-    margin:20px 0;
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: 20px 0;
   }
 
   .updated {
-    color:var(--muted);
-    font-style:italic;
-    font-size:.95rem;
-    margin-top:16px;
+    color: var(--muted);
+    font-style: italic;
+    font-size: .95rem;
+    margin-top: 16px;
   }
-
 </style>
 
 <main class="doc">
 
-<p># FAQ</p>
+  <p># FAQ</p>
 
-<details>
-  <summary>음성팩이 없어서 예문 음성을 들을 수 없어요.</summary>
-  <div class="details-body">
-    단말기 제조사, 혹은 단말기 제작 연도와 출시 국가에 따라서 일본어 TTS 기능이 기본적으로 내장되지 않은 경우가 있어요. 단말기 설정의 [일반-언어-글자 읽어주기] 또는 이와 유사한 메뉴에서 수동으로 음성팩을 설치해 보세요. 단말기에서 일본어 TTS 음성팩을 설치하는 상세한 방법은 각 제조사의 메뉴얼을 참고해 주세요.
-  </div>
-</details>
+  <details>
+    <summary>음성팩이 없어서 예문 음성을 들을 수 없어요.</summary>
+    <div class="details-body">
+      단말기 제조사, 혹은 단말기 제작 연도와 출시 국가에 따라서 일본어 TTS 기능이 기본적으로 내장되지 않은 경우가 있어요. 단말기 설정의 [일반-언어-글자 읽어주기] 또는 이와 유사한 메뉴에서 수동으로
+      음성팩을 설치해 보세요. 단말기에서 일본어 TTS 음성팩을 설치하는 상세한 방법은 각 제조사의 메뉴얼을 참고해 주세요.
+    </div>
+  </details>
 
-<details>
-  <summary>한자의 유래는 학설에 따르나요?</summary>
-  <div class="details-body">
-    한자 카드에 적힌 한자의 유래는 전통 학설에 따른 설명도 있지만, 빠른 학습을 돕기 위해 창작한 설명도 있어요. 전통 학설을 정확하게 익히는 게 중요하다면 보다 전문적인 논문을 함께 참고해 주세요.
-  </div>
-</details>
+  <details>
+    <summary>한자의 유래는 학설에 따르나요?</summary>
+    <div class="details-body">
+      한자 카드에 적힌 한자의 유래는 전통 학설에 따른 설명도 있지만, 빠른 학습을 돕기 위해 창작한 설명도 있어요. 전통 학설을 정확하게 익히는 게 중요하다면 보다 전문적인 논문을 함께 참고해 주세요.
+    </div>
+  </details>
 
-<details>
-  <summary>학습 진도를 저장하고 싶어요</summary>
-  <div class="details-body">
-    앱을 삭제하거나 다른 기기에서 이용하기 전에 [메뉴-설정-학습 진도 저장하기] 기능으로 학습 진도를 저장해 주세요. 저장 수단으로 iCloud나 Google Drive을 선택하면 보다 편리하게 백업 및 복구가 가능해요.<br><br>
-    진도를 복구하려는 단말기에서 [메뉴-설정-복구하기] 기능으로 저장했던 백업 파일을 불러와서 학습 진도를 복구해 주세요.<br><br>
-    백업하지 않고 앱을 삭제한 경우 앱 설정 및 학습 진도는 소실되어 복구할 수 없으므로 주의해 주세요.
-  </div>
-</details>
+  <details>
+    <summary>학습 진도를 저장하고 싶어요</summary>
+    <div class="details-body">
+      앱을 삭제하거나 다른 기기에서 이용하기 전에 [메뉴-설정-학습 진도 저장하기] 기능으로 학습 진도를 저장해 주세요. 저장 수단으로 iCloud나 Google Drive을 선택하면 보다 편리하게 백업 및
+      복구가 가능해요.<br><br>
+      진도를 복구하려는 단말기에서 [메뉴-설정-복구하기] 기능으로 저장했던 백업 파일을 불러와서 학습 진도를 복구해 주세요.<br><br>
+      백업하지 않고 앱을 삭제한 경우 앱 설정 및 학습 진도는 소실되어 복구할 수 없으므로 주의해 주세요.
+    </div>
+  </details>
 
-<details>
-  <summary>과금했는데 모든 한자를 학습할 수 없어요</summary>
-  <div class="details-body">
-    결제가 정상적으로 완료되었는데 모든 한자를 이용할 수 없다면 먼저 앱을 완전히 종료한 뒤 다시 실행해 주세요.<br><br>
-    문제가 계속된다면 [메뉴 → 설정 → 구매 복원]를 눌러 구매 이력을 복원해 주세요.<br><br>
-    앱을 삭제 후 재설치했거나 기기를 변경한 경우에도 [구매 복원]을 진행해 주세요.<br><br>
-    구매 내역은 Google Play 또는 App Store의 동일한 계정에서만 복원돼요. 다른 계정으로 결제했다면, 해당 계정으로 스토어에 로그인한 뒤 구매 복원하기를 실행해 주세요.
-  </div>
-</details>
+  <details>
+    <summary>과금했는데 모든 한자를 학습할 수 없어요</summary>
+    <div class="details-body">
+      결제가 정상적으로 완료되었는데 모든 한자를 이용할 수 없다면 먼저 앱을 완전히 종료한 뒤 다시 실행해 주세요.<br><br>
+      문제가 계속된다면 [메뉴 → 설정 → 구매 복원]를 눌러 구매 이력을 복원해 주세요.<br><br>
+      앱을 삭제 후 재설치했거나 기기를 변경한 경우에도 [구매 복원]을 진행해 주세요.<br><br>
+      구매 내역은 Google Play 또는 App Store의 동일한 계정에서만 복원돼요. 다른 계정으로 결제했다면, 해당 계정으로 스토어에 로그인한 뒤 구매 복원하기를 실행해 주세요.
+    </div>
+  </details>
 
-<details>
-  <summary>개인정보를 수집하나요?</summary>
-  <div class="details-body">
-    이 앱은 이름, 이메일, 연락처 등 개인을 식별할 수 있는 정보를 수집하지 않아요. 앱 품질 개선을 위해 이용 패턴, 학습 진도 등 기술적 분석 정보는 자동으로 수집될 수 있어요.<br><br>
-    사용자가 원한다면 본인의 Google Drive 또는 iCloud에 학습 데이터를 백업할 수 있어요. 해당 클라우드 서비스에서 수집하는 개인정보는 각 플랫폼의 정책에 따라요. 백업 데이터에는 앱 설정 및 학습 진도가 포함되며, 이메일, 이름 등의 개인정보는 포함되지 않아요.
-  </div>
-</details>
+  <details>
+    <summary>개인정보를 수집하나요?</summary>
+    <div class="details-body">
+      이 앱은 이름, 이메일, 연락처 등 개인을 식별할 수 있는 정보를 수집하지 않아요. 앱 품질 개선을 위해 이용 패턴, 학습 진도 등 기술적 분석 정보는 자동으로 수집될 수 있어요.<br><br>
+      사용자가 원한다면 본인의 Google Drive 또는 iCloud에 학습 데이터를 백업할 수 있어요. 해당 클라우드 서비스에서 수집하는 개인정보는 각 플랫폼의 정책에 따라요. 백업 데이터에는 앱 설정 및
+      학습 진도가 포함되며, 이메일, 이름 등의 개인정보는 포함되지 않아요.
+    </div>
+  </details>
 
-<details>
-  <summary>문의 사항이 있어요.</summary>
-  <div class="details-body">
-    궁금한 점이 있으시면 아래 메일로 연락해 주세요.<br>
-    contact@freenaru.com
-  </div>
-</details>
+  <details>
+    <summary>문의 사항이 있어요.</summary>
+    <div class="details-body">
+      궁금한 점이 있으시면 아래 메일로 연락해 주세요.<br>
+      contact@freenaru.com
+    </div>
+  </details>
 
 </main>

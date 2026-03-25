@@ -11,63 +11,70 @@ title: FAQ
   /* ===============================
      기본: LIGHT 테마
      =============================== */
-  :root{
+  :root {
     color-scheme: light dark;
 
-    --fg:#111827;
-    --bg:#fffbf3;
-    --body:#374151;
-    --muted:#070708;
+    --fg: #111827;
+    --bg: #fffbf3;
+    --body: #374151;
+    --muted: #070708;
 
     --border: rgba(6, 9, 16, 0.12);
-    --card:#FFFFFF;
+    --card: #FFFFFF;
 
-    --primary:#142743;
-    --shadow: 0 6px 18px rgba(17,24,39,0.08);
+    --primary: #142743;
+    --shadow: 0 6px 18px rgba(17, 24, 39, 0.08);
   }
 
   /* ===============================
      Flutter가 강제 DARK 주입할 때
      =============================== */
-  :root[data-theme="dark"]{
-    --fg:#E5E7EB;
-    --bg:#0B1220;
-    --body:#D1D5DB;
-    --muted:#9CA3AF;
+  :root[data-theme="dark"] {
+    --fg: #F3EBDD;
+    /* 따뜻한 밝은 글자 */
+    --bg: #17110D;
+    /* 앱 바깥 배경 */
+    --body: #D8CBBB;
+    /* 본문 */
+    --muted: #B7A894;
+    /* 보조 글자 */
 
-    --border: rgba(229,231,235,0.16);
-    --card:#121C2E; /* bg보다 살짝 밝게 */
+    --border: rgba(216, 203, 187, 0.12);
+    --card: #2A1F18;
+    /* 카드 배경 */
 
-    --primary:#8AB4FF;
-    --shadow: 0 10px 28px rgba(0,0,0,0.40);
+    --primary: #B8A3FF;
+    /* 보라 포인트 */
+    --shadow: 0 10px 28px rgba(0, 0, 0, 0.32);
   }
 
   /* ===============================
      data-theme 없을 때만 시스템 따라감
      =============================== */
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme]){
-      --fg:#E5E7EB;
-      --bg:#0B1220;
-      --body:#D1D5DB;
-      --muted:#9CA3AF;
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+      --fg: #E5E7EB;
+      --bg: #0B1220;
+      --body: #D1D5DB;
+      --muted: #9CA3AF;
 
-      --border: rgba(229,231,235,0.16);
-      --card:#121C2E;
+      --border: rgba(229, 231, 235, 0.16);
+      --card: #121C2E;
 
-      --primary:#8AB4FF;
-      --shadow: 0 10px 28px rgba(0,0,0,0.40);
+      --primary: #8AB4FF;
+      --shadow: 0 10px 28px rgba(0, 0, 0, 0.40);
     }
   }
 
   /* =============================== */
 
-  html, body {
+  html,
+  body {
     -webkit-text-size-adjust: 100%;
   }
 
-  body{
-    margin:0;
+  body {
+    margin: 0;
     background: var(--bg);
     color: var(--fg);
   }
@@ -75,10 +82,7 @@ title: FAQ
   main.doc {
     max-width: 720px;
     margin: 0 auto;
-    padding: env(safe-area-inset-top)
-            max(16px, env(safe-area-inset-right))
-            calc(48px + env(safe-area-inset-bottom))
-            max(16px, env(safe-area-inset-left));
+    padding: env(safe-area-inset-top) max(16px, env(safe-area-inset-right)) calc(48px + env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
   }
 
   /* =============================== */
@@ -93,32 +97,32 @@ title: FAQ
      =============================== */
 
   details {
-    border:1px solid var(--border);
-    border-radius:14px;
-    background:var(--card);
-    overflow:hidden;
-    margin:14px 0;
-    box-shadow:var(--shadow);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--card);
+    overflow: hidden;
+    margin: 14px 0;
+    box-shadow: var(--shadow);
     transition: all .2s ease;
   }
 
   summary {
-    list-style:none;
-    cursor:pointer;
-    font-weight:600;
-    padding:16px;
-    user-select:none;
+    list-style: none;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 16px;
+    user-select: none;
     color: var(--fg);
   }
 
   summary::-webkit-details-marker {
-    display:none;
+    display: none;
   }
 
   summary::before {
-    content:"▸";
-    display:inline-block;
-    margin-right:8px;
+    content: "▸";
+    display: inline-block;
+    margin-right: 8px;
     transition: transform .18s ease;
     color: var(--muted);
   }
@@ -127,78 +131,92 @@ title: FAQ
     transform: rotate(90deg);
   }
 
-  .details-body{
+  .details-body {
     padding: 0 16px 16px;
     line-height: 1.7;
     color: var(--body);
   }
 
   hr {
-    border:0;
-    border-top:1px solid var(--border);
-    margin:20px 0;
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: 20px 0;
   }
 
   .updated {
-    color:var(--muted);
-    font-style:italic;
-    font-size:.95rem;
-    margin-top:16px;
+    color: var(--muted);
+    font-style: italic;
+    font-size: .95rem;
+    margin-top: 16px;
   }
-
 </style>
 
 <main class="doc">
 
-<p># FAQ</p>
+  <p># FAQ</p>
 
-<details>
-  <summary>I can’t hear the example sentence audio because there is no voice pack.</summary>
-  <div class="details-body">
-    Depending on the device manufacturer, model year, or country of release, Japanese TTS may not be pre-installed. Please try installing the Japanese voice pack manually from your device settings under [General - Language - Text-to-Speech] or a similar menu. For detailed instructions on installing the Japanese TTS voice pack, refer to your device manufacturer’s manual.
-  </div>
-</details>
+  <details>
+    <summary>I can’t hear the example sentence audio because there is no voice pack.</summary>
+    <div class="details-body">
+      Depending on the device manufacturer, model year, or country of release, Japanese TTS may not be pre-installed.
+      Please try installing the Japanese voice pack manually from your device settings under [General - Language -
+      Text-to-Speech] or a similar menu. For detailed instructions on installing the Japanese TTS voice pack, refer to
+      your device manufacturer’s manual.
+    </div>
+  </details>
 
-<details>
-  <summary>Are the kanji origins based on academic theories?</summary>
-  <div class="details-body">
-    Some kanji origin explanations on the cards are based on traditional academic theories, while others are creatively written to help you learn more efficiently. If you would like to study traditional theories in depth, please refer to specialized academic sources as well.
-  </div>
-</details>
+  <details>
+    <summary>Are the kanji origins based on academic theories?</summary>
+    <div class="details-body">
+      Some kanji origin explanations on the cards are based on traditional academic theories, while others are
+      creatively written to help you learn more efficiently. If you would like to study traditional theories in depth,
+      please refer to specialized academic sources as well.
+    </div>
+  </details>
 
-<details>
-  <summary>I want to save my learning progress</summary>
-  <div class="details-body">
-    Before deleting the app or switching to another device, please use [Menu - Settings - Save learning progress] to back up your progress. Choosing iCloud or Google Drive as the storage option allows for more convenient backup and restore.<br><br>
-    On the device where you want to restore your progress, use [Menu - Settings - Restore] and load the previously saved backup file.<br><br>
-    If you delete the app without creating a backup, your app settings and learning progress will be lost and cannot be recovered.
-  </div>
-</details>
+  <details>
+    <summary>I want to save my learning progress</summary>
+    <div class="details-body">
+      Before deleting the app or switching to another device, please use [Menu - Settings - Save learning progress] to
+      back up your progress. Choosing iCloud or Google Drive as the storage option allows for more convenient backup and
+      restore.<br><br>
+      On the device where you want to restore your progress, use [Menu - Settings - Restore] and load the previously
+      saved backup file.<br><br>
+      If you delete the app without creating a backup, your app settings and learning progress will be lost and cannot
+      be recovered.
+    </div>
+  </details>
 
-<details>
-  <summary>I made a purchase but can’t access all kanji</summary>
-  <div class="details-body">
-    If your payment was completed successfully but you still cannot access all kanji, please fully close the app and then reopen it.<br><br>
-    If the issue persists, tap [Menu → Settings → Restore purchase] to restore your purchase history.<br><br>
-    If you reinstalled the app or changed your device, please also use [Restore purchase].<br><br>
-    Purchases can only be restored with the same Google Play or App Store account used for the original payment. If you paid with a different account, log in to the store with that account and then run Restore purchase.
-  </div>
-</details>
+  <details>
+    <summary>I made a purchase but can’t access all kanji</summary>
+    <div class="details-body">
+      If your payment was completed successfully but you still cannot access all kanji, please fully close the app and
+      then reopen it.<br><br>
+      If the issue persists, tap [Menu → Settings → Restore purchase] to restore your purchase history.<br><br>
+      If you reinstalled the app or changed your device, please also use [Restore purchase].<br><br>
+      Purchases can only be restored with the same Google Play or App Store account used for the original payment. If
+      you paid with a different account, log in to the store with that account and then run Restore purchase.
+    </div>
+  </details>
 
-<details>
-  <summary>Do you collect personal information?</summary>
-  <div class="details-body">
-    This app does not collect personally identifiable information such as your name, email address, or contact details. For quality improvement purposes, technical analytics data such as usage patterns and learning progress may be collected automatically.<br><br>
-    If you choose, you can back up your learning data to your own Google Drive or iCloud. Any personal data collected by those cloud services is governed by their respective policies. Backup data includes app settings and learning progress, but does not include personal information such as your name or email address.
-  </div>
-</details>
+  <details>
+    <summary>Do you collect personal information?</summary>
+    <div class="details-body">
+      This app does not collect personally identifiable information such as your name, email address, or contact
+      details. For quality improvement purposes, technical analytics data such as usage patterns and learning progress
+      may be collected automatically.<br><br>
+      If you choose, you can back up your learning data to your own Google Drive or iCloud. Any personal data collected
+      by those cloud services is governed by their respective policies. Backup data includes app settings and learning
+      progress, but does not include personal information such as your name or email address.
+    </div>
+  </details>
 
-<details>
-  <summary>I have a question</summary>
-  <div class="details-body">
-    If you have any questions, please contact us at the email address below.<br>
-    contact@freenaru.com
-  </div>
-</details>
+  <details>
+    <summary>I have a question</summary>
+    <div class="details-body">
+      If you have any questions, please contact us at the email address below.<br>
+      contact@freenaru.com
+    </div>
+  </details>
 
 </main>
