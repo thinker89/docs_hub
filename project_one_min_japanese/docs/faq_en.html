@@ -1,0 +1,284 @@
+---
+layout: null
+title: FAQ
+---
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta charset="utf-8">
+<meta name="color-scheme" content="light dark">
+<meta name="format-detection" content="telephone=no">
+
+<script>
+  (function () {
+    try {
+      var params = new URLSearchParams(location.search);
+      var theme = params.get('theme');
+      if (theme === 'dark' || theme === 'light') {
+        document.documentElement.setAttribute('data-theme', theme);
+      }
+    } catch (e) {}
+  })();
+</script>
+
+<style>
+  /* ===============================
+     기본: LIGHT 테마
+     =============================== */
+  :root {
+    color-scheme: light dark;
+
+    --fg: #111827;
+    --bg: #fffbf3;
+    --body: #374151;
+    --muted: #070708;
+
+    --border: rgba(6, 9, 16, 0.12);
+    --card: #FFFFFF;
+
+    --primary: #142743;
+    --shadow: 0 6px 18px rgba(17, 24, 39, 0.08);
+  }
+
+  /* ===============================
+     Flutter가 강제 DARK 주입할 때
+     =============================== */
+  :root[data-theme="dark"] {
+    --fg: #F3EBDD;
+    /* 따뜻한 밝은 글자 */
+    --bg: #17110D;
+    /* 앱 바깥 배경 */
+    --body: #D8CBBB;
+    /* 본문 */
+    --muted: #B7A894;
+    /* 보조 글자 */
+
+    --border: rgba(216, 203, 187, 0.12);
+    --card: #2A1F18;
+    /* 카드 배경 */
+
+    --primary: #B8A3FF;
+    /* 보라 포인트 */
+    --shadow: 0 10px 28px rgba(0, 0, 0, 0.32);
+  }
+
+  /* =============================== */
+
+  html,
+  body {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+  }
+
+  main.doc {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: env(safe-area-inset-top) max(16px, env(safe-area-inset-right)) calc(48px + env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+  }
+
+  /* =============================== */
+
+  p.lead {
+    margin: 0 0 12px;
+    color: var(--muted);
+  }
+
+  /* ===============================
+     카드 스타일
+     =============================== */
+
+  details {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--card);
+    overflow: hidden;
+    margin: 14px 0;
+    box-shadow: var(--shadow);
+    transition: all .2s ease;
+  }
+
+  summary {
+    list-style: none;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 16px;
+    user-select: none;
+    color: var(--fg);
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  summary::before {
+    content: "▸";
+    display: inline-block;
+    margin-right: 8px;
+    transition: transform .18s ease;
+    color: var(--muted);
+  }
+
+  details[open] summary::before {
+    transform: rotate(90deg);
+  }
+
+  .details-body {
+    padding: 0 16px 16px;
+    line-height: 1.7;
+    color: var(--body);
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: 20px 0;
+  }
+
+  .updated {
+    color: var(--muted);
+    font-style: italic;
+    font-size: .95rem;
+    margin-top: 16px;
+  }
+</style>
+
+<main class="doc">
+
+  <p># FAQ</p>
+
+  <details>
+    <summary>I made a purchase, but I can’t access all kanji</summary>
+    <div class="details-body">
+      If you can’t access all kanji after purchasing, first fully close the app and restart it.<br>
+      Also check that your network connection is stable.<br>
+      If the issue persists, go to [Menu → Settings → Restore Purchases] and restore your purchase.<br>
+      If you reinstalled the app or changed devices, you’ll also need to use [Restore Purchases].<br><br>
+      Purchases can only be restored with the same Google Play or App Store account used for the purchase. If you used a
+      different account, log into that account and restore your purchase.
+    </div>
+  </details>
+
+  <details>
+    <summary>No sound or the voice sounds robotic</summary>
+    <div class="details-body">
+      This may happen if a Japanese voice is not installed on your device, or if a low-quality voice is selected.<br><br>
+
+      Installing a high-quality Japanese voice will make pronunciation sound much more natural.<br><br>
+
+      [iOS]<br>
+      1. Open your device Settings.<br>
+      2. Go to [Accessibility] → [Spoken Content] → [Voices].<br>
+      3. Select [Japanese], then download a voice you like.<br>
+      4. Make sure the downloaded Japanese voice is selected.<br><br>
+
+      [Android]<br>
+      1. Open your device Settings.<br>
+      2. Use the search bar and type "Text-to-Speech" or "Text".<br>
+      3. Open the Text-to-Speech settings.<br>
+      4. Download a Japanese voice or switch to a high-quality Japanese voice.<br><br>
+
+      After changing the settings, fully close the app and open it again.<br><br>
+
+      If it still doesn’t work, your device may not support Japanese TTS.
+    </div>
+  </details>
+
+  <details>
+    <summary>I changed devices and my progress is gone</summary>
+    <div class="details-body">
+      First, on your old device, go to [Menu → Settings → Save Progress] to create a backup.<br>
+      Save the backup file somewhere you can access on your new device (messenger, iCloud, Google Drive, etc.).<br>
+      On your new device, go to [Menu → Settings → Restore] and load the file to recover your progress.<br>
+    </div>
+  </details>
+
+  <details>
+    <summary>I can’t see my saved progress file in cloud storage</summary>
+    <div class="details-body">
+      The cloud storage shown in [Settings → Restore] may not always be up to date.<br>
+      In this case, open your cloud app (such as iCloud or Google Drive) so your device can refresh and recognize the
+      latest files.
+    </div>
+  </details>
+
+  <details>
+    <summary>It’s too easy—I want to skip levels</summary>
+    <div class="details-body">
+      If the current level feels easy, it’s better to move on to the next one.<br><br>
+      1) Tap [All Kanji] in the top menu<br>
+      2) Tap the [⋮ menu] at the top right<br>
+      3) Tap [Skip Level]<br><br>
+      Skipped kanji will still appear occasionally in reviews, so don’t worry. If it feels easy, move on confidently.
+    </div>
+  </details>
+
+  <details>
+    <summary>Show me more features of the app</summary>
+    <div class="details-body">
+      This app is designed so you can start learning right away by tapping “Start Learning,” without any complicated
+      setup.<br>
+      However, if you want more control, you can explore the following options:<br><br>
+
+      1) Dark Mode<br>
+      Switch the screen to a dark theme.<br><br>
+
+      2) Word Priority Mode<br>
+      Enable [Settings → Kanji Card Display → Word Priority] to show words first on the card.<br>
+      If you’re an intermediate or advanced learner who wants to focus more on vocabulary than kanji stories, try this
+      option.<br><br>
+
+      3) Expand Examples by Default<br>
+      If tapping to expand example sentences feels inconvenient, enable this option.<br><br>
+
+      4) Adjust Study Amount<br>
+      Each session shows 20 kanji cards by default, but you can adjust this to match your preferred study
+      volume.<br><br>
+
+      5) Save Learning Progress<br>
+      Your progress is not stored on a server, so be sure to back it up regularly to your personal cloud.<br>
+      Use this feature when switching to a new device as well.<br><br>
+
+      6) View Weak Kanji<br>
+      Go to [All Kanji → ⋮ menu → My Weak Kanji] to review kanji you struggle with.<br>
+      Weak kanji are determined based on your difficulty responses.<br><br>
+
+      7) Skip Current Level<br>
+      If the current level feels too easy, you can skip it via [All Kanji → ⋮ menu → Skip Level].<br>
+      Skipped kanji will still reappear occasionally to help reinforce your memory.<br>
+      So don’t worry—feel free to skip easy levels with confidence.
+    </div>
+  </details>
+
+  <details>
+    <summary>Are kanji origins based on academic theory?</summary>
+    <div class="details-body">
+      Some explanations follow traditional theories, while others are simplified or created to help you learn
+      faster.<br>
+      If you want academically accurate origins, refer to specialized resources or research materials.
+    </div>
+  </details>
+
+  <details>
+    <summary>Do you collect personal information?</summary>
+    <div class="details-body">
+      This app does not collect personally identifiable information such as your name, email, or contact details.<br>
+      However, technical data like usage patterns, learning progress, and error logs may be collected automatically to
+      improve the service.<br><br>
+      You can back up your learning data to your own Google Drive or iCloud if you wish. Any personal data collected by
+      those services follows their respective policies.<br>
+      Backup data includes app settings and learning progress, but not personal information like your name or email.
+    </div>
+  </details>
+
+  <details>
+    <summary>I have a question</summary>
+    <div class="details-body">
+      If you have any questions, feel free to contact us at:<br>
+      contact@freenaru.com
+    </div>
+  </details>
+
+</main>

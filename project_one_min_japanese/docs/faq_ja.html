@@ -1,0 +1,204 @@
+---
+layout: null
+title: FAQ
+---
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta charset="utf-8">
+<meta name="color-scheme" content="light dark">
+<meta name="format-detection" content="telephone=no">
+
+<script>
+  (function () {
+    try {
+      var params = new URLSearchParams(location.search);
+      var theme = params.get('theme');
+      if (theme === 'dark' || theme === 'light') {
+        document.documentElement.setAttribute('data-theme', theme);
+      }
+    } catch (e) {}
+  })();
+</script>
+
+<style>
+  /* ===============================
+     기본: LIGHT 테마
+     =============================== */
+  :root {
+    color-scheme: light dark;
+
+    --fg: #111827;
+    --bg: #fffbf3;
+    --body: #374151;
+    --muted: #070708;
+
+    --border: rgba(6, 9, 16, 0.12);
+    --card: #FFFFFF;
+
+    --primary: #142743;
+    --shadow: 0 6px 18px rgba(17, 24, 39, 0.08);
+  }
+
+  /* ===============================
+     Flutter가 강제 DARK 주입할 때
+     =============================== */
+  :root[data-theme="dark"] {
+    --fg: #F3EBDD;
+    /* 따뜻한 밝은 글자 */
+    --bg: #17110D;
+    /* 앱 바깥 배경 */
+    --body: #D8CBBB;
+    /* 본문 */
+    --muted: #B7A894;
+    /* 보조 글자 */
+
+    --border: rgba(216, 203, 187, 0.12);
+    --card: #2A1F18;
+    /* 카드 배경 */
+
+    --primary: #B8A3FF;
+    /* 보라 포인트 */
+    --shadow: 0 10px 28px rgba(0, 0, 0, 0.32);
+  }
+
+  /* =============================== */
+
+  html,
+  body {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+  }
+
+  main.doc {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: env(safe-area-inset-top) max(16px, env(safe-area-inset-right)) calc(48px + env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+  }
+
+  /* =============================== */
+
+  p.lead {
+    margin: 0 0 12px;
+    color: var(--muted);
+  }
+
+  /* ===============================
+     카드 스타일
+     =============================== */
+
+  details {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--card);
+    overflow: hidden;
+    margin: 14px 0;
+    box-shadow: var(--shadow);
+    transition: all .2s ease;
+  }
+
+  summary {
+    list-style: none;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 16px;
+    user-select: none;
+    color: var(--fg);
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  summary::before {
+    content: "▸";
+    display: inline-block;
+    margin-right: 8px;
+    transition: transform .18s ease;
+    color: var(--muted);
+  }
+
+  details[open] summary::before {
+    transform: rotate(90deg);
+  }
+
+  .details-body {
+    padding: 0 16px 16px;
+    line-height: 1.7;
+    color: var(--body);
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: 20px 0;
+  }
+
+  .updated {
+    color: var(--muted);
+    font-style: italic;
+    font-size: .95rem;
+    margin-top: 16px;
+  }
+</style>
+
+<main class="doc">
+
+  <p># FAQ</p>
+
+  <details>
+    <summary>音声パックがないため、例文の音声を聞くことができません。</summary>
+    <div class="details-body">
+      端末のメーカー、製造年、または発売国によっては、日本語TTS機能が標準で搭載されていない場合があります。端末の設定の［一般 - 言語 -
+      テキスト読み上げ］またはそれに類似したメニューから、日本語の音声パックを手動でインストールしてください。日本語TTS音声パックの詳しいインストール方法については、各メーカーのマニュアルをご参照ください。
+    </div>
+  </details>
+
+  <details>
+    <summary>漢字の由来は学説に基づいていますか？</summary>
+    <div class="details-body">
+      漢字カードに記載されている由来には、伝統的な学説に基づく説明もありますが、学習を効率化するために創作した説明も含まれています。伝統的な学説を正確に学びたい場合は、専門的な論文などもあわせてご参照ください。
+    </div>
+  </details>
+
+  <details>
+    <summary>学習進捗を保存したいです</summary>
+    <div class="details-body">
+      アプリを削除したり、別の端末で利用する前に、[メニュー-設定-学習進捗を保存]機能で学習進捗を保存してください。保存先としてiCloudやGoogle
+      Driveを選択すると、より簡単にバックアップと復元ができます。<br><br>
+      進捗を復元する端末で[メニュー-設定-復元する]機能を使い、保存したバックアップファイルを読み込んでください。<br><br>
+      バックアップを行わずにアプリを削除した場合、アプリ設定および学習進捗は失われ、復元できませんのでご注意ください。
+    </div>
+  </details>
+
+  <details>
+    <summary>課金したのにすべての漢字を学習できません</summary>
+    <div class="details-body">
+      決済が正常に完了しているのにすべての漢字を利用できない場合は、まずアプリを完全に終了してから再度起動してください。<br><br>
+      問題が続く場合は、[メニュー → 設定 → 購入を復元]をタップして購入履歴を復元してください。<br><br>
+      アプリを削除して再インストールした場合や、端末を変更した場合も[購入を復元]を実行してください。<br><br>
+      購入履歴はGoogle PlayまたはApp Storeの同一アカウントでのみ復元できます。別のアカウントで決済した場合は、そのアカウントでストアにログインしたうえで購入を復元してください。
+    </div>
+  </details>
+
+  <details>
+    <summary>個人情報を収集しますか？</summary>
+    <div class="details-body">
+      本アプリは、氏名、メールアドレス、連絡先など個人を特定できる情報を収集しません。アプリの品質向上のため、利用パターンや学習進捗などの技術的な分析情報が自動的に収集される場合があります。<br><br>
+      ユーザーが希望する場合、自身のGoogle
+      DriveまたはiCloudに学習データをバックアップできます。これらのクラウドサービスが収集する個人情報は各プラットフォームのポリシーに従います。バックアップデータにはアプリ設定および学習進捗が含まれ、メールアドレスや氏名などの個人情報は含まれません。
+    </div>
+  </details>
+
+  <details>
+    <summary>お問い合わせがあります</summary>
+    <div class="details-body">
+      ご不明な点がございましたら、下記のメールアドレスまでご連絡ください。<br>
+      contact@freenaru.com
+    </div>
+  </details>
+
+</main>

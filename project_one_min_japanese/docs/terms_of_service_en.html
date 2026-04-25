@@ -1,0 +1,287 @@
+---
+layout: null
+title: Terms of Service
+---
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta charset="utf-8">
+<meta name="color-scheme" content="light dark">
+<meta name="format-detection" content="telephone=no">
+
+<script>
+  (function () {
+    try {
+      var params = new URLSearchParams(location.search);
+      var theme = params.get('theme');
+      if (theme === 'dark' || theme === 'light') {
+        document.documentElement.setAttribute('data-theme', theme);
+      }
+    } catch (e) {}
+  })();
+</script>
+
+<style>
+  :root {
+    color-scheme: light dark;
+
+    --fg: #111827;
+    --bg: #fffbf3;
+    --body: #374151;
+    --muted: #070708;
+
+    --border: rgba(6, 9, 16, 0.12);
+    --card: #FFFFFF;
+
+    --primary: #142743;
+    --shadow: 0 6px 18px rgba(17, 24, 39, 0.08);
+  }
+
+  :root[data-theme="dark"] {
+    --fg: #F3EBDD;
+    /* 따뜻한 밝은 글자 */
+    --bg: #17110D;
+    /* 앱 바깥 배경 */
+    --body: #D8CBBB;
+    /* 본문 */
+    --muted: #B7A894;
+    /* 보조 글자 */
+
+    --border: rgba(216, 203, 187, 0.12);
+    --card: #2A1F18;
+    /* 카드 배경 */
+
+    --primary: #B8A3FF;
+    /* 보라 포인트 */
+    --shadow: 0 10px 28px rgba(0, 0, 0, 0.32);
+  }
+
+  html,
+  body {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+  }
+
+  main.doc {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: env(safe-area-inset-top) max(16px, env(safe-area-inset-right)) calc(48px + env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+  }
+
+  /* language switch (필요하면 유지) */
+  .lang-switch {
+    display: flex;
+    gap: 8px;
+    margin: 14px 0 10px;
+    flex-wrap: wrap;
+  }
+
+  .lang-switch a {
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--fg);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: var(--shadow);
+  }
+
+  h1 {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.2px;
+    margin: 10px 0 12px;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 800;
+    margin: 0 0 8px;
+  }
+
+  p.lead {
+    margin: 0 0 12px;
+    color: var(--muted);
+  }
+
+  .card {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--card);
+    overflow: hidden;
+    margin: 14px 0;
+    box-shadow: var(--shadow);
+    padding: 16px;
+  }
+
+  ul {
+    padding-left: 18px;
+    margin: 8px 0 0;
+    color: var(--body);
+    line-height: 1.7;
+  }
+
+  p {
+    margin: 8px 0 0;
+    color: var(--body);
+    line-height: 1.7;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: 18px 0;
+  }
+
+  .updated {
+    color: var(--muted);
+    font-style: italic;
+    font-size: .95rem;
+    margin-top: 16px;
+  }
+</style>
+
+<main class="doc">
+
+  <div class="updated">Effective Date: February 13, 2026</div>
+  <hr />
+
+  <h1>Terms of Service</h1>
+  <p class="lead">
+    These Terms of Service govern the rights, obligations, and responsibilities of users when using this app.
+  </p>
+
+  <div class="card">
+    <h2>1. Purpose</h2>
+    <p>
+      These Terms set forth the conditions for using the Japanese Kanji learning app (the “Service”) provided by us.
+      By installing, accessing, or using the app, you agree to be bound by these Terms.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>2. Description of the Service</h2>
+    <ul>
+      <li>This app is an educational tool designed to assist users in learning Japanese Kanji.</li>
+      <li>Kanji explanations, examples, and illustrations are provided for learning purposes and do not guarantee
+        complete academic or lexicographical accuracy.</li>
+      <li>We may modify, improve, or update all or part of the Service at our discretion.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>3. Purchases and Refunds</h2>
+    <ul>
+      <li>This app provides certain features for free. Full access to all Kanji learning content is available through a
+        one-time in-app purchase.</li>
+      <li>All payments are processed through Google Play or the Apple App Store.</li>
+      <li>Refunds are subject to the policies of the respective app store and applicable laws.</li>
+      <li>If your app store account is changed, removed, or unavailable, purchase restoration may be limited or
+        unavailable.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>4. User Obligations</h2>
+    <ul>
+      <li>You are granted a non-exclusive, non-transferable license to use the app for personal learning purposes only.
+      </li>
+      <li>Unauthorized copying, distribution, modification, or commercial use of the app’s code, text, images,
+        explanations, UI/UX, or other content is prohibited.</li>
+      <li>Reverse engineering, automated access, scraping, or similar unauthorized technical attempts are prohibited.
+      </li>
+      <li>You must not engage in activities that violate applicable laws or interfere with the operation of the Service.
+      </li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>5. Intellectual Property</h2>
+    <ul>
+      <li>All proprietary content within the app, including code, learning materials, illustrations, design, and
+        branding, is owned by us.</li>
+      <li>Your use of the app does not grant you ownership of any intellectual property rights. You are granted only a
+        limited right to use the Service in accordance with these Terms.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>6. Disclaimer and Limitation of Liability</h2>
+    <ul>
+      <li>This app is provided as an educational tool and does not guarantee specific learning outcomes.</li>
+      <li>Learning results may vary depending on individual effort and circumstances.</li>
+      <li>Parts of the Service may be delayed, interrupted, or unavailable due to technical errors, network conditions,
+        device settings, operating system policies, app store policies, or third-party services (including Firebase
+        Analytics).</li>
+      <li>To the fullest extent permitted by applicable law, we are not liable for indirect, incidental, special, or
+        consequential damages arising from the use of the Service.</li>
+      <li>Our total liability shall not exceed the amount actually paid by the user for the app.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>7. Privacy</h2>
+    <ul>
+      <li>This app does not collect directly identifiable personal information such as name or email address.</li>
+      <li>We use Firebase Analytics to analyze usage patterns and technical information for service improvement.</li>
+      <li>Learning data is stored locally on the user’s device and may be optionally backed up to Google Drive or iCloud
+        at the user’s discretion.</li>
+      <li>For more information, please refer to our separate Privacy Policy.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>8. Service Modification or Termination</h2>
+    <ul>
+      <li>We may modify or discontinue all or part of the Service for technical or operational reasons.</li>
+      <li>The Service may be limited due to platform policy changes, operating system updates, network issues, or other
+        external factors.</li>
+      <li>Except as required by applicable law, we are not liable for damages resulting from service modifications or
+        interruptions.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>9. Storage of Learning Data and User Responsibility</h2>
+    <ul>
+      <li>The App stores users’ learning progress and settings locally on the user’s device and does not store such data
+        on any central server.</li>
+      <li>Users are responsible for backing up their data using the backup feature before deleting the App, changing
+        devices, reinstalling the App, or in cases of device loss or damage.</li>
+      <li>The Company shall not be liable for any loss of learning data resulting from a user’s failure to perform a
+        backup.</li>
+      <li>Backups performed through third-party cloud services such as iCloud or Google Drive are subject to the
+        policies and technical environments of the respective service providers, and the Company shall not be liable for
+        any data loss or failure of restoration arising therefrom.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>10. Changes to These Terms</h2>
+    <p>
+      We may revise these Terms as necessary.
+      Updated Terms will be posted on this page and become effective upon publication.
+      Continued use of the app after changes constitutes acceptance of the revised Terms.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>11. Governing Law</h2>
+    <p>
+      These Terms shall be governed by and interpreted in accordance with the laws of the Republic of Korea.
+      Any disputes shall be subject to the jurisdiction provided under applicable law.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>12. Contact</h2>
+    <p>For inquiries regarding these Terms: contact@freenaru.com</p>
+  </div>
+
+
+</main>

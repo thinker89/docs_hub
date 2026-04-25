@@ -1,0 +1,284 @@
+---
+layout: null
+title: FAQ
+---
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta charset="utf-8">
+<meta name="color-scheme" content="light dark">
+<meta name="format-detection" content="telephone=no">
+
+<script>
+  (function () {
+    try {
+      var params = new URLSearchParams(location.search);
+      var theme = params.get('theme');
+      if (theme === 'dark' || theme === 'light') {
+        document.documentElement.setAttribute('data-theme', theme);
+      }
+    } catch (e) {}
+  })();
+</script>
+
+<style>
+  /* ===============================
+     기본: LIGHT 테마
+     =============================== */
+  :root {
+    color-scheme: light dark;
+
+    --fg: #111827;
+    --bg: #fffbf3;
+    --body: #374151;
+    --muted: #070708;
+
+    --border: rgba(6, 9, 16, 0.12);
+    --card: #FFFFFF;
+
+    --primary: #142743;
+    --shadow: 0 6px 18px rgba(17, 24, 39, 0.08);
+  }
+
+  /* ===============================
+     Flutter가 강제 DARK 주입할 때
+     =============================== */
+  :root[data-theme="dark"] {
+    --fg: #F3EBDD;
+    /* 따뜻한 밝은 글자 */
+    --bg: #17110D;
+    /* 앱 바깥 배경 */
+    --body: #D8CBBB;
+    /* 본문 */
+    --muted: #B7A894;
+    /* 보조 글자 */
+
+    --border: rgba(216, 203, 187, 0.12);
+    --card: #2A1F18;
+    /* 카드 배경 */
+
+    --primary: #B8A3FF;
+    /* 보라 포인트 */
+    --shadow: 0 10px 28px rgba(0, 0, 0, 0.32);
+  }
+
+  /* =============================== */
+
+  html,
+  body {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+  }
+
+  main.doc {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: env(safe-area-inset-top) max(16px, env(safe-area-inset-right)) calc(48px + env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+  }
+
+  /* =============================== */
+
+  p.lead {
+    margin: 0 0 12px;
+    color: var(--muted);
+  }
+
+  /* ===============================
+     카드 스타일
+     =============================== */
+
+  details {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--card);
+    overflow: hidden;
+    margin: 14px 0;
+    box-shadow: var(--shadow);
+    transition: all .2s ease;
+  }
+
+  summary {
+    list-style: none;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 16px;
+    user-select: none;
+    color: var(--fg);
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  summary::before {
+    content: "▸";
+    display: inline-block;
+    margin-right: 8px;
+    transition: transform .18s ease;
+    color: var(--muted);
+  }
+
+  details[open] summary::before {
+    transform: rotate(90deg);
+  }
+
+  .details-body {
+    padding: 0 16px 16px;
+    line-height: 1.7;
+    color: var(--body);
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: 20px 0;
+  }
+
+  .updated {
+    color: var(--muted);
+    font-style: italic;
+    font-size: .95rem;
+    margin-top: 16px;
+  }
+</style>
+
+<main class="doc">
+
+  <p># FAQ</p>
+
+  <details>
+    <summary>Tôi đã mua nhưng không thể truy cập tất cả kanji</summary>
+    <div class="details-body">
+      Nếu sau khi mua mà bạn không thể truy cập tất cả kanji, hãy thử đóng hoàn toàn ứng dụng rồi mở lại.<br>
+      Đồng thời kiểm tra kết nối mạng có ổn định không.<br>
+      Nếu vẫn còn lỗi, vào [Menu → Cài đặt → Khôi phục mua hàng] để khôi phục giao dịch.<br>
+      Nếu bạn đã cài lại ứng dụng hoặc đổi thiết bị, bạn cũng cần dùng [Khôi phục mua hàng].<br><br>
+      Chỉ có thể khôi phục giao dịch bằng cùng tài khoản Google Play hoặc App Store đã dùng khi mua. Nếu bạn dùng tài
+      khoản khác, hãy đăng nhập tài khoản đó rồi khôi phục lại.
+    </div>
+  </details>
+
+  <details>
+    <summary>Không có âm thanh hoặc giọng nghe như robot</summary>
+    <div class="details-body">
+      Vấn đề này có thể xảy ra khi thiết bị của bạn chưa cài giọng tiếng Nhật, hoặc đang dùng giọng chất lượng thấp.<br><br>
+
+      Cài đặt giọng tiếng Nhật chất lượng cao sẽ giúp phát âm tự nhiên hơn.<br><br>
+
+      [iOS]<br>
+      1. Mở Cài đặt trên thiết bị.<br>
+      2. Vào [Trợ năng] → [Nội dung được đọc] → [Giọng nói].<br>
+      3. Chọn [Tiếng Nhật], sau đó tải về giọng bạn muốn.<br>
+      4. Đảm bảo giọng tiếng Nhật đã được chọn.<br><br>
+
+      [Android]<br>
+      1. Mở Cài đặt trên thiết bị.<br>
+      2. Dùng thanh tìm kiếm và nhập "Text-to-Speech" hoặc "Chuyển văn bản thành giọng nói".<br>
+      3. Mở cài đặt "Text-to-Speech" (Chuyển văn bản thành giọng nói).<br>
+      4. Tải giọng tiếng Nhật hoặc chuyển sang giọng chất lượng cao.<br><br>
+
+      Sau khi thay đổi cài đặt, hãy đóng hoàn toàn ứng dụng và mở lại.<br><br>
+
+      Nếu vẫn không hoạt động, thiết bị của bạn có thể không hỗ trợ TTS tiếng Nhật.
+    </div>
+  </details>
+
+  <details>
+    <summary>Tôi đổi thiết bị và bị mất tiến trình</summary>
+    <div class="details-body">
+      Trước tiên, trên thiết bị cũ, vào [Menu → Cài đặt → Lưu tiến trình] để tạo bản sao lưu.<br>
+      Lưu file này ở nơi bạn có thể truy cập trên thiết bị mới (messenger, iCloud, Google Drive, v.v.).<br>
+      Trên thiết bị mới, vào [Menu → Cài đặt → Khôi phục] và tải file đó để lấy lại tiến trình.<br>
+    </div>
+  </details>
+
+  <details>
+    <summary>Không thấy file tiến trình đã lưu trên cloud</summary>
+    <div class="details-body">
+      Bộ nhớ cloud hiển thị trong [Cài đặt → Khôi phục] đôi khi không phải là phiên bản mới nhất.<br>
+      Trong trường hợp này, hãy mở ứng dụng cloud bạn đang sử dụng (như iCloud hoặc Google Drive) để thiết bị cập nhật
+      và
+      nhận diện các file mới nhất.
+    </div>
+  </details>
+
+  <details>
+    <summary>Quá dễ — tôi muốn bỏ qua level</summary>
+    <div class="details-body">
+      Nếu level hiện tại quá dễ, bạn nên chuyển sang level tiếp theo.<br><br>
+      1) Nhấn [Tất cả Kanji] ở menu trên<br>
+      2) Nhấn [menu ⋮] ở góc trên bên phải<br>
+      3) Chọn [Bỏ qua Level]<br><br>
+      Các kanji đã bỏ qua vẫn sẽ xuất hiện đôi khi trong phần ôn tập, nên bạn không cần lo. Nếu thấy dễ, cứ tiếp tục.
+    </div>
+  </details>
+
+  <details>
+    <summary>Giới thiệu thêm các tính năng của ứng dụng</summary>
+    <div class="details-body">
+      Ứng dụng này được thiết kế để bạn có thể nhấn “Bắt đầu học” và học ngay mà không cần thiết lập phức tạp.<br>
+      Tuy nhiên, nếu bạn muốn nhiều tùy chọn hơn, hãy thử các cài đặt sau:<br><br>
+
+      1) Chế độ tối<br>
+      Chuyển giao diện sang nền tối.<br><br>
+
+      2) Chế độ ưu tiên từ vựng<br>
+      Bật [Cài đặt → Hiển thị thẻ kanji → Ưu tiên từ vựng] để hiển thị từ trước trên thẻ.<br>
+      Nếu bạn là người học trung cấp hoặc cao cấp muốn tập trung vào từ vựng hơn là câu chuyện kanji, hãy thử tính năng
+      này.<br><br>
+
+      3) Tự động hiển thị ví dụ<br>
+      Nếu việc phải chạm để mở câu ví dụ gây bất tiện, bạn có thể bật tùy chọn này.<br><br>
+
+      4) Điều chỉnh khối lượng học<br>
+      Mỗi lần học mặc định có 20 thẻ kanji, nhưng bạn có thể điều chỉnh cho phù hợp với mình.<br><br>
+
+      5) Lưu tiến trình học<br>
+      Tiến trình học không được lưu trên server, vì vậy hãy thường xuyên sao lưu lên cloud cá nhân.<br>
+      Sử dụng tính năng này khi chuyển sang thiết bị khác.<br><br>
+
+      6) Xem kanji yếu<br>
+      Vào [Tất cả Kanji → menu ⋮ → Kanji yếu của tôi] để xem các kanji bạn gặp khó khăn khi ghi nhớ.<br>
+      Kanji yếu được phân loại dựa trên phản hồi độ khó của bạn.<br><br>
+
+      7) Bỏ qua level hiện tại<br>
+      Nếu level hiện tại quá dễ, bạn có thể bỏ qua tại [Tất cả Kanji → menu ⋮ → Bỏ qua Level].<br>
+      Các kanji đã bỏ qua vẫn sẽ xuất hiện lại đôi khi để giúp bạn ôn lại.<br>
+      Vì vậy đừng lo—hãy tự tin bỏ qua những level dễ.
+    </div>
+  </details>
+
+  <details>
+    <summary>Nguồn gốc kanji có dựa trên học thuật không?</summary>
+    <div class="details-body">
+      Một số giải thích dựa trên các học thuyết truyền thống, trong khi một số khác được đơn giản hóa hoặc tạo ra để
+      giúp bạn học nhanh hơn.<br>
+      Nếu bạn muốn tìm hiểu theo hướng học thuật chính xác, hãy tham khảo tài liệu hoặc sách chuyên sâu.
+    </div>
+  </details>
+
+  <details>
+    <summary>Ứng dụng có thu thập thông tin cá nhân không?</summary>
+    <div class="details-body">
+      Ứng dụng này không thu thập thông tin cá nhân như tên, email hay thông tin liên hệ.<br>
+      Tuy nhiên, dữ liệu kỹ thuật như thói quen sử dụng, tiến trình học và log lỗi có thể được thu thập tự động để cải
+      thiện dịch vụ.<br><br>
+      Bạn có thể sao lưu dữ liệu học lên Google Drive hoặc iCloud của riêng mình nếu muốn. Dữ liệu cá nhân do các dịch
+      vụ này thu thập sẽ tuân theo chính sách của họ.<br>
+      Dữ liệu sao lưu bao gồm cài đặt ứng dụng và tiến trình học, nhưng không bao gồm thông tin cá nhân như tên hay
+      email.
+    </div>
+  </details>
+
+  <details>
+    <summary>Tôi có câu hỏi</summary>
+    <div class="details-body">
+      Nếu bạn có câu hỏi, hãy liên hệ với chúng tôi tại:<br>
+      contact@freenaru.com
+    </div>
+  </details>
+
+</main>

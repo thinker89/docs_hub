@@ -1,0 +1,287 @@
+---
+layout: null
+title: FAQ
+---
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta charset="utf-8">
+<meta name="color-scheme" content="light dark">
+<meta name="format-detection" content="telephone=no">
+
+<script>
+  (function () {
+    try {
+      var params = new URLSearchParams(location.search);
+      var theme = params.get('theme');
+      if (theme === 'dark' || theme === 'light') {
+        document.documentElement.setAttribute('data-theme', theme);
+      }
+    } catch (e) {}
+  })();
+</script>
+
+<style>
+  /* ===============================
+     기본: LIGHT 테마
+     =============================== */
+  :root {
+    color-scheme: light dark;
+
+    --fg: #111827;
+    --bg: #fffbf3;
+    --body: #374151;
+    --muted: #070708;
+
+    --border: rgba(6, 9, 16, 0.12);
+    --card: #FFFFFF;
+
+    --primary: #142743;
+    --shadow: 0 6px 18px rgba(17, 24, 39, 0.08);
+  }
+
+  /* ===============================
+     Flutter가 강제 DARK 주입할 때
+     =============================== */
+  :root[data-theme="dark"] {
+    --fg: #F3EBDD;
+    /* 따뜻한 밝은 글자 */
+    --bg: #17110D;
+    /* 앱 바깥 배경 */
+    --body: #D8CBBB;
+    /* 본문 */
+    --muted: #B7A894;
+    /* 보조 글자 */
+
+    --border: rgba(216, 203, 187, 0.12);
+    --card: #2A1F18;
+    /* 카드 배경 */
+
+    --primary: #B8A3FF;
+    /* 보라 포인트 */
+    --shadow: 0 10px 28px rgba(0, 0, 0, 0.32);
+  }
+  
+  /* =============================== */
+
+  html,
+  body {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+  }
+
+  main.doc {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: env(safe-area-inset-top) max(16px, env(safe-area-inset-right)) calc(48px + env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+  }
+
+  /* =============================== */
+
+  p.lead {
+    margin: 0 0 12px;
+    color: var(--muted);
+  }
+
+  /* ===============================
+     카드 스타일
+     =============================== */
+
+  details {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--card);
+    overflow: hidden;
+    margin: 14px 0;
+    box-shadow: var(--shadow);
+    transition: all .2s ease;
+  }
+
+  summary {
+    list-style: none;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 16px;
+    user-select: none;
+    color: var(--fg);
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  summary::before {
+    content: "▸";
+    display: inline-block;
+    margin-right: 8px;
+    transition: transform .18s ease;
+    color: var(--muted);
+  }
+
+  details[open] summary::before {
+    transform: rotate(90deg);
+  }
+
+  .details-body {
+    padding: 0 16px 16px;
+    line-height: 1.7;
+    color: var(--body);
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: 20px 0;
+  }
+
+  .updated {
+    color: var(--muted);
+    font-style: italic;
+    font-size: .95rem;
+    margin-top: 16px;
+  }
+</style>
+
+<main class="doc">
+
+  <p># FAQ</p>
+
+  <details>
+    <summary>Saya sudah membeli, tapi tidak bisa mengakses semua kanji</summary>
+    <div class="details-body">
+      Jika setelah membeli kamu tidak bisa mengakses semua kanji, coba tutup aplikasi sepenuhnya lalu buka kembali.<br>
+      Pastikan juga koneksi internet kamu stabil.<br>
+      Jika masalah masih berlanjut, buka [Menu → Pengaturan → Pulihkan Pembelian] dan pulihkan pembelianmu.<br>
+      Jika kamu menginstal ulang aplikasi atau mengganti perangkat, kamu juga perlu menggunakan [Pulihkan
+      Pembelian].<br><br>
+      Pembelian hanya bisa dipulihkan dengan akun Google Play atau App Store yang sama saat melakukan pembelian. Jika
+      kamu menggunakan akun berbeda, masuk ke akun tersebut lalu lakukan pemulihan.
+    </div>
+  </details>
+
+  <details>
+    <summary>Tidak ada suara atau suara terdengar seperti robot</summary>
+    <div class="details-body">
+      Hal ini bisa terjadi jika suara bahasa Jepang belum terpasang di perangkat Anda, atau masih menggunakan suara berkualitas rendah.<br><br>
+
+      Menggunakan suara bahasa Jepang berkualitas tinggi akan membuat pelafalan terdengar lebih alami.<br><br>
+
+      [iOS]<br>
+      1. Buka Pengaturan perangkat Anda.<br>
+      2. Masuk ke [Aksesibilitas] → [Konten Lisan] → [Suara].<br>
+      3. Pilih [Bahasa Jepang], lalu unduh suara yang Anda suka.<br>
+      4. Pastikan suara Jepang yang diunduh sudah dipilih.<br><br>
+
+      [Android]<br>
+      1. Buka Pengaturan perangkat Anda.<br>
+      2. Gunakan kolom pencarian dan ketik "Text-to-Speech" atau "Teks ke Ucapan".<br>
+      3. Buka pengaturan "Text-to-Speech" (Teks ke Ucapan).<br>
+      4. Unduh suara bahasa Jepang atau ganti ke suara berkualitas tinggi.<br><br>
+
+      Setelah mengubah pengaturan, tutup aplikasi sepenuhnya lalu buka kembali.<br><br>
+
+      Jika masih tidak berfungsi, perangkat Anda mungkin tidak mendukung TTS bahasa Jepang.
+    </div>
+  </details>
+
+  <details>
+    <summary>Saya ganti perangkat dan progres saya hilang</summary>
+    <div class="details-body">
+      Pertama, di perangkat lama, buka [Menu → Pengaturan → Simpan Progres] untuk membuat cadangan.<br>
+      Simpan file cadangan di tempat yang bisa diakses di perangkat baru (messenger, iCloud, Google Drive, dll.).<br>
+      Di perangkat baru, buka [Menu → Pengaturan → Pulihkan] lalu muat file tersebut untuk mengembalikan progresmu.<br>
+    </div>
+  </details>
+
+  <details>
+    <summary>File progres yang disimpan di cloud tidak terlihat</summary>
+    <div class="details-body">
+      Penyimpanan cloud yang ditampilkan di [Pengaturan → Pulihkan] terkadang tidak dalam kondisi terbaru.<br>
+      Jika demikian, buka aplikasi cloud yang kamu gunakan (seperti iCloud atau Google Drive) agar perangkat dapat
+      memperbarui dan mengenali file terbaru.
+    </div>
+  </details>
+
+  <details>
+    <summary>Terlalu mudah—saya ingin melewati level</summary>
+    <div class="details-body">
+      Jika level saat ini terasa mudah, lebih baik lanjut ke level berikutnya.<br><br>
+      1) Ketuk [Semua Kanji] di menu atas<br>
+      2) Ketuk [menu ⋮] di kanan atas<br>
+      3) Ketuk [Lewati Level]<br><br>
+      Kanji yang dilewati tetap akan muncul sesekali saat review, jadi tidak perlu khawatir. Jika terasa mudah, lanjut
+      saja dengan percaya diri.
+    </div>
+  </details>
+
+  <details>
+    <summary>Tampilkan lebih banyak fitur aplikasi</summary>
+    <div class="details-body">
+      Aplikasi ini dirancang agar kamu bisa langsung mulai belajar dengan menekan “Mulai Belajar” tanpa pengaturan yang
+      rumit.<br>
+      Namun, jika kamu ingin lebih banyak opsi, kamu bisa mencoba pengaturan berikut:<br><br>
+
+      1) Mode Gelap<br>
+      Ubah tampilan ke tema gelap.<br><br>
+
+      2) Mode Prioritas Kata<br>
+      Aktifkan [Pengaturan → Tampilan Kartu Kanji → Prioritas Kata] untuk menampilkan kata terlebih dahulu di kartu.<br>
+      Jika kamu adalah pembelajar menengah atau lanjutan yang ingin lebih fokus pada kosakata daripada cerita kanji,
+      cobalah fitur ini.<br><br>
+
+      3) Tampilkan Contoh Secara Default<br>
+      Jika kamu merasa tidak nyaman harus mengetuk untuk membuka contoh kalimat, aktifkan opsi ini.<br><br>
+
+      4) Atur Jumlah Belajar<br>
+      Secara default, satu sesi menampilkan 20 kartu kanji, tetapi kamu bisa menyesuaikannya sesuai kebutuhanmu.<br><br>
+
+      5) Simpan Progres Belajar<br>
+      Progres belajar tidak disimpan di server, jadi pastikan untuk secara berkala mencadangkannya ke cloud
+      pribadimu.<br>
+      Gunakan fitur ini juga saat berpindah ke perangkat lain.<br><br>
+
+      6) Lihat Kanji Lemah<br>
+      Buka [Semua Kanji → menu ⋮ → Kanji Lemah Saya] untuk melihat kanji yang sulit kamu ingat.<br>
+      Kanji lemah ditentukan berdasarkan respons tingkat kesulitanmu.<br><br>
+
+      7) Lewati Level Saat Ini<br>
+      Jika level saat ini terasa terlalu mudah, kamu bisa melewatinya melalui [Semua Kanji → menu ⋮ → Lewati Level].<br>
+      Kanji yang dilewati tetap akan muncul sesekali untuk membantu mengingat kembali.<br>
+      Jadi tidak perlu khawatir—lewati saja level yang mudah dengan percaya diri.
+    </div>
+  </details>
+
+  <details>
+    <summary>Apakah asal-usul kanji berdasarkan teori akademis?</summary>
+    <div class="details-body">
+      Beberapa penjelasan mengikuti teori tradisional, sementara yang lain disederhanakan atau dibuat agar lebih mudah
+      dipelajari.<br>
+      Jika kamu ingin penjelasan yang benar-benar akademis, silakan merujuk ke buku atau sumber penelitian khusus.
+    </div>
+  </details>
+
+  <details>
+    <summary>Apakah aplikasi ini mengumpulkan data pribadi?</summary>
+    <div class="details-body">
+      Aplikasi ini tidak mengumpulkan informasi pribadi seperti nama, email, atau kontak.<br>
+      Namun, data teknis seperti pola penggunaan, progres belajar, dan log error dapat dikumpulkan secara otomatis untuk
+      meningkatkan layanan.<br><br>
+      Kamu bisa mencadangkan data belajar ke Google Drive atau iCloud milikmu sendiri jika ingin. Data pribadi yang
+      dikumpulkan oleh layanan tersebut mengikuti kebijakan masing-masing.<br>
+      Data cadangan mencakup pengaturan aplikasi dan progres belajar, tetapi tidak termasuk informasi pribadi seperti
+      nama atau email.
+    </div>
+  </details>
+
+  <details>
+    <summary>Saya punya pertanyaan</summary>
+    <div class="details-body">
+      Jika ada pertanyaan, silakan hubungi kami di:<br>
+      contact@freenaru.com
+    </div>
+  </details>
+
+</main>

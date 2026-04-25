@@ -1,0 +1,295 @@
+---
+layout: null
+title: Study Guide
+---
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta charset="utf-8">
+<meta name="color-scheme" content="light dark">
+<meta name="format-detection" content="telephone=no">
+
+<script>
+  (function () {
+    try {
+      var params = new URLSearchParams(location.search);
+      var theme = params.get('theme');
+      if (theme === 'dark' || theme === 'light') {
+        document.documentElement.setAttribute('data-theme', theme);
+      }
+    } catch (e) { }
+  })();
+</script>
+
+<style>
+  /* ===============================
+     기본: LIGHT 테마
+     =============================== */
+  :root {
+    color-scheme: light dark;
+
+    --fg: #111827;
+    --bg: #fffbf3;
+    --body: #374151;
+    --muted: #070708;
+
+    --border: rgba(6, 9, 16, 0.12);
+    --card: #FFFFFF;
+
+    --primary: #142743;
+    --shadow: 0 6px 18px rgba(17, 24, 39, 0.08);
+  }
+
+  /* ===============================
+     Flutter가 강제 DARK 주입할 때
+     =============================== */
+  :root[data-theme="dark"] {
+    --fg: #F3EBDD;
+    /* 따뜻한 밝은 글자 */
+    --bg: #17110D;
+    /* 앱 바깥 배경 */
+    --body: #D8CBBB;
+    /* 본문 */
+    --muted: #B7A894;
+    /* 보조 글자 */
+
+    --border: rgba(216, 203, 187, 0.12);
+    --card: #2A1F18;
+    /* 카드 배경 */
+
+    --primary: #B8A3FF;
+    /* 보라 포인트 */
+    --shadow: 0 10px 28px rgba(0, 0, 0, 0.32);
+  }
+
+  /* =============================== */
+
+  html,
+  body {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+  }
+
+  main.doc {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: env(safe-area-inset-top) max(16px, env(safe-area-inset-right)) calc(48px + env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+  }
+
+  /* =============================== */
+
+  p.lead {
+    margin: 0 0 12px;
+    color: var(--muted);
+  }
+
+  /* ===============================
+     카드 스타일
+     =============================== */
+
+  details {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--card);
+    overflow: hidden;
+    margin: 14px 0;
+    box-shadow: var(--shadow);
+    transition: all .2s ease;
+  }
+
+  summary {
+    list-style: none;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 16px;
+    user-select: none;
+    color: var(--fg);
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  summary::before {
+    content: "▸";
+    display: inline-block;
+    margin-right: 8px;
+    transition: transform .18s ease;
+    color: var(--muted);
+  }
+
+  details[open] summary::before {
+    transform: rotate(90deg);
+  }
+
+  .details-body {
+    padding: 0 16px 16px;
+    line-height: 1.7;
+    color: var(--body);
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: 20px 0;
+  }
+
+  .updated {
+    color: var(--muted);
+    font-style: italic;
+    font-size: .95rem;
+    margin-top: 16px;
+  }
+</style>
+
+<main class="doc">
+
+  <p># 한자를 마스터하는 가장 빠른 길. 일본어 한자 마스터!</p>
+
+  <details>
+    <summary>고양이 한자 암기법으로 빠르게 외우세요</summary>
+    <div class="details-body">
+      매일 보는 길고양이는 '줄무늬가 5개, 꼬리에 하얀 점'처럼 구체적인 형태를 잘 몰라도 보자마자 알 수 있죠?<br><br>
+      이제부터 길고양이를 눈에 익히는 것과 마찬가지 방법으로 한자를 공부하기로 해요.<br><br>
+      한자의 정확한 모양과 획수를 쓰면서 외우는 방법은 이제 그만두세요.<br><br>
+      ────────<br><br>
+      1) '학습 시작하기' 버튼을 누르고 일일 학습을 진행하세요.<br><br>
+      2) 한자의 획수와 형태를 정확하게 외우려고 하지 마세요. 대략적인 모양만 파악한 후 빠르게 넘어가 주세요.<br><br>
+      3) 앱은 사용자의 약점 한자를 학습해요. 다음날부터 약점 한자가 학습에 자주 등장해요. 숙련된 한자는 점점 학습에 덜 등장해요.<br><br>
+      ────────<br><br>
+      이 방법으로, 어려운 한자를 매일 자주 마주쳐 익숙하게 만드는 게 바로 고양이 한자 암기법이에요.
+    </div>
+  </details>
+
+  <details>
+    <summary>한자의 원리가 궁금해요</summary>
+    <div class="details-body">
+      영어를 예로 들면, dislike에서 dis-는 부정, 반대를 뜻하고 like는 좋다는 뜻이니까 합쳐져서 싫다는 뜻이 돼요. preview에서 pre-는 어떤 단어에 붙든 대체로 이전, 미리 등을
+      뜻하죠.<br><br>
+      이와 마찬가지로 한자도 더 작은 단위인 구성자로 쪼개볼 수 있어요. 예를 들어볼게요.<br><br>
+      亻: 사람<br>
+      木: 나무<br>
+      「休」: 사람(亻)이 나무(木)에 기대어 쉰다. ‘휴식’을 뜻해요.<br><br>
+      石: 돌을 뜻해요.<br>
+      更: 뜻 없이 발음 こう만 나타내요.<br>
+      「硬」: 돌(石)처럼 ‘단단하다’는 뜻이에요. 更(こう)는 발음만 나타내요.<br><br>
+      이처럼 구성자는 뜻이나 발음을 나타내요. 대부분의 한자는 이런 원리로 빠르게 이해할 수 있어요.<br><br>
+      또한, 하나의 구성자는 여러 가지 뜻으로 해석될 수 있어요.<br><br>
+      口 : ‘입’을 뜻하지만 말, 먹다, 네모난 물건 등을 뜻하기도 해요.<br>
+      十 : ’10’을 뜻하지만 십자가, 사거리 등을 뜻하기도 해요.<br><br>
+      영어에서 dis-, pre-를 따로 외우지는 않는 것처럼, 한자 구성자를 따로 외울 필요는 없어요. 이 앱을 통해 학습을 진행하다 보면 자연스럽게 이해할 수 있어요.
+    </div>
+  </details>
+
+  <details>
+    <summary>자주 등장하는 구성자가 궁금해요</summary>
+    <div class="details-body">
+      이 앱을 통해 학습을 진행하다 보면 다양한 구성자를 만나게 돼요.<br>
+      아래 구성자는 자주 등장하므로 본격적인 학습 전에 재미 삼아 확인해 보는 것도 좋아요.<br>
+      구성자를 따로 외울 필요는 없으므로, 어디까지나 참고용이에요.<br><br>
+      <b>·사물</b><br>
+      宀 : 집, 건물<br>
+      冖 : 집, 건물, 이불<br>
+      尸 : 집, 건물, 문<br>
+      广 : 집, 건물<br>
+      厂 : 집, 건물, 언덕, 활<br>
+      匚 : 집, 건물, 방, 상자<br>
+      衤 : 옷<br>
+      礻 : 제단, 신, 종교<br>
+      王 : 보물, 왕<br>
+      玉 : 보물, 왕<br>
+      糸 : 실, 줄, 연속<br><br>
+
+      <b>·자연</b><br>
+      日 : 해, 물건<br>
+      阝 : 언덕, 마을<br>
+      灬 : 불<br>
+      氵 : 물<br>
+      冫 : 얼음, 추위<br>
+      云 : 구름<br><br>
+
+      <b>·식물</b><br>
+      艹 : 식물, 풀, 꽃<br>
+      竹 : 대나무<br>
+      禾 : 쌀, 곡식<br><br>
+
+      <b>·동물</b><br>
+      犭 : 동물, 괴물<br>
+      隹 : 새<br>
+      羊 : 양, 길하다<br>
+      豕 : 돼지<br><br>
+
+      <b>·사람</b><br>
+      亻: 사람<br>
+      大 : 크다, 사람<br>
+      扌: 손, 팔<br>
+      ヨ : 손<br>
+      又 : 손, 또다시<br>
+      夂 : 발, 다리, 걸음<br>
+      月 : 몸, 고기, 달<br>
+      口 : 입, 말, 물건<br>
+      疒 : 질병, 고통<br>
+      訁 : 말, 언어, 문구<br>
+      忄 : 마음, 감정<br>
+      飠(𩙿) : 음식, 먹다<br><br>
+
+      <b>·전쟁</b><br>
+      戈 : 창, 병기<br>
+      弋 : 활, 창, 병기<br>
+      刂 : 칼, 막대기<br>
+      殳 : 곤봉, 둔기<br>
+      攵 : 막대기, 집게, 때리다, 손<br><br>
+
+      <b>·행위</b><br>
+      辶 : 길, 걷다, 가다<br>
+      廴 : 걷다, 다리(신체), 길<br>
+      彳 : 가다, 길
+    </div>
+  </details>
+
+  <details>
+    <summary>한자의 난이도 분류</summary>
+    <div class="details-body">
+      이 앱의 한자 난이도는 일본 현지 학생들이 한자를 배우는 기준을 따라요.<br><br>
+      1~6단계 : 초등학교 한자<br>
+      7~8단계 : 중학교 한자<br>
+      9~10단계 : 고등학교 한자<br>
+      11단계 : 일상에서 많이 쓰는 비공식 한자<br><br>
+      JLPT 시험을 목표로 한다면 아래 기준을 참고해 주세요.<br><br>
+      N5 : 1단계<br>
+      N4 : 2~3단계<br>
+      N3 : 4~5단계<br>
+      N2 : 6~7단계<br>
+      N1 : 8~9단계<br>
+      N1 고득점 : 모든 한자
+    </div>
+  </details>
+
+  <details>
+    <summary>약점 한자 확인</summary>
+    <div class="details-body">
+      앱이 파악한 약점 한자는 매일 학습에 자연스럽게 재등장해요. 따라서 별도로 학습할 필요는 없지만, 시험 전날 약점 한자만 몰아서 보고 싶다면 다음과 같이 확인하세요.<br><br>
+      1) 타이틀 상단 메뉴의 [모든 한자] 터치<br>
+      2) [모든 한자] 화면의 우측 상단 [⋮ 메뉴] 터치<br>
+      3) [내 약점 한자] 확인
+    </div>
+  </details>
+
+  <details>
+    <summary>이 앱의 모든 학습 과정을 마쳤어요</summary>
+    <div class="details-body">
+      축하합니다! 🎉<br><br>
+      이제 일본어의 기본기가 튼튼하게 잡힌 상태예요. 계속해서 일본어 달인을 향해 나아가세요.<br><br>
+      1) 더 많은 단어 공부하기<br>
+      이 앱에서 다루지 않은 특수 발음과 고급 어휘를 계속 정복하세요.<br><br>
+      2) 문법과 문형 공부하기<br>
+      단어를 조합하여 긴 문장으로 말하는 훈련을 거듭하세요.<br><br>
+      3) 한자 복습하기<br>
+      한자는 휘발성이 강해서 복습을 멈추면 다시 까먹어요. 이 앱으로 매일 1번, 5분 만에 빠르게 훑어보고 기억을 되살려 주세요.
+    </div>
+  </details>
+
+</main>

@@ -1,0 +1,302 @@
+---
+layout: null
+title: Study Guide
+---
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta charset="utf-8">
+<meta name="color-scheme" content="light dark">
+<meta name="format-detection" content="telephone=no">
+
+<script>
+  (function () {
+    try {
+      var params = new URLSearchParams(location.search);
+      var theme = params.get('theme');
+      if (theme === 'dark' || theme === 'light') {
+        document.documentElement.setAttribute('data-theme', theme);
+      }
+    } catch (e) { }
+  })();
+</script>
+
+<style>
+  /* ===============================
+     기본: LIGHT 테마
+     =============================== */
+  :root {
+    color-scheme: light dark;
+
+    --fg: #111827;
+    --bg: #fffbf3;
+    --body: #374151;
+    --muted: #070708;
+
+    --border: rgba(6, 9, 16, 0.12);
+    --card: #FFFFFF;
+
+    --primary: #142743;
+    --shadow: 0 6px 18px rgba(17, 24, 39, 0.08);
+  }
+
+  /* ===============================
+     Flutter가 강제 DARK 주입할 때
+     =============================== */
+  :root[data-theme="dark"] {
+    --fg: #F3EBDD;
+    /* 따뜻한 밝은 글자 */
+    --bg: #17110D;
+    /* 앱 바깥 배경 */
+    --body: #D8CBBB;
+    /* 본문 */
+    --muted: #B7A894;
+    /* 보조 글자 */
+
+    --border: rgba(216, 203, 187, 0.12);
+    --card: #2A1F18;
+    /* 카드 배경 */
+
+    --primary: #B8A3FF;
+    /* 보라 포인트 */
+    --shadow: 0 10px 28px rgba(0, 0, 0, 0.32);
+  }
+
+  /* =============================== */
+
+  html,
+  body {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+  }
+
+  main.doc {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: env(safe-area-inset-top) max(16px, env(safe-area-inset-right)) calc(48px + env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+  }
+
+  /* =============================== */
+
+  p.lead {
+    margin: 0 0 12px;
+    color: var(--muted);
+  }
+
+  /* ===============================
+     카드 스타일
+     =============================== */
+
+  details {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--card);
+    overflow: hidden;
+    margin: 14px 0;
+    box-shadow: var(--shadow);
+    transition: all .2s ease;
+  }
+
+  summary {
+    list-style: none;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 16px;
+    user-select: none;
+    color: var(--fg);
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  summary::before {
+    content: "▸";
+    display: inline-block;
+    margin-right: 8px;
+    transition: transform .18s ease;
+    color: var(--muted);
+  }
+
+  details[open] summary::before {
+    transform: rotate(90deg);
+  }
+
+  .details-body {
+    padding: 0 16px 16px;
+    line-height: 1.7;
+    color: var(--body);
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: 20px 0;
+  }
+
+  .updated {
+    color: var(--muted);
+    font-style: italic;
+    font-size: .95rem;
+    margin-top: 16px;
+  }
+</style>
+
+<main class="doc">
+
+  <p># The fastest way to master kanji. Japanese Kanji Master!</p>
+
+  <details>
+    <summary>Memorize faster with the Cat Kanji Method</summary>
+    <div class="details-body">
+      When you see a stray cat every day, you recognize it instantly—even if you don’t know details like “5 stripes” or
+      “a white spot on its tail,” right?<br><br>
+      From now on, learn kanji the same way you recognize familiar cats.<br><br>
+      Stop trying to memorize exact shapes and stroke counts by writing them over and over.<br><br>
+      ────────<br><br>
+      1) Tap "Start Learning" and begin your daily session.<br><br>
+      2) Don’t try to memorize every stroke or exact shape of a kanji. Just grasp the general form and move on
+      quickly.<br><br>
+      3) The app focuses on your weak kanji. From the next day, difficult kanji will appear more often, while mastered
+      ones will appear less.<br><br>
+      ────────<br><br>
+      With this method, you repeatedly encounter difficult kanji until they feel familiar — this is the Cat Kanji
+      Method.
+    </div>
+  </details>
+
+  <details>
+    <summary>I’m curious about how kanji works</summary>
+    <div class="details-body">
+      Think of English: in “dislike,” dis- means negation and like means to like, so together it means “to dislike.” In
+      “preview,” pre- generally means “before.”<br><br>
+      Similarly, kanji can be broken down into smaller components.<br><br>
+      亻: person<br>
+      木: tree<br>
+      「休」: a person (亻) leaning on a tree (木) → means “rest”<br><br>
+      石: means stone<br>
+      更: represents the sound “こう” only<br>
+      「硬」: means “hard like stone (石)” while 更 (こう) provides the sound<br><br>
+      Components can represent meaning or sound, and most kanji can be understood this way.<br><br>
+      Also, one component can have multiple meanings:<br><br>
+      口: mouth, speech, eating, or even a square shape<br>
+      十: ten, cross, or intersection<br><br>
+      Just like you don’t memorize dis- or pre- separately, you don’t need to memorize components individually. As you
+      study, you’ll naturally understand them.
+    </div>
+  </details>
+
+  <details>
+    <summary>What are common components?</summary>
+    <div class="details-body">
+      As you study, you’ll encounter many components.<br>
+      The ones below appear frequently, so you can skim them for fun before studying.<br>
+      You don’t need to memorize them—just use them as reference.<br><br>
+
+      <b>·Objects</b><br>
+      宀 : house, building<br>
+      冖 : house, building, cover<br>
+      尸 : house, building, door<br>
+      广 : house, building<br>
+      厂 : house, building, cliff<br>
+      匚 : house, box, container<br>
+      衤 : clothing<br>
+      礻 : altar, god, religion<br>
+      王 : king, treasure<br>
+      玉 : jewel, treasure<br>
+      糸 : thread, connection<br><br>
+
+      <b>·Nature</b><br>
+      日 : sun, object<br>
+      阝 : hill, village<br>
+      灬 : fire<br>
+      氵 : water<br>
+      冫 : ice, cold<br>
+      云 : cloud<br><br>
+
+      <b>·Plants</b><br>
+      艹 : plant, grass, flower<br>
+      竹 : bamboo<br>
+      禾 : rice, grain<br><br>
+
+      <b>·Animals</b><br>
+      犭 : animal, beast<br>
+      隹 : bird<br>
+      羊 : sheep, good omen<br>
+      豕 : pig<br><br>
+
+      <b>·People</b><br>
+      亻: person<br>
+      大 : big, person<br>
+      扌: hand, arm<br>
+      ヨ : hand<br>
+      又 : hand, again<br>
+      夂 : foot, step<br>
+      月 : body, flesh, moon<br>
+      口 : mouth, speech, object<br>
+      疒 : illness, pain<br>
+      訁 : speech, language<br>
+      忄 : heart, emotion<br>
+      飠(𩙿) : food, eating<br><br>
+
+      <b>·War</b><br>
+      戈 : spear, weapon<br>
+      弋 : weapon<br>
+      刂 : knife, blade<br>
+      殳 : club, weapon<br>
+      攵 : strike, action<br><br>
+
+      <b>·Actions</b><br>
+      辶 : road, walk, go<br>
+      廴 : walk, path<br>
+      彳 : go, step
+    </div>
+  </details>
+
+  <details>
+    <summary>Kanji difficulty levels</summary>
+    <div class="details-body">
+      The difficulty levels follow how Japanese students learn kanji.<br><br>
+      Levels 1–6: Elementary school kanji<br>
+      Levels 7–8: Middle school kanji<br>
+      Levels 9–10: High school kanji<br>
+      Level 11: Common non-official kanji used in daily life<br><br>
+      If you're preparing for the JLPT, use this as a guide:<br><br>
+      N5: Level 1<br>
+      N4: Levels 2–3<br>
+      N3: Levels 4–5<br>
+      N2: Levels 6–7<br>
+      N1: Levels 8–9<br>
+      High N1 score: All kanji
+    </div>
+  </details>
+
+  <details>
+    <summary>Check Weak Kanji</summary>
+    <div class="details-body">
+      The app automatically brings back your weak kanji during daily study, so you don’t need to review them separately.
+      However, if you want to review only your weak kanji before a test, follow these steps:<br><br>
+      1) Tap [All Kanji] from the top menu on the title screen<br>
+      2) Tap the [⋮ menu] at the top right of the [All Kanji] screen<br>
+      3) Check [My Weak Kanji]
+    </div>
+  </details>
+
+  <details>
+    <summary>I’ve completed all learning in this app</summary>
+    <div class="details-body">
+      Congratulations! 🎉<br><br>
+      You now have a strong foundation in Japanese. Keep going toward mastery.<br><br>
+      1) Learn more vocabulary<br>
+      Continue mastering advanced words and special readings not covered in this app.<br><br>
+      2) Study grammar and sentence patterns<br>
+      Practice combining words into longer sentences.<br><br>
+      3) Review kanji regularly<br>
+      Kanji fades quickly if not reviewed. Use this app for a quick 5-minute daily review.
+    </div>
+  </details>
+
+</main>

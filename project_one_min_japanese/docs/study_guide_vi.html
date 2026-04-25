@@ -1,0 +1,302 @@
+---
+layout: null
+title: Study Guide
+---
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta charset="utf-8">
+<meta name="color-scheme" content="light dark">
+<meta name="format-detection" content="telephone=no">
+
+<script>
+  (function () {
+    try {
+      var params = new URLSearchParams(location.search);
+      var theme = params.get('theme');
+      if (theme === 'dark' || theme === 'light') {
+        document.documentElement.setAttribute('data-theme', theme);
+      }
+    } catch (e) { }
+  })();
+</script>
+
+<style>
+  /* ===============================
+     기본: LIGHT 테마
+     =============================== */
+  :root {
+    color-scheme: light dark;
+
+    --fg: #111827;
+    --bg: #fffbf3;
+    --body: #374151;
+    --muted: #070708;
+
+    --border: rgba(6, 9, 16, 0.12);
+    --card: #FFFFFF;
+
+    --primary: #142743;
+    --shadow: 0 6px 18px rgba(17, 24, 39, 0.08);
+  }
+
+  /* ===============================
+     Flutter가 강제 DARK 주입할 때
+     =============================== */
+  :root[data-theme="dark"] {
+    --fg: #F3EBDD;
+    /* 따뜻한 밝은 글자 */
+    --bg: #17110D;
+    /* 앱 바깥 배경 */
+    --body: #D8CBBB;
+    /* 본문 */
+    --muted: #B7A894;
+    /* 보조 글자 */
+
+    --border: rgba(216, 203, 187, 0.12);
+    --card: #2A1F18;
+    /* 카드 배경 */
+
+    --primary: #B8A3FF;
+    /* 보라 포인트 */
+    --shadow: 0 10px 28px rgba(0, 0, 0, 0.32);
+  }
+
+  /* =============================== */
+
+  html,
+  body {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+  }
+
+  main.doc {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: env(safe-area-inset-top) max(16px, env(safe-area-inset-right)) calc(48px + env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+  }
+
+  /* =============================== */
+
+  p.lead {
+    margin: 0 0 12px;
+    color: var(--muted);
+  }
+
+  /* ===============================
+     카드 스타일
+     =============================== */
+
+  details {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--card);
+    overflow: hidden;
+    margin: 14px 0;
+    box-shadow: var(--shadow);
+    transition: all .2s ease;
+  }
+
+  summary {
+    list-style: none;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 16px;
+    user-select: none;
+    color: var(--fg);
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  summary::before {
+    content: "▸";
+    display: inline-block;
+    margin-right: 8px;
+    transition: transform .18s ease;
+    color: var(--muted);
+  }
+
+  details[open] summary::before {
+    transform: rotate(90deg);
+  }
+
+  .details-body {
+    padding: 0 16px 16px;
+    line-height: 1.7;
+    color: var(--body);
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: 20px 0;
+  }
+
+  .updated {
+    color: var(--muted);
+    font-style: italic;
+    font-size: .95rem;
+    margin-top: 16px;
+  }
+</style>
+
+<main class="doc">
+
+  <p># Cách nhanh nhất để nắm vững kanji. Japanese Kanji Master!</p>
+
+  <details>
+    <summary>Ghi nhớ nhanh hơn với Phương pháp Kanji Mèo</summary>
+    <div class="details-body">
+      Khi bạn nhìn thấy một con mèo hoang mỗi ngày, bạn sẽ nhận ra nó ngay lập tức—dù không biết chi tiết như “5 vằn”
+      hay “đốm trắng ở đuôi”, đúng không?<br><br>
+      Từ giờ, hãy học kanji theo cách bạn nhận ra những con mèo quen thuộc.<br><br>
+      Đừng cố ghi nhớ chính xác hình dạng và số nét bằng cách viết đi viết lại.<br><br>
+      ────────<br><br>
+      1) Nhấn nút "Bắt đầu học" và tiến hành học mỗi ngày.<br><br>
+      2) Đừng cố ghi nhớ từng nét hay hình dạng chính xác của kanji. Chỉ cần nắm hình dạng tổng thể rồi chuyển nhanh
+      sang tiếp.<br><br>
+      3) Ứng dụng tập trung vào những kanji bạn yếu. Từ ngày hôm sau, kanji khó sẽ xuất hiện thường xuyên hơn, còn những
+      kanji đã quen sẽ xuất hiện ít hơn.<br><br>
+      ────────<br><br>
+      Với phương pháp này, bạn sẽ thường xuyên gặp lại những kanji khó cho đến khi quen thuộc — đó chính là Phương pháp
+      Kanji Mèo.
+    </div>
+  </details>
+
+  <details>
+    <summary>Tôi muốn hiểu cách kanji hoạt động</summary>
+    <div class="details-body">
+      Hãy nghĩ đến tiếng Anh: trong “dislike”, dis- mang nghĩa phủ định và like là thích, nên cả từ có nghĩa là “không
+      thích”. Trong “preview”, pre- thường mang nghĩa “trước”.<br><br>
+      Tương tự, kanji cũng có thể được tách thành các thành phần nhỏ hơn.<br><br>
+      亻: người<br>
+      木: cây<br>
+      「休」: người (亻) dựa vào cây (木) → nghĩa là “nghỉ ngơi”<br><br>
+      石: nghĩa là đá<br>
+      更: chỉ biểu thị âm “こう”<br>
+      「硬」: nghĩa là “cứng như đá (石)”, còn 更 (こう) cung cấp âm đọc<br><br>
+      Các thành phần có thể biểu thị nghĩa hoặc âm, và hầu hết kanji đều có thể hiểu theo cách này.<br><br>
+      Ngoài ra, một thành phần có thể có nhiều nghĩa:<br><br>
+      口: miệng, nói, ăn, hoặc hình vuông<br>
+      十: mười, dấu cộng, hoặc giao lộ<br><br>
+      Cũng giống như bạn không cần học riêng dis- hay pre-, bạn cũng không cần ghi nhớ từng thành phần riêng lẻ. Khi
+      học, bạn sẽ tự nhiên hiểu được chúng.
+    </div>
+  </details>
+
+  <details>
+    <summary>Các thành phần thường gặp là gì?</summary>
+    <div class="details-body">
+      Khi học, bạn sẽ gặp rất nhiều thành phần.<br>
+      Những thành phần dưới đây xuất hiện khá thường xuyên, bạn có thể xem qua trước khi học.<br>
+      Không cần phải ghi nhớ—chỉ dùng để tham khảo.<br><br>
+
+      <b>·Vật thể</b><br>
+      宀 : nhà, công trình<br>
+      冖 : nhà, công trình, che phủ<br>
+      尸 : nhà, công trình, cửa<br>
+      广 : nhà, công trình<br>
+      厂 : nhà, công trình, vách đá<br>
+      匚 : nhà, hộp, vật chứa<br>
+      衤 : quần áo<br>
+      礻 : bàn thờ, thần, tôn giáo<br>
+      王 : vua, báu vật<br>
+      玉 : ngọc, báu vật<br>
+      糸 : sợi, kết nối<br><br>
+
+      <b>·Tự nhiên</b><br>
+      日 : mặt trời, vật thể<br>
+      阝 : đồi, làng<br>
+      灬 : lửa<br>
+      氵 : nước<br>
+      冫 : băng, lạnh<br>
+      云 : mây<br><br>
+
+      <b>·Thực vật</b><br>
+      艹 : cây cỏ, hoa<br>
+      竹 : tre<br>
+      禾 : lúa, ngũ cốc<br><br>
+
+      <b>·Động vật</b><br>
+      犭 : động vật, thú<br>
+      隹 : chim<br>
+      羊 : cừu, điềm lành<br>
+      豕 : heo<br><br>
+
+      <b>·Con người</b><br>
+      亻: người<br>
+      大 : lớn, người<br>
+      扌: tay, cánh tay<br>
+      ヨ : tay<br>
+      又 : tay, lặp lại<br>
+      夂 : chân, bước đi<br>
+      月 : cơ thể, thịt, trăng<br>
+      口 : miệng, lời nói, vật thể<br>
+      疒 : bệnh, đau<br>
+      訁 : lời nói, ngôn ngữ<br>
+      忄 : tim, cảm xúc<br>
+      飠(𩙿) : thức ăn, ăn uống<br><br>
+
+      <b>·Chiến đấu</b><br>
+      戈 : giáo, vũ khí<br>
+      弋 : vũ khí<br>
+      刂 : dao, lưỡi dao<br>
+      殳 : gậy, vũ khí<br>
+      攵 : đánh, hành động<br><br>
+
+      <b>·Hành động</b><br>
+      辶 : đường, đi, di chuyển<br>
+      廴 : đi, đường đi<br>
+      彳 : đi, bước
+    </div>
+  </details>
+
+  <details>
+    <summary>Cấp độ độ khó kanji</summary>
+    <div class="details-body">
+      Các cấp độ được thiết kế theo cách học kanji của học sinh Nhật Bản.<br><br>
+      Level 1–6: Kanji tiểu học<br>
+      Level 7–8: Kanji trung học cơ sở<br>
+      Level 9–10: Kanji trung học phổ thông<br>
+      Level 11: Kanji thông dụng ngoài danh sách chính thức<br><br>
+      Nếu bạn đang chuẩn bị JLPT, hãy tham khảo:<br><br>
+      N5: Level 1<br>
+      N4: Level 2–3<br>
+      N3: Level 4–5<br>
+      N2: Level 6–7<br>
+      N1: Level 8–9<br>
+      N1 điểm cao: Tất cả kanji
+    </div>
+  </details>
+
+  <details>
+    <summary>Xem Kanji Yếu</summary>
+    <div class="details-body">
+      Các kanji yếu sẽ tự động xuất hiện lại trong quá trình học hàng ngày, vì vậy bạn không cần học riêng. Tuy nhiên,
+      nếu muốn ôn tập riêng các kanji yếu trước kỳ thi, hãy làm theo các bước sau:<br><br>
+      1) Nhấn [Tất cả Kanji] ở menu trên màn hình chính<br>
+      2) Nhấn [menu ⋮] ở góc trên bên phải màn hình [Tất cả Kanji]<br>
+      3) Xem [Kanji Yếu của tôi]
+    </div>
+  </details>
+
+  <details>
+    <summary>Tôi đã hoàn thành toàn bộ nội dung học</summary>
+    <div class="details-body">
+      Chúc mừng! 🎉<br><br>
+      Bạn đã có nền tảng vững chắc về tiếng Nhật. Hãy tiếp tục tiến xa hơn.<br><br>
+      1) Học thêm từ vựng<br>
+      Tiếp tục nắm vững các từ nâng cao và cách đọc đặc biệt chưa có trong ứng dụng này.<br><br>
+      2) Học ngữ pháp và mẫu câu<br>
+      Luyện tập ghép từ thành câu dài hơn.<br><br>
+      3) Ôn tập kanji thường xuyên<br>
+      Kanji sẽ nhanh quên nếu không ôn lại. Hãy dùng ứng dụng để ôn nhanh 5 phút mỗi ngày.
+    </div>
+  </details>
+
+</main>
